@@ -1,0 +1,17 @@
+{
+  "D": 4.565080580027522e-06,
+  "D_CI95": [
+    -9.910408867994005e-05,
+    0.00011121835661949559
+  ],
+  "candidate_utility": -9.56912658045539e-05,
+  "candidate_vs_baseline_CI95": [
+    -0.0002350222202949226,
+    4.357438634282765e-05
+  ],
+  "candidate_rank": 16,
+  "replicates": 10000,
+  "seed_string": "PROJECT1-Q3-BOOTSTRAP-v173",
+  "seed_integer": 3224224317123772872,
+  "primary_label": "NULL_OR_UNRESOLVED"
+}

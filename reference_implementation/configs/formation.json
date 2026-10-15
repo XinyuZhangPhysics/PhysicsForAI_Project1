@@ -1,0 +1,22 @@
+{
+  "eta_M_mu": 0.2,
+  "r_eta": [
+    0.25,
+    1,
+    4
+  ],
+  "epsilon": [
+    -0.24,
+    -0.08,
+    0,
+    0.08,
+    0.24
+  ],
+  "invalid_primary_cells": [
+    {
+      "epsilon": 0.24,
+      "r_eta": 4
+    }
+  ],
+  "marginal_epsilon_zero_excluded": true
+}

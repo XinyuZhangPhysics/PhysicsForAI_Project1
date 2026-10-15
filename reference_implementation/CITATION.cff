@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "Please cite the paper and this reproducibility release."
+title: "From Symmetry to Response: Expert-Private Response Channels in Mixture-of-Experts"
+type: software
+version: 1.0.0
+date-released: 2026-10-14
+authors:
+  - family-names: Zhang
+    given-names: Xinyu
+license: MIT
+abstract: "Frozen-output reconstruction and operator checks for expert-private response in mixture-of-experts networks."

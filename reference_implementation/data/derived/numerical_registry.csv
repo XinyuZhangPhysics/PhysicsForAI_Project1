@@ -1,0 +1,78 @@
+id,experiment,quantity,value,interval,estimator_scope,primary_paragraph
+N001,Route-freeze,S_B,4.69717e-3,,private response RMS,II.P5
+N002,Route-freeze,E_MC,9.655e-4,,permutation resolution,II.P5
+N003,Route-freeze,Q_B,4.8648,,S_B/E_MC approx,II.P5
+N010,Restricted selection S1,beta_B,2.714061,"[1.868875,3.447519]",64k seed-fixed-effect log slope,III.P6
+N011,Restricted selection S2,beta_B,2.943391,"[2.431571,3.494240]",64k seed-fixed-effect log slope,III.P6
+N020,Full tangent S1,cosine,0.708949,"[0.297772,0.852265]","288 coords/family, whole-seed bootstrap",III.P7
+N021,Full tangent S1,Pearson,0.710923,"[0.42944,0.822768]",,III.P7
+N022,Full tangent S1,Spearman,0.617949,"[0.268386,0.858544]",,III.P7
+N023,Full tangent S1,sign agreement,0.788194,"[0.652778,0.913194]",,III.P7
+N024,Full tangent S1,slope,0.832397,"[0.491063,0.928702]",,III.P7
+N025,Full tangent S2,cosine,0.328060,"[0.0148937,0.596824]",,III.P7
+N026,Full tangent S2,Pearson,0.336752,"[0.0000766314,0.601035]",,III.P7
+N027,Full tangent S2,Spearman,0.276794,"[-0.00526461,0.559677]",fails lower-bound criterion,III.P7
+N028,Full tangent S2,sign agreement,0.565972,"[0.475694,0.652778]",fails lower-bound >0.5 criterion,III.P7
+N029,Full tangent S2,slope,0.188827,"[0.0248051,0.380098]",,III.P7
+N030,Full tangent,max A/M-to-C power ratio,4.8197e-31,,H4 sector consistency,III.P7
+N040,R63,max H1 coordinate residual,3.46945e-18,,actual derivative vs A-projected prediction,III.P10
+N041,R63,max A field in A-null directions,4.33681e-19,,H2,III.P11
+N042,R63,max dark RMS12,6.37042e-19,,all dark controls,III.P11
+N043,R63 S1 g1,RMS12 mean,3.1904707e-5,"[2.2218376e-5,4.1767322e-5]",expert-side brightness,III.P11
+N044,R63 S2 g1,RMS12 mean,2.9678557e-6,"[2.0918941e-6,3.8450841e-6]",expert-side brightness,III.P11
+N050,Mode conversion S1 g2,Lambda_C(0),0.011184588,"[0.0085524504,0.013838508]",,III.P15
+N051,Mode conversion S1 g2,Xi_M,0.0019374477,"[0.0012803905,0.0028203894]",,III.P15
+N052,Mode conversion S2 g8,Lambda_C(0),0.0036736074,"[0.0031360262,0.004277256]",,III.P15
+N053,Mode conversion S2 g8,Xi_M,0.00021623333,"[0.00017567338,0.00025423972]",,III.P15
+N060,Controlled formation,onset discrepancy,0.0115,,~1.15%,IV.P4
+N061,Controlled formation,rate relative error,4.9e-4,,,IV.P4
+N062,Controlled formation,fast-router saturation discrepancy,0.0103,,~1.03%,IV.P4
+N063,Controlled formation,local expansion residual,8e-6,,,IV.P4
+N064,Transformer formation,E_gamma,0.002023886,,primary valid cells,IV.P6
+N065,Transformer formation,Pearson,0.999999514,,primary valid cells,IV.P6
+N066,Transformer formation,locality-safe mean rel L2,0.001915,,epsilon=0.24 confirmation,IV.P6
+N067,Transformer formation,locality-safe Pearson,0.999999959,,epsilon=0.24 confirmation,IV.P6
+N070,Tomography L7 local,d_eff range,4.92-5.40,,declared six-control family,V.P5
+N071,Tomography L7 objective,d_eff range,4.72-5.30,,declared six-control family,V.P5
+N072,Tomography L15 local,d_eff range,2.44-2.71,,d50=1,V.P5
+N073,Tomography L15 objective,d_eff range,3.40-4.11,,d50=2,V.P5
+N074,Tomography L15 local,Q1 146/503/1740/5033,0.9986;0.9969;0.9956;0.9928,,vs 41B projector,V.P6
+N075,Tomography L15 local,lambda1/lambda2,3.7-4.3,,,V.P6
+N076,Tomography L7 local,lambda1/lambda2,1.19-1.49,,,V.P6
+N077,Tomography L15/5033,local-objective Q1/Q2/Q3,0.9935;0.5065;0.7395,,,V.P7
+N078,Tomography L7,absolute power contraction,2010.78,,41B->5033B,V.P3
+N079,Tomography L15,absolute power contraction,166.42,,41B->5033B,V.P3
+N080,Objective propagation L7,Abar ratio 5033/41,4101.40,,downstream adjoint norm-square,V.P10
+N081,Objective propagation L15,Abar ratio 5033/41,1041.30,,downstream adjoint norm-square,V.P10
+N082,Q3,D,4.5650805800275218e-6,"[-9.9104088679940051e-5,1.1121835661949559e-4]",rank 16/40,V.P12
+N090,Finite-time primary,full-state paired median ratio,88.7564,,mean-map error / sequence error,VI.P3
+N091,Finite-time replication,full-state paired median ratio,146.100,,,VI.P3
+N092,Finite-time primary,expert-private paired median ratio,1.13718,,,VI.P4
+N093,Finite-time primary,router-private paired median ratio,1.20e6,,approx,VI.P4
+N094,Finite-time primary,mean-map full median abs error,1.49573e-3,,"marginal median, not ratio estimator",VI.P3
+N095,Finite-time primary,sequence full median abs error,1.67644e-5,,marginal median,VI.P3
+N096,Finite-time ordering,cyclic median change,~5%,,relative to realized order,VI.P5
+N097,Finite-time ordering,reverse median change,~9.5%,,relative to realized order,VI.P5
+N100,Finite-time primary,same-sequence/full ordered paired median ratio,1.0248071872,"[1.0134040124,1.0271912740]",whole-stream clustered; 90 paired cases,VI.P3
+N101,Finite-time primary,reference/same-sequence paired median ratio,86.4886740665,"[80.1630105538,119.9213366403]",whole-stream clustered,VI.P3
+N102,Finite-time replication,same-sequence/full ordered paired median ratio,1.0107399883,"[1.0051120116,1.0159671506]",two-stream descriptive bootstrap,VI.P3
+N103,Finite-time primary,same-sequence full median normalized error,1.7219363719e-5,"[1.6265059540e-5,1.7334939498e-5]",marginal median,VI.P3
+N104,Finite-time mean shift,Frobenius norm median,2.949699738e-4,"[2.932371676e-4,2.968254097e-4]",primary paired cases,VI.P4
+N105,Finite-time mean shift,spectral norm median,1.160986547e-4,"[1.155757810e-4,1.165166126e-4]",primary paired cases,VI.P4
+N106,Finite-time mean shift,initial-state action norm,4.572250114e-9,"[4.228798479e-9,6.395517975e-9]",primary; entirely router-private,VI.P4
+N107,Finite-time sampling control,same-stream 4-ref closure error,0.003370143016,,primary median,VI.P5
+N108,Finite-time sampling control,4-sequence-subset joint median,0.003268239425,"[0.002827386528,0.004058477061]",sampling control,VI.P5
+N109,Finite-time sampling control,same-stream reference percentile,0.619141,,joint four-map control,VI.P5
+N110,Finite-time cumulant,first-cumulant action norm median,9.758681394e-5,,primary full state,VI.P6
+N111,Finite-time cumulant,commutator action norm median,3.68812708e-10,,primary full state,VI.P6
+N112,Finite-time cumulant,ordered-vs-seqmean residual norm median,3.679191824e-10,,primary full state,VI.P6
+N113,Finite-time cumulant,second-order fraction residual explained,0.9975059,"[0.9966992,0.9981105]",paired-case median; small residual only,VI.P6
+N114,Finite-time primary router-private,same-sequence/ordered paired median ratio,1241.7168485,"[1113.2116938,1473.0287793]",whole-stream clustered,VI.P4
+N120,Tomography L15/5033,local-objective leading-eigenvector angle,4.6162228733,"[2.5797109843,10.3263840317]",degrees,V.P7
+N121,Tomography L15/5033,top2 principal angle 1,2.1260902404,"[0.8985488138,5.9475537583]",degrees,V.P7
+N122,Tomography L15/5033,top2 principal angle 2,83.1107120395,"[36.2354114473,89.2579999581]",degrees,V.P7
+N123,Tomography L15/5033 local,lambda2/lambda3,1.5787829081,"[1.5442116715,1.6284548089]",physical generalized spectrum,V.P7
+N124,Tomography L15/5033 objective,lambda2/lambda3,1.1297705639,"[1.0300645645,1.4066136867]",physical generalized spectrum,V.P7
+N125,Tomography L15/5033 objective,second eigenvector bootstrap squared overlap median,0.9031041939,"[0.0752919042,0.9920618329]",weak identifiability,V.P7
+N126,R63,max H1 coordinate residual exact,3.4694469519536142e-18,,"10,752 coordinate archive",III.P10
+N127,R63,max A-null field component exact,4.3368086899420177e-19,,coordinate archive,III.P11

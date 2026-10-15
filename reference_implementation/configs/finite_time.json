@@ -1,0 +1,12 @@
+{
+  "steps": 32,
+  "origin": "same frozen dense copied model for each batch",
+  "maps": [
+    "Phi_refmean",
+    "Phi_seqmean",
+    "Phi_log",
+    "Phi_log+comm",
+    "Phi_ord"
+  ],
+  "unknown_future_prediction": false
+}

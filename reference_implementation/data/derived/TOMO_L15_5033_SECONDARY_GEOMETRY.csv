@@ -1,0 +1,20 @@
+record_type,probe,metric,point_estimate,ci_low,ci_high,unit,individual_e2_claim,bootstrap_e2_overlap_median,bootstrap_e2_overlap_ci_low,bootstrap_e2_overlap_ci_high,top2_to_point_angle2_median,top2_to_point_angle2_ci_low,top2_to_point_angle2_ci_high,e2_squared_overlap_with_point,top2_angle2_with_point_degrees
+eigenspectrum,local,lambda2_over_lambda3,1.5787829080719311,1.5442116715045524,1.6284548088940689,ratio,UNRESOLVED; inspect stability and gap,0.99803844082432014,0.98209383066995681,0.99993209232486846,2.5109476387322083,0.45385170972676198,7.6350346889640308,,
+eigenspectrum,objective,lambda2_over_lambda3,1.1297705639372597,1.0300645644916913,1.4066136866555761,ratio,UNRESOLVED; inspect stability and gap,0.90310419389483909,0.075291904219133871,0.99206183290423988,18.14238202067861,4.8886339173280087,74.073486955834696,,
+cross_probe,local_vs_objective,Q1,0.99352278423271412,0.96786753868914277,0.9979741683416864,overlap,,,,,,,,,
+cross_probe,local_vs_objective,top1_principal_angle1,4.616222873329674,2.5797109842503669,10.32638403167671,degree,,,,,,,,,
+cross_probe,local_vs_objective,Q2,0.50650598986088913,0.498292535090129,0.82301914432981393,overlap,,,,,,,,,
+cross_probe,local_vs_objective,top2_principal_angle1,2.1260902404179238,0.89854881375128548,5.9475537582991809,degree,,,,,,,,,
+cross_probe,local_vs_objective,top2_principal_angle2,83.110712039500783,36.235411447252339,89.257999958143444,degree,,,,,,,,,
+cross_probe,local_vs_objective,Q3,0.73951991526007521,0.64487030336775863,0.83592751431851331,overlap,,,,,,,,,
+cross_probe,local_vs_objective,top3_principal_angle1,0.13891443765890618,0.02592521895355512,1.8851255611269697,degree,,,,,,,,,
+cross_probe,local_vs_objective,top3_principal_angle2,23.761361527151138,11.888555715588817,33.637743065075739,degree,,,,,,,,,
+cross_probe,local_vs_objective,top3_principal_angle3,51.889175706550702,38.592757485032372,67.429944345589476,degree,,,,,,,,,
+split_half,local_vs_objective,half0_top2_principal_angle1,4.9778769973203794,,,degree,,,,,,,,,
+split_half,local_vs_objective,half0_top2_principal_angle2,63.466933652292539,,,degree,,,,,,,,,
+split_half,local,half0_lambda2_over_lambda3,1.5776390290688054,,,ratio,,,,,,,,0.99762192457579113,2.7963740014042218
+split_half,objective,half0_lambda2_over_lambda3,1.0431287270046532,,,ratio,,,,,,,,0.49243372748024744,45.286300595267868
+split_half,local_vs_objective,half1_top2_principal_angle1,2.1335489967876096,,,degree,,,,,,,,,
+split_half,local_vs_objective,half1_top2_principal_angle2,79.728898585997854,,,degree,,,,,,,,,
+split_half,local,half1_lambda2_over_lambda3,1.5859560557237813,,,ratio,,,,,,,,0.99797908950625791,2.5740466148575321
+split_half,objective,half1_lambda2_over_lambda3,1.3139286549894311,,,ratio,,,,,,,,0.96384826230287035,10.512901383423067

@@ -1,0 +1,534 @@
+{
+  "path_f6b2b72181c3": {
+    "value": "REQUIRED",
+    "asset_kind": "bank/input",
+    "historical_filename_or_directory": "data",
+    "suggested_private_archive_file": "",
+    "note": "Set a local input/model path or writable working-copy output path. Never direct writes into the sole scientific archive."
+  },
+  "path_f2699b70cfbf": {
+    "value": "REQUIRED",
+    "asset_kind": "model/tokenizer",
+    "historical_filename_or_directory": "6d84c48581ece794365f2b8e9cfb043c68ade9c5",
+    "suggested_private_archive_file": "",
+    "note": "Set a local input/model path or writable working-copy output path. Never direct writes into the sole scientific archive."
+  },
+  "path_33f6c02e7543": {
+    "value": "REQUIRED",
+    "asset_kind": "working_directory_or_input",
+    "historical_filename_or_directory": "physicsforai-project-1-physicsforai-exp-g0",
+    "suggested_private_archive_file": "",
+    "note": "Set a local input/model path or writable working-copy output path. Never direct writes into the sole scientific archive."
+  },
+  "path_8c5dea5cdb13": {
+    "value": "REQUIRED",
+    "asset_kind": "bank/input",
+    "historical_filename_or_directory": "data",
+    "suggested_private_archive_file": "",
+    "note": "Set a local input/model path or writable working-copy output path. Never direct writes into the sole scientific archive."
+  },
+  "path_b2b55db8f49e": {
+    "value": "REQUIRED",
+    "asset_kind": "working_directory_or_input",
+    "historical_filename_or_directory": "PhysicsForAI_EXP_S1_Scientific.tar.gz",
+    "suggested_private_archive_file": "",
+    "note": "Set a local input/model path or writable working-copy output path. Never direct writes into the sole scientific archive."
+  },
+  "path_5c4748c9a3ef": {
+    "value": "REQUIRED",
+    "asset_kind": "working_directory_or_input",
+    "historical_filename_or_directory": "ASSET_MANIFEST.json",
+    "suggested_private_archive_file": "",
+    "note": "Set a local input/model path or writable working-copy output path. Never direct writes into the sole scientific archive."
+  },
+  "path_7d5464ba027c": {
+    "value": "REQUIRED",
+    "asset_kind": "bank/input",
+    "historical_filename_or_directory": "b5f90f419b7489cdba26fdbc8c022fcb5562f968",
+    "suggested_private_archive_file": "",
+    "note": "Set a local input/model path or writable working-copy output path. Never direct writes into the sole scientific archive."
+  },
+  "path_44e1748c77d6": {
+    "value": "REQUIRED",
+    "asset_kind": "working_directory_or_input",
+    "historical_filename_or_directory": "EXP_G_V3_LAPTOP_PREFLIGHT",
+    "suggested_private_archive_file": "",
+    "note": "Set a local input/model path or writable working-copy output path. Never direct writes into the sole scientific archive."
+  },
+  "path_fa9fd8233283": {
+    "value": "REQUIRED",
+    "asset_kind": "working_directory_or_input",
+    "historical_filename_or_directory": "PHASEI_RETAINED_RESULTS_SUMMARY_v1.md",
+    "suggested_private_archive_file": "",
+    "note": "Set a local input/model path or writable working-copy output path. Never direct writes into the sole scientific archive."
+  },
+  "path_8d6f660f09d5": {
+    "value": "REQUIRED",
+    "asset_kind": "working_directory_or_input",
+    "historical_filename_or_directory": "PhysicsForAI_Project1_ResearchRecord_v119_SELF_CONTAINED.md",
+    "suggested_private_archive_file": "",
+    "note": "Set a local input/model path or writable working-copy output path. Never direct writes into the sole scientific archive."
+  },
+  "path_a6053f7e53dc": {
+    "value": "REQUIRED",
+    "asset_kind": "working_directory_or_input",
+    "historical_filename_or_directory": "PhysicsForAI_Project1_Experiments_v240M.md",
+    "suggested_private_archive_file": "",
+    "note": "Set a local input/model path or writable working-copy output path. Never direct writes into the sole scientific archive."
+  },
+  "path_d5a5a4203b69": {
+    "value": "REQUIRED",
+    "asset_kind": "working_directory_or_input",
+    "historical_filename_or_directory": "Project1_SelectionResponseContractionAudit_v281M",
+    "suggested_private_archive_file": "",
+    "note": "Set a local input/model path or writable working-copy output path. Never direct writes into the sole scientific archive."
+  },
+  "path_8c32eaf570f6": {
+    "value": "REQUIRED",
+    "asset_kind": "working_directory_or_input",
+    "historical_filename_or_directory": "PhysicsForAIProject1",
+    "suggested_private_archive_file": "",
+    "note": "Set a local input/model path or writable working-copy output path. Never direct writes into the sole scientific archive."
+  },
+  "path_44ab72c5d90e": {
+    "value": "REQUIRED",
+    "asset_kind": "model/tokenizer",
+    "historical_filename_or_directory": "model",
+    "suggested_private_archive_file": "",
+    "note": "Set a local input/model path or writable working-copy output path. Never direct writes into the sole scientific archive."
+  },
+  "path_3397fdd42660": {
+    "value": "REQUIRED",
+    "asset_kind": "model/tokenizer",
+    "historical_filename_or_directory": "smollm2-pinned",
+    "suggested_private_archive_file": "",
+    "note": "Set a local input/model path or writable working-copy output path. Never direct writes into the sole scientific archive."
+  },
+  "path_15a9c2a56381": {
+    "value": "REQUIRED",
+    "asset_kind": "working_directory_or_input",
+    "historical_filename_or_directory": "PhysicsForAI_Project1_FullTangentLaunch_v283M.zip",
+    "suggested_private_archive_file": "",
+    "note": "Set a local input/model path or writable working-copy output path. Never direct writes into the sole scientific archive."
+  },
+  "path_1997da014ac8": {
+    "value": "REQUIRED",
+    "asset_kind": "working_directory_or_input",
+    "historical_filename_or_directory": "PhysicsForAI_Project1_Migration_v283M.zip",
+    "suggested_private_archive_file": "",
+    "note": "Set a local input/model path or writable working-copy output path. Never direct writes into the sole scientific archive."
+  },
+  "path_942393e607f5": {
+    "value": "REQUIRED",
+    "asset_kind": "working_directory_or_input",
+    "historical_filename_or_directory": "v283M_r1",
+    "suggested_private_archive_file": "",
+    "note": "Set a local input/model path or writable working-copy output path. Never direct writes into the sole scientific archive."
+  },
+  "path_7e04651960a0": {
+    "value": "REQUIRED",
+    "asset_kind": "working_directory_or_input",
+    "historical_filename_or_directory": "Project1_BackgroundModeConversion_v282M_r2",
+    "suggested_private_archive_file": "",
+    "note": "Set a local input/model path or writable working-copy output path. Never direct writes into the sole scientific archive."
+  },
+  "path_f9e2b3116c4e": {
+    "value": "REQUIRED",
+    "asset_kind": "working_directory_or_input",
+    "historical_filename_or_directory": "PhysicsForAI_Project1_TheoryDrivenExperimentAudit_v284M.zip",
+    "suggested_private_archive_file": "",
+    "note": "Set a local input/model path or writable working-copy output path. Never direct writes into the sole scientific archive."
+  },
+  "path_176b5fe52446": {
+    "value": "REQUIRED",
+    "asset_kind": "working_directory_or_input",
+    "historical_filename_or_directory": "04_prospective_experiments",
+    "suggested_private_archive_file": "",
+    "note": "Set a local input/model path or writable working-copy output path. Never direct writes into the sole scientific archive."
+  },
+  "path_8a53678fb13c": {
+    "value": "REQUIRED",
+    "asset_kind": "working_directory_or_input",
+    "historical_filename_or_directory": "Project1_MatchedSectorIntervention_v282M",
+    "suggested_private_archive_file": "",
+    "note": "Set a local input/model path or writable working-copy output path. Never direct writes into the sole scientific archive."
+  },
+  "path_49eb03aa7e97": {
+    "value": "REQUIRED",
+    "asset_kind": "working_directory_or_input",
+    "historical_filename_or_directory": "Project1_BackgroundModeConversion_v282M_r1",
+    "suggested_private_archive_file": "",
+    "note": "Set a local input/model path or writable working-copy output path. Never direct writes into the sole scientific archive."
+  },
+  "path_87e0c0eab882": {
+    "value": "REQUIRED",
+    "asset_kind": "model/tokenizer",
+    "historical_filename_or_directory": "PhysicsForAI",
+    "suggested_private_archive_file": "",
+    "note": "Set a local input/model path or writable working-copy output path. Never direct writes into the sole scientific archive."
+  },
+  "path_c94848b205c1": {
+    "value": "REQUIRED",
+    "asset_kind": "working_directory_or_input",
+    "historical_filename_or_directory": "v3_train_unique.sqlite",
+    "suggested_private_archive_file": "",
+    "note": "Set a local input/model path or writable working-copy output path. Never direct writes into the sole scientific archive."
+  },
+  "path_1a97f575bc3c": {
+    "value": "REQUIRED",
+    "asset_kind": "model/tokenizer",
+    "historical_filename_or_directory": "28e66ca6931668447a3bac213f23d990ad3b0e2b",
+    "suggested_private_archive_file": "",
+    "note": "Set a local input/model path or writable working-copy output path. Never direct writes into the sole scientific archive."
+  },
+  "path_a27a23695440": {
+    "value": "REQUIRED",
+    "asset_kind": "working_directory_or_input",
+    "historical_filename_or_directory": "source",
+    "suggested_private_archive_file": "",
+    "note": "Set a local input/model path or writable working-copy output path. Never direct writes into the sole scientific archive."
+  },
+  "path_796298a2b5da": {
+    "value": "REQUIRED",
+    "asset_kind": "working_directory_or_input",
+    "historical_filename_or_directory": "AI_Workspace",
+    "suggested_private_archive_file": "",
+    "note": "Set a local input/model path or writable working-copy output path. Never direct writes into the sole scientific archive."
+  },
+  "path_27e4e1a80a62": {
+    "value": "REQUIRED",
+    "asset_kind": "working_directory_or_input",
+    "historical_filename_or_directory": "Downloads",
+    "suggested_private_archive_file": "",
+    "note": "Set a local input/model path or writable working-copy output path. Never direct writes into the sole scientific archive."
+  },
+  "path_4f415242142d": {
+    "value": "REQUIRED",
+    "asset_kind": "working_directory_or_input",
+    "historical_filename_or_directory": "huggingface",
+    "suggested_private_archive_file": "",
+    "note": "Set a local input/model path or writable working-copy output path. Never direct writes into the sole scientific archive."
+  },
+  "path_82160b73a452": {
+    "value": "REQUIRED",
+    "asset_kind": "model/tokenizer",
+    "historical_filename_or_directory": "a39f36b100fe8a5377810d56c3f4789b9c53ac42",
+    "suggested_private_archive_file": "",
+    "note": "Set a local input/model path or writable working-copy output path. Never direct writes into the sole scientific archive."
+  },
+  "path_8ffb5e529ad6": {
+    "value": "REQUIRED",
+    "asset_kind": "model/tokenizer",
+    "historical_filename_or_directory": "6d84c48581ece794365f2b8e9cfb043c68ade9c5",
+    "suggested_private_archive_file": "",
+    "note": "Set a local input/model path or writable working-copy output path. Never direct writes into the sole scientific archive."
+  },
+  "path_d0590e7c3477": {
+    "value": "REQUIRED",
+    "asset_kind": "working_directory_or_input",
+    "historical_filename_or_directory": "Project1_R2_Pilot",
+    "suggested_private_archive_file": "",
+    "note": "Set a local input/model path or writable working-copy output path. Never direct writes into the sole scientific archive."
+  },
+  "path_fb2f3153db17": {
+    "value": "REQUIRED",
+    "asset_kind": "working_directory_or_input",
+    "historical_filename_or_directory": "Project1_R2_v158",
+    "suggested_private_archive_file": "",
+    "note": "Set a local input/model path or writable working-copy output path. Never direct writes into the sole scientific archive."
+  },
+  "path_97e245237253": {
+    "value": "REQUIRED",
+    "asset_kind": "working_directory_or_input",
+    "historical_filename_or_directory": "src",
+    "suggested_private_archive_file": "",
+    "note": "Set a local input/model path or writable working-copy output path. Never direct writes into the sole scientific archive."
+  },
+  "path_65e87eb57756": {
+    "value": "REQUIRED",
+    "asset_kind": "working_directory_or_input",
+    "historical_filename_or_directory": "Codex",
+    "suggested_private_archive_file": "",
+    "note": "Set a local input/model path or writable working-copy output path. Never direct writes into the sole scientific archive."
+  },
+  "path_7e3390fd04bd": {
+    "value": "REQUIRED",
+    "asset_kind": "working_directory_or_input",
+    "historical_filename_or_directory": "PhysicsForAI_Project1_PhaseII",
+    "suggested_private_archive_file": "",
+    "note": "Set a local input/model path or writable working-copy output path. Never direct writes into the sole scientific archive."
+  },
+  "path_643af9e8d449": {
+    "value": "REQUIRED",
+    "asset_kind": "working_directory_or_input",
+    "historical_filename_or_directory": "formal_prep_v1p1",
+    "suggested_private_archive_file": "",
+    "note": "Set a local input/model path or writable working-copy output path. Never direct writes into the sole scientific archive."
+  },
+  "path_23cf439563e4": {
+    "value": "REQUIRED",
+    "asset_kind": "bank/input",
+    "historical_filename_or_directory": "WP1_Pilot_Banks_v1.json",
+    "suggested_private_archive_file": "",
+    "note": "Set a local input/model path or writable working-copy output path. Never direct writes into the sole scientific archive."
+  },
+  "path_98cd919fbc38": {
+    "value": "REQUIRED",
+    "asset_kind": "bank/input",
+    "historical_filename_or_directory": "WP1_FP32_Extension_Banks_v1.json",
+    "suggested_private_archive_file": "",
+    "note": "Set a local input/model path or writable working-copy output path. Never direct writes into the sole scientific archive."
+  },
+  "path_5e0fd824e039": {
+    "value": "REQUIRED",
+    "asset_kind": "working_directory_or_input",
+    "historical_filename_or_directory": "P2P_NV1_FRESH_P2P_COMPLETE",
+    "suggested_private_archive_file": "",
+    "note": "Set a local input/model path or writable working-copy output path. Never direct writes into the sole scientific archive."
+  },
+  "path_08e09cd8aadb": {
+    "value": "REQUIRED",
+    "asset_kind": "working_directory_or_input",
+    "historical_filename_or_directory": "outputs",
+    "suggested_private_archive_file": "",
+    "note": "Set a local input/model path or writable working-copy output path. Never direct writes into the sole scientific archive."
+  },
+  "path_046030bc90f5": {
+    "value": "REQUIRED",
+    "asset_kind": "working_directory_or_input",
+    "historical_filename_or_directory": "an.",
+    "suggested_private_archive_file": "",
+    "note": "Set a local input/model path or writable working-copy output path. Never direct writes into the sole scientific archive."
+  },
+  "path_aa9fd874df96": {
+    "value": "REQUIRED",
+    "asset_kind": "working_directory_or_input",
+    "historical_filename_or_directory": "outputs",
+    "suggested_private_archive_file": "",
+    "note": "Set a local input/model path or writable working-copy output path. Never direct writes into the sole scientific archive."
+  },
+  "path_8ea7adbae811": {
+    "value": "REQUIRED",
+    "asset_kind": "working_directory_or_input",
+    "historical_filename_or_directory": "CODEX_EXECUTION_TICKET_P2P_NV1.md",
+    "suggested_private_archive_file": "",
+    "note": "Set a local input/model path or writable working-copy output path. Never direct writes into the sole scientific archive."
+  },
+  "path_d4fe3b336f94": {
+    "value": "REQUIRED",
+    "asset_kind": "working_directory_or_input",
+    "historical_filename_or_directory": "site-packages",
+    "suggested_private_archive_file": "",
+    "note": "Set a local input/model path or writable working-copy output path. Never direct writes into the sole scientific archive."
+  },
+  "path_1256d42d8823": {
+    "value": "REQUIRED",
+    "asset_kind": "working_directory_or_input",
+    "historical_filename_or_directory": "Project1_v286M_FiniteTimeMechanism_and_CompactPack_Codex_Handoff.md",
+    "suggested_private_archive_file": "",
+    "note": "Set a local input/model path or writable working-copy output path. Never direct writes into the sole scientific archive."
+  },
+  "path_671bfbb48bd3": {
+    "value": "REQUIRED",
+    "asset_kind": "working_directory_or_input",
+    "historical_filename_or_directory": "PhysicsForAI_Project1_Scientific_Authoring_Update_v286M.md",
+    "suggested_private_archive_file": "",
+    "note": "Set a local input/model path or writable working-copy output path. Never direct writes into the sole scientific archive."
+  },
+  "path_54a9e138cf70": {
+    "value": "REQUIRED",
+    "asset_kind": "working_directory_or_input",
+    "historical_filename_or_directory": "python,",
+    "suggested_private_archive_file": "",
+    "note": "Set a local input/model path or writable working-copy output path. Never direct writes into the sole scientific archive."
+  },
+  "path_9daa8b272cd4": {
+    "value": "REQUIRED",
+    "asset_kind": "working_directory_or_input",
+    "historical_filename_or_directory": "PhysicsForAI_Project1_SelfContained_AuthoringPack_v284M",
+    "suggested_private_archive_file": "",
+    "note": "Set a local input/model path or writable working-copy output path. Never direct writes into the sole scientific archive."
+  },
+  "path_fd01557d84f7": {
+    "value": "REQUIRED",
+    "asset_kind": "working_directory_or_input",
+    "historical_filename_or_directory": "g-j",
+    "suggested_private_archive_file": "",
+    "note": "Set a local input/model path or writable working-copy output path. Never direct writes into the sole scientific archive."
+  },
+  "path_5eb61c4666c4": {
+    "value": "REQUIRED",
+    "asset_kind": "working_directory_or_input",
+    "historical_filename_or_directory": "Project1_v285M_ArchiveAnalysis_Codex_Handoff.md",
+    "suggested_private_archive_file": "",
+    "note": "Set a local input/model path or writable working-copy output path. Never direct writes into the sole scientific archive."
+  },
+  "path_c7aaf2b90a15": {
+    "value": "REQUIRED",
+    "asset_kind": "working_directory_or_input",
+    "historical_filename_or_directory": "PhysicsForAI_Project1_Revised_Authoring_Plan_v285M-R1.md",
+    "suggested_private_archive_file": "",
+    "note": "Set a local input/model path or writable working-copy output path. Never direct writes into the sole scientific archive."
+  },
+  "path_3f476833c93e": {
+    "value": "REQUIRED",
+    "asset_kind": "working_directory_or_input",
+    "historical_filename_or_directory": "P2Q_BOOTSTRAP_RESAMPLES.npz",
+    "suggested_private_archive_file": "10_FiniteTime/raw/finite_sequences/P2Q_BOOTSTRAP_RESAMPLES.npz",
+    "note": "Set a local input/model path or writable working-copy output path. Never direct writes into the sole scientific archive."
+  },
+  "path_593625669d6c": {
+    "value": "REQUIRED",
+    "asset_kind": "working_directory_or_input",
+    "historical_filename_or_directory": "EXPERT_SIDE_SELECTION_PREREGISTRATION_v284M.md",
+    "suggested_private_archive_file": "04_ExpertSideSelection/configs/expert_branch/EXPERT_SIDE_SELECTION_PREREGISTRATION_v284M.md",
+    "note": "Set a local input/model path or writable working-copy output path. Never direct writes into the sole scientific archive."
+  },
+  "path_47b065e7e563": {
+    "value": "REQUIRED",
+    "asset_kind": "working_directory_or_input",
+    "historical_filename_or_directory": "EXPERT_SIDE_SELECTION_BINDINGS_v284M.json",
+    "suggested_private_archive_file": "04_ExpertSideSelection/raw/expert_branch/EXPERT_SIDE_SELECTION_BINDINGS_v284M.json",
+    "note": "Set a local input/model path or writable working-copy output path. Never direct writes into the sole scientific archive."
+  },
+  "path_f21ef6338a9a": {
+    "value": "REQUIRED",
+    "asset_kind": "working_directory_or_input",
+    "historical_filename_or_directory": "DIRECTION_BINDINGS_v284M.json",
+    "suggested_private_archive_file": "04_ExpertSideSelection/raw/expert_branch/DIRECTION_BINDINGS_v284M.json",
+    "note": "Set a local input/model path or writable working-copy output path. Never direct writes into the sole scientific archive."
+  },
+  "path_3f68cd2ef0e9": {
+    "value": "REQUIRED",
+    "asset_kind": "working_directory_or_input",
+    "historical_filename_or_directory": "run.py",
+    "suggested_private_archive_file": "",
+    "note": "Set a local input/model path or writable working-copy output path. Never direct writes into the sole scientific archive."
+  },
+  "path_1b01c23237a2": {
+    "value": "REQUIRED",
+    "asset_kind": "working_directory_or_input",
+    "historical_filename_or_directory": "check.py",
+    "suggested_private_archive_file": "",
+    "note": "Set a local input/model path or writable working-copy output path. Never direct writes into the sole scientific archive."
+  },
+  "path_0a43bbbba701": {
+    "value": "REQUIRED",
+    "asset_kind": "working_directory_or_input",
+    "historical_filename_or_directory": "core.py",
+    "suggested_private_archive_file": "",
+    "note": "Set a local input/model path or writable working-copy output path. Never direct writes into the sole scientific archive."
+  },
+  "path_0d9978c5400f": {
+    "value": "REQUIRED",
+    "asset_kind": "working_directory_or_input",
+    "historical_filename_or_directory": "common.py",
+    "suggested_private_archive_file": "",
+    "note": "Set a local input/model path or writable working-copy output path. Never direct writes into the sole scientific archive."
+  },
+  "path_3f1c9c5622cb": {
+    "value": "REQUIRED",
+    "asset_kind": "working_directory_or_input",
+    "historical_filename_or_directory": "kernels.py",
+    "suggested_private_archive_file": "",
+    "note": "Set a local input/model path or writable working-copy output path. Never direct writes into the sole scientific archive."
+  },
+  "path_1b8f71797ec8": {
+    "value": "REQUIRED",
+    "asset_kind": "working_directory_or_input",
+    "historical_filename_or_directory": "freeze.py",
+    "suggested_private_archive_file": "",
+    "note": "Set a local input/model path or writable working-copy output path. Never direct writes into the sole scientific archive."
+  },
+  "path_9f6da26e4a22": {
+    "value": "REQUIRED",
+    "asset_kind": "working_directory_or_input",
+    "historical_filename_or_directory": "prepare.py",
+    "suggested_private_archive_file": "",
+    "note": "Set a local input/model path or writable working-copy output path. Never direct writes into the sole scientific archive."
+  },
+  "path_9571639a10dd": {
+    "value": "REQUIRED",
+    "asset_kind": "bank/input",
+    "historical_filename_or_directory": "S2_audit.npz",
+    "suggested_private_archive_file": "04_ExpertSideSelection/raw/expert_branch/banks/S2_audit.npz",
+    "note": "Set a local input/model path or writable working-copy output path. Never direct writes into the sole scientific archive."
+  },
+  "path_c67a04e66912": {
+    "value": "REQUIRED",
+    "asset_kind": "bank/input",
+    "historical_filename_or_directory": "S2_calibration.npz",
+    "suggested_private_archive_file": "04_ExpertSideSelection/raw/expert_branch/banks/S2_calibration.npz",
+    "note": "Set a local input/model path or writable working-copy output path. Never direct writes into the sole scientific archive."
+  },
+  "path_896172c096e5": {
+    "value": "REQUIRED",
+    "asset_kind": "bank/input",
+    "historical_filename_or_directory": "S1_calibration_documents.jsonl",
+    "suggested_private_archive_file": "04_ExpertSideSelection/raw/expert_branch/banks/S1_calibration_documents.jsonl",
+    "note": "Set a local input/model path or writable working-copy output path. Never direct writes into the sole scientific archive."
+  },
+  "path_0e6a3f81c603": {
+    "value": "REQUIRED",
+    "asset_kind": "bank/input",
+    "historical_filename_or_directory": "S2_audit_documents.jsonl",
+    "suggested_private_archive_file": "04_ExpertSideSelection/raw/expert_branch/banks/S2_audit_documents.jsonl",
+    "note": "Set a local input/model path or writable working-copy output path. Never direct writes into the sole scientific archive."
+  },
+  "path_adcdcb49052b": {
+    "value": "REQUIRED",
+    "asset_kind": "bank/input",
+    "historical_filename_or_directory": "S1_audit_documents.jsonl",
+    "suggested_private_archive_file": "04_ExpertSideSelection/raw/expert_branch/banks/S1_audit_documents.jsonl",
+    "note": "Set a local input/model path or writable working-copy output path. Never direct writes into the sole scientific archive."
+  },
+  "path_f82c213a6beb": {
+    "value": "REQUIRED",
+    "asset_kind": "bank/input",
+    "historical_filename_or_directory": "S1_calibration.jsonl",
+    "suggested_private_archive_file": "04_ExpertSideSelection/raw/expert_branch/banks/S1_calibration.jsonl",
+    "note": "Set a local input/model path or writable working-copy output path. Never direct writes into the sole scientific archive."
+  },
+  "path_f6e857664e79": {
+    "value": "REQUIRED",
+    "asset_kind": "bank/input",
+    "historical_filename_or_directory": "S1_calibration.npz",
+    "suggested_private_archive_file": "04_ExpertSideSelection/raw/expert_branch/banks/S1_calibration.npz",
+    "note": "Set a local input/model path or writable working-copy output path. Never direct writes into the sole scientific archive."
+  },
+  "path_10cc62a581a9": {
+    "value": "REQUIRED",
+    "asset_kind": "bank/input",
+    "historical_filename_or_directory": "S1_audit.jsonl",
+    "suggested_private_archive_file": "04_ExpertSideSelection/raw/expert_branch/banks/S1_audit.jsonl",
+    "note": "Set a local input/model path or writable working-copy output path. Never direct writes into the sole scientific archive."
+  },
+  "path_cb97054e2939": {
+    "value": "REQUIRED",
+    "asset_kind": "bank/input",
+    "historical_filename_or_directory": "S2_calibration_documents.jsonl",
+    "suggested_private_archive_file": "04_ExpertSideSelection/raw/expert_branch/banks/S2_calibration_documents.jsonl",
+    "note": "Set a local input/model path or writable working-copy output path. Never direct writes into the sole scientific archive."
+  },
+  "path_6f8b56071be8": {
+    "value": "REQUIRED",
+    "asset_kind": "bank/input",
+    "historical_filename_or_directory": "S1_audit.npz",
+    "suggested_private_archive_file": "04_ExpertSideSelection/raw/expert_branch/banks/S1_audit.npz",
+    "note": "Set a local input/model path or writable working-copy output path. Never direct writes into the sole scientific archive."
+  },
+  "path_5596b37f7a3b": {
+    "value": "REQUIRED",
+    "asset_kind": "bank/input",
+    "historical_filename_or_directory": "S2_audit.jsonl",
+    "suggested_private_archive_file": "04_ExpertSideSelection/raw/expert_branch/banks/S2_audit.jsonl",
+    "note": "Set a local input/model path or writable working-copy output path. Never direct writes into the sole scientific archive."
+  },
+  "path_56326f2bfc18": {
+    "value": "REQUIRED",
+    "asset_kind": "bank/input",
+    "historical_filename_or_directory": "S2_calibration.jsonl",
+    "suggested_private_archive_file": "04_ExpertSideSelection/raw/expert_branch/banks/S2_calibration.jsonl",
+    "note": "Set a local input/model path or writable working-copy output path. Never direct writes into the sole scientific archive."
+  }
+}

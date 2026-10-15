@@ -1,0 +1,41 @@
+{
+  "timestamp": "2026-10-12T04:54:35.534519+00:00",
+  "phase": "BEFORE_ANY_NEW_DERIVATIVE",
+  "preregistration_sha256": "784e324abcc217bb5090f5accf56bb88afd16a1355c68dd0b463800511d2156b",
+  "assets": {
+    "${path_593625669d6c}": "784e324abcc217bb5090f5accf56bb88afd16a1355c68dd0b463800511d2156b",
+    "${path_47b065e7e563}": "a23c940c7c729d5de734357ad327110d7bbe8e67eb7ca14b03d4eb6061ee324b",
+    "${path_f21ef6338a9a}": "f0415cabf5987ba873a0436bce80d3c635cc012c76dad453a7bdb3f0cf01d79c",
+    "${path_3f68cd2ef0e9}": "3f35f4b6388b76d802ad5f33dbb64c00abe713b7d45cfad4bbee04f312a75d53",
+    "${path_1b01c23237a2}": "d7f6524828cd131bdcf3db80fa3a4286de3777f76a19e1e2acc086d3be2970c2",
+    "${path_0a43bbbba701}": "aac6d843e985eb0e6391507599312c34def0fae7f3e3b7b61d1853e32b9b3e21",
+    "${path_0d9978c5400f}": "bdccc261d4cd16b139f5a6d04a6ea5c64b6c9817323eece9ec42f90997d84950",
+    "${path_3f1c9c5622cb}": "cc7bf3e2e7171c1937e4a72a6fb05a771da9c9ff4a511cca67428cbc9323bba6",
+    "${path_1b8f71797ec8}": "190f1a9958b8ecfc033c50a768223fc03fd6659aaf53f53fc494d7f6b8556edb",
+    "${path_9f6da26e4a22}": "5865d7e7aee6f46b5e4d6d582cfd6be80cd05060329277c7be434a0f78b18998",
+    "${path_9571639a10dd}": "87ed6c1fea20882ce0912ea65cdc6b8901fb57d52a4afb72f100c544499ddb41",
+    "${path_c67a04e66912}": "ffe4eebff97253385d414cb0fd14da753d1024755430d89d667029d2a05e5107",
+    "${path_896172c096e5}": "df6379f9c5469731e1d57e3607f723d9bd51a6dba8e5a60ff14c2d8d7305df22",
+    "${path_0e6a3f81c603}": "2814e1d96943886291d22485b7bcbb4058c4e74b8a88baef7120508a2e0209ac",
+    "${path_adcdcb49052b}": "d26f42ab5e1acc317e836036f7b5ecde969d6bca46157c4f14c83eedf4af0fff",
+    "${path_f82c213a6beb}": "4b86c02f2a58d4708acf3f795fcb3b11e0c203a8e9367d35cd1edbdff93a3b3a",
+    "${path_f6e857664e79}": "d66e217ffa7aea292e390c1bb4c57233009367d2c348b20dc71e28725642378d",
+    "${path_10cc62a581a9}": "19195387d798385b026941715f8cd0f2d6c2e8b5b80399b3dfb3809dab9b66b1",
+    "${path_cb97054e2939}": "6f4f4c3d1d9217e3d58fb12b98848b01dbf1e11901df7583578367eb6b0f7cd7",
+    "${path_6f8b56071be8}": "3341d7d27bd94816f05b2fb411b646d12d60faecedafbaf861d80ed17ae7d507",
+    "${path_5596b37f7a3b}": "9355520ac32716637f01b6a92e66790a2fe3a1a7f197ec6f70de9b1b70f7cc0b",
+    "${path_56326f2bfc18}": "48bcbd48d6d13b9b3caaa19f549036f98ccd0d37087cbbf35aaa7ac900d59174"
+  },
+  "closure_atol": 1e-10,
+  "closure_rtol": 1e-08,
+  "fd_atol": 1e-09,
+  "fd_rtol": 1e-06,
+  "structural_floor": 1e-10,
+  "amplitudes": [
+    0.02,
+    0.01,
+    0.005
+  ],
+  "bootstrap_seed": 202610120284,
+  "bootstrap_draws": 20000
+}

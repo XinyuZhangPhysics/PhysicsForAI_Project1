@@ -1,0 +1,13 @@
+{
+  "status": "COMPLETE",
+  "arm": "RANDOM_009",
+  "time_UTC": "2026-10-07T07:56:37.629510+00:00",
+  "scientific_freeze_sha256": "53c1cd3dedf77bf5656390b765d95e262094cdd707be3f1a14406df98ef63f96",
+  "adaptation_receipt_sha256": "661af23d65bc028f1a12b5d5820381bbc2af74c0ac7d7d8f4055eaa291cf40b9",
+  "nll_table_sha256": "00cf1fc559334383dc4161e79a350ddc0f571c4eab80fcad47b8d119d886967c",
+  "heldout_documents": 448,
+  "elapsed_arm_seconds": 320.5873312499607,
+  "base_parameter_updates": 0,
+  "base_parameters_with_grad": 0,
+  "base_trainable_parameters": 0
+}

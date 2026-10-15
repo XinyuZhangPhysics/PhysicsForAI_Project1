@@ -1,0 +1,12 @@
+# Historical model-facing dependencies. Match the archived run environment before execution.
+torch==2.14.1
+transformers==4.57.1
+safetensors==0.8.0
+numpy==2.5.3
+scipy==1.18.1
+pyarrow==25.0.1
+pandas
+PyYAML==6.0.3
+einops
+zstandard
+pytest

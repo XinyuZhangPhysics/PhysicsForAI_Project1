@@ -1,0 +1,248 @@
+[
+  {
+    "role": "Q3 logits intervention",
+    "source_name": "package.py",
+    "sha256": "f7cbd7bbd2a1d625e11d269dc1978666d9d85217f57f46c78f1fa2b82af3cd2f",
+    "binding": "post-execution verification/packaging source"
+  },
+  {
+    "role": "Q3 logits intervention",
+    "source_name": "independent_verify.py",
+    "sha256": "cdd19ee2f0cae4eb9e7cffaf7a65c95910cc691a775eecb9f6e10d4726370733",
+    "binding": "post-execution verification/packaging source"
+  },
+  {
+    "role": "Q3 logits intervention",
+    "source_name": "run.py",
+    "sha256": "b89541eab5f97c65b61cb5db417a18486307f2440740980a5e433e6a8dfbd45b",
+    "binding": "prospective source SHA256 MATCH"
+  },
+  {
+    "role": "Q3 logits intervention",
+    "source_name": "firewall.py",
+    "sha256": "5879a5503ba2bea430d570d0e5bc79468234b8967880853930b7859084160dff",
+    "binding": "prospective source SHA256 MATCH"
+  },
+  {
+    "role": "Q3 logits intervention",
+    "source_name": "test_firewall.py",
+    "sha256": "394e88e4b57edd736f054e4bff3337567c0684df1e834b5b50d881ef46278cbd",
+    "binding": "prospective source SHA256 MATCH"
+  },
+  {
+    "role": "Q3 logits intervention",
+    "source_name": "endpoint.py",
+    "sha256": "eb119d9f38f17c14732d0d06b3f841eae8fa58ca6530e3b3043120a4e7c1134a",
+    "binding": "prospective source SHA256 MATCH"
+  },
+  {
+    "role": "Q3 logits intervention",
+    "source_name": "engine.py",
+    "sha256": "251d5f32b32367ec9deddd49cba9ece7623ce44ec0acecd1407eb05d411f0cdd",
+    "binding": "prospective source SHA256 MATCH"
+  },
+  {
+    "role": "Q3 logits intervention",
+    "source_name": "seal_freeze.py",
+    "sha256": "f10df4ade7fd3016c38fade3e853e066ec3b60f69ea5ba3dfbf6583d195cedbb",
+    "binding": "prospective source SHA256 MATCH"
+  },
+  {
+    "role": "Q3 logits intervention",
+    "source_name": "common.py",
+    "sha256": "81dd46b505b6f9f007849e2faab26d900ffd67864aa8ab992c7edb45940cb5ac",
+    "binding": "prospective source SHA256 MATCH"
+  },
+  {
+    "role": "Q3 logits intervention",
+    "source_name": "prepare.py",
+    "sha256": "110040ead03599c0dbc67a5e60e1c5ce66cebc801c1eaaff38fab48ce119d481",
+    "binding": "prospective source SHA256 MATCH"
+  },
+  {
+    "role": "Q3 logits intervention",
+    "source_name": "preflight.py",
+    "sha256": "2b000e203cbfb510b07a8b9d01ec1cad9ce6d01916bce8ae8a1f261595650e60",
+    "binding": "prospective source SHA256 MATCH"
+  },
+  {
+    "role": "earlier extracted Q3 candidate",
+    "source_name": "q3_engine.py",
+    "sha256": "251d5f32b32367ec9deddd49cba9ece7623ce44ec0acecd1407eb05d411f0cdd",
+    "binding": "identical to prospective engine.py if hash match"
+  },
+  {
+    "role": "initialization, trajectory fit and kinetic error definition",
+    "source_name": "finalize_verify.py",
+    "sha256": "0437aae66f61762163268154cd8419ab68b96bd05e41c0eccff4ccd382cfdaae",
+    "binding": "preflight source SHA256 MATCH"
+  },
+  {
+    "role": "initialization, trajectory fit and kinetic error definition",
+    "source_name": "preflight_resume.py",
+    "sha256": "fd936dcc79e4cecd89fba0f1712ab8ced6568ed792a0fc56cc1d97f060d27376",
+    "binding": "preflight source SHA256 MATCH"
+  },
+  {
+    "role": "initialization, trajectory fit and kinetic error definition",
+    "source_name": "common.py",
+    "sha256": "981029580c0254d95bbcea9cb789e18506e0448df767ca32b4e2c69907107bc1",
+    "binding": "preflight source SHA256 MATCH"
+  },
+  {
+    "role": "initialization, trajectory fit and kinetic error definition",
+    "source_name": "train_primary.py",
+    "sha256": "8e9e82c6eba51e2f34c8ed2af77d2568cbd25f118eac484113a11b8ef74bb4d3",
+    "binding": "preflight source SHA256 MATCH"
+  },
+  {
+    "role": "initialization, trajectory fit and kinetic error definition",
+    "source_name": "analyze_primary.py",
+    "sha256": "954f6d249b6b7c4204687a05ec68c207aa292a9c0b460c8c8b28797928828d4e",
+    "binding": "preflight source SHA256 MATCH"
+  },
+  {
+    "role": "separate locality-safe confirmation",
+    "source_name": "finalize_verify.py",
+    "sha256": "9028a7cbedfa0c7186ef877ad2e137b49266f48641bada65afea6fd04d03f392",
+    "binding": "candidate; execution identity requires seal comparison"
+  },
+  {
+    "role": "separate locality-safe confirmation",
+    "source_name": "common.py",
+    "sha256": "5a86cb08d76b9eb0667a0f9e8b3fff041510f7a1b034741076665c8a48656973",
+    "binding": "candidate; execution identity requires seal comparison"
+  },
+  {
+    "role": "separate locality-safe confirmation",
+    "source_name": "train_primary.py",
+    "sha256": "a83b8fce8cff3db08204515179c40c8c7f6a0ef3061000515df76937a277a681",
+    "binding": "candidate; execution identity requires seal comparison"
+  },
+  {
+    "role": "separate locality-safe confirmation",
+    "source_name": "analyze_primary.py",
+    "sha256": "9455ef203c8898e9d13ed369f518dd0e84973c3bebb136e789c7cf2bff9d791f",
+    "binding": "candidate; execution identity requires seal comparison"
+  },
+  {
+    "role": "separate locality-safe confirmation",
+    "source_name": "preflight.py",
+    "sha256": "3b43af8dc6bc531220e6672e890c2fd2002c0f6f834d801a7478aaf3b7f00f37",
+    "binding": "candidate; execution identity requires seal comparison"
+  },
+  {
+    "role": "native controls, operators and gate definitions",
+    "source_name": "tomography_engine.py",
+    "sha256": "04fde82b74a44593a555ecbaef12a276ba3f9e084db71acd3c319960f68f94f0",
+    "binding": "T4 provenance source/artifact SHA256 MATCH"
+  },
+  {
+    "role": "tomography formula and T4 gate implementation",
+    "source_name": "final_t4.py",
+    "sha256": "a2292d85ccfe1c395a15e204c8ca4626e2ff8124e93a04aa5924892375581a7f",
+    "binding": "candidate; execution identity requires seal comparison"
+  },
+  {
+    "role": "exact expert-gain and pre-Top-k bias action",
+    "source_name": "expert_internal.py",
+    "sha256": "05ad255e087595ae91036097507dae101c33e628a1ca96d2d01d0738b4574881",
+    "binding": "T4 provenance source/artifact SHA256 MATCH"
+  },
+  {
+    "role": "exact expert-gain and pre-Top-k bias action",
+    "source_name": "shadow_oracle_repair.py",
+    "sha256": "db764c1781cd5ef5aca900d0776c1cae8c0ed966f386413808c6f5601a9e8898",
+    "binding": "T4 provenance source/artifact SHA256 MATCH"
+  },
+  {
+    "role": "exact expert-gain and pre-Top-k bias action",
+    "source_name": "hard_routing_diagnostic.py",
+    "sha256": "68277b9aee673ef76e7d30c1435c2271de0703a35415bf533edfabc9a029d7e9",
+    "binding": "T4 provenance source/artifact SHA256 MATCH"
+  },
+  {
+    "role": "exact expert-gain and pre-Top-k bias action",
+    "source_name": "routing.py",
+    "sha256": "372368b0bc091bd7ddb71f54d25b5a1e23ca1807446ce52050acdfd8b46bc14c",
+    "binding": "inherited candidate dependency; archived copies retained"
+  },
+  {
+    "role": "exact expert-gain and pre-Top-k bias action",
+    "source_name": "formal_a_discovery_v159.py",
+    "sha256": "bfd62f40d5cd8ea8c670abb07462c476c5f3934e9776418d37b02841d7e20619",
+    "binding": "inherited candidate dependency; archived copies retained"
+  },
+  {
+    "role": "capture at frozen dense copied origin",
+    "source_name": "preflight.py",
+    "sha256": "c5f54c3c59319c15b4d2f1337e035d7054f5bd84e3a7a3889ced3756afaf4659",
+    "binding": "source-index SHA256 MATCH"
+  },
+  {
+    "role": "common-reference batch-conditioned maps",
+    "source_name": "finalize_p2q.py",
+    "sha256": "f4684439610d1be563e37b076985ed7b47d21e6367f1747128058a6e5cd6a384",
+    "binding": "source/dependency index plus output consistency"
+  },
+  {
+    "role": "common-reference batch-conditioned maps",
+    "source_name": "verify_p2q.py",
+    "sha256": "7defa385a2547feaab80223dca4a55f2da7ac85f08ff77f83673b4292802d777",
+    "binding": "source/dependency index plus output consistency"
+  },
+  {
+    "role": "common-reference batch-conditioned maps",
+    "source_name": "run_p2q.py",
+    "sha256": "2bc11e2ae7a302776dea449cdfdb8271f77fd6dd3b6f8abf78c3e2e683aa1277",
+    "binding": "source/dependency index plus output consistency"
+  },
+  {
+    "role": "common-reference batch-conditioned maps",
+    "source_name": "run_nv1.py",
+    "sha256": "5fc653c98f88f0c4869b0189bfeffe59260f737da9f521384e134a88c93a29de",
+    "binding": "source/dependency index plus output consistency"
+  },
+  {
+    "role": "common-reference batch-conditioned maps",
+    "source_name": "run_science.py",
+    "sha256": "382db5617b8ba2a660ecb5df4bdc9fe67af0d5ccd64ac3451d765c529e6dcabb",
+    "binding": "source/dependency index plus output consistency"
+  },
+  {
+    "role": "v286 finite-time frozen deterministic post-hoc reproduction",
+    "source_name": "projected_cumulant_norms.py",
+    "sha256": "082a6f26cbf27b98d2f59e2a5fc3d086e52e010176fe82ce36afc7c08ca8a5c4",
+    "binding": "candidate; execution identity requires seal comparison"
+  },
+  {
+    "role": "v286 finite-time frozen deterministic post-hoc reproduction",
+    "source_name": "finite_time_v286.py",
+    "sha256": "3c46e4f6e767430bc2ee901631a54d4de0758b9c1e353d62fa90c7957734441e",
+    "binding": "candidate; execution identity requires seal comparison"
+  },
+  {
+    "role": "v286 finite-time frozen deterministic post-hoc reproduction",
+    "source_name": "finalize_v286.py",
+    "sha256": "d9f842ac689b03d73d41b5c83ea928194b7a126adcd5b0b4e1f80976fbea7244",
+    "binding": "candidate; execution identity requires seal comparison"
+  },
+  {
+    "role": "v286 finite-time frozen deterministic post-hoc reproduction",
+    "source_name": "verify_samples_and_logs.py",
+    "sha256": "1dfdb8025aaecfb3f9e2c5162d65374d84e4b249565fb79afd21e5d653383460",
+    "binding": "candidate; execution identity requires seal comparison"
+  },
+  {
+    "role": "v286 finite-time frozen deterministic post-hoc reproduction",
+    "source_name": "verify_algebra.py",
+    "sha256": "31c9fbd270685dd8da4e5d59b48b5449bc6d8ec342d09b4752157c26b73e8080",
+    "binding": "candidate; execution identity requires seal comparison"
+  },
+  {
+    "role": "v286 finite-time frozen deterministic post-hoc reproduction",
+    "source_name": "prepare_compact.py",
+    "sha256": "1cfc6e9d52567fcc681b417b1082be39aa1b6dfd6d8cdfdc1c10fe830219ed65",
+    "binding": "candidate; execution identity requires seal comparison"
+  }
+]
