@@ -1,9 +1,9 @@
 cff-version: 1.2.0
 message: "Please cite the paper and this reproducibility release."
-title: "From Symmetry to Response: Expert-Private Response Channels in Mixture-of-Experts"
+title: "Expert-Private Response in Mixture-of-Experts"
 type: software
-version: 1.0.0
-date-released: 2026-10-14
+version: "2026-10-21"
+date-released: 2026-10-21
 authors:
   - family-names: Zhang
     given-names: Xinyu

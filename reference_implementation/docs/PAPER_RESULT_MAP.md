@@ -1,8 +1,8 @@
-# v318 paper result map
+# Paper result map — 2026-10-21
 
 This map describes reconstruction from frozen project-owned derived data. It is not a model-training recipe.
 
-| ID | v318 claim | Clean implementation | Public data | Output/check |
+| ID | Manuscript claim | Clean implementation | Public data | Output/check |
 |---|---|---|---|---|
 | P1-E01 | native route-freeze response | `src/moe_private_response/native_tomography.py` | no direct public file | PROVENANCE_ONLY / NOT FULLY REPRODUCIBLE for complete claim; PARTIAL: no full headline expected value |
 | P1-E02 | copied router-side two-sided selection; B(0)=0; g=1 dependence | `src/moe_private_response/selection.py` | data/derived/R63_COORDINATE_CLOSURE_SUMMARY.csv; data/derived/R63_EXPERT_SIDE_SELECTION.csv; data/derived/R63_MAIN_FIGURE_DATA.csv | PUBLICLY_REPRODUCIBLE selected frozen checks; YES: expected/OUTPUT_SHA256SUMS.txt |
