@@ -1,4 +1,4 @@
-"""Two-amplitude pre-Top-k action and paired stratified endpoint bootstrap."""
+"""Two-amplitude pre-Top-k action and paired stratified endpoint bootstrap.\n\nThe bias vector supplied to ``logits_action`` is already frozen upstream. For the manuscript candidate it is the 64-coordinate router-bias block of the leading joint expert-output/router control constructed on the independent discovery bank; random arms supply their correspondingly frozen matched router-bias blocks. This module applies those fixed directions and does not select or refit them from utility outcomes.\n"""
 import hashlib
 import numpy as np
 def logits_action(logits,bias,amplitude):

@@ -1,4 +1,4 @@
-"""Six-control tangent and physical operator gates, fixed selected support."""
+"""Six-control tangent and physical operator gates, fixed selected support.\n\nThe local Gram uses the mean squared response per output coordinate; for the paper tensors this is exactly division by 256*2048. The objective Gram is formed from signed document-level objective contractions and is not divided by that response-coordinate factor.\n"""
 import numpy as np
 def soft_tangent(probabilities,selected,expert_outputs,gain,bias):
     # Mean bias uses all 64 full-softmax probabilities; Top-8 is unnormalized.
@@ -8,6 +8,14 @@ def soft_tangent(probabilities,selected,expert_outputs,gain,bias):
     factor=w*(np.asarray(gain)[idx]+np.asarray(bias)[idx]-mean[:,None])
     return np.einsum('tk,tkh->th',factor,out)
 def gram_operators(tangents,adjoint):
+    """Return local-response and objective Gram matrices.
+
+    ``tangents`` is control x response-coordinate. In the manuscript each
+    response has shape (256, 2048), so ``u.shape[1] == 256*2048`` and the
+    local matrix is normalized by that factor. The objective matrix is the
+    outer product of signed objective contractions and receives no such
+    normalization.
+    """
     t=np.asarray(tangents);u=t.reshape(t.shape[0],-1)
     local=u@u.T/u.shape[1];signed=u@np.asarray(adjoint).ravel()
     return local,np.outer(signed,signed)
