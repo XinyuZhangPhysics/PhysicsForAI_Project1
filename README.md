@@ -1,6 +1,6 @@
 # PhysicsForAI Project 1 — 2026-10-21
 
-Code accompanying *Expert-Private Response in Mixture-of-Experts*.
+Code accompanying *Expert-Specific Response in Mixture-of-Experts*.
 
 `experiments/` contains sanitized versions of actual retained experiment and analysis source snapshots. Every script is bound to the private archived source path and SHA256 in `PUBLIC_SOURCE_BINDINGS.tsv`; `PUBLIC_CODE_MANIFEST.tsv` summarizes experiment coverage. Path substitutions are reversible and were checked with Python AST equivalence; scientific algorithms were not rewritten. A few historical source records are candidates rather than execution-bound; their binding column states this explicitly.
 
