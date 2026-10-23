@@ -1,8 +1,8 @@
-# PhysicsForAI Project 1 — source release
+# PhysicsForAI Project 1 — source and reproducibility release
 
-Code accompanying *Expert-Specific Response in Mixture-of-Experts*.
+Code and project-owned derived reproducibility material accompanying *Expert-Specific Response in Mixture-of-Experts*.
 
-The current public release is **source-only**: it contains implementation code, configuration templates, tests, environment specifications, and provenance metadata, but no project-owned experimental output arrays, frozen result tables, or intermediate scientific captures.
+The public release contains implementation code, configuration templates, tests, environment specifications, provenance metadata, and a reader-facing reproducibility layer under `reproducibility/`. That directory publishes frozen headline numerical summaries, claim-to-source mappings, pinned model/data revisions, protocol/basis hashes, and the statistical-unit conventions used in the manuscript.
 
 `experiments/` contains sanitized versions of retained historical experiment and analysis source snapshots. Every script is bound to the corresponding archived source record in `PUBLIC_SOURCE_BINDINGS.tsv`; `PUBLIC_CODE_MANIFEST.tsv` summarizes coverage. Path substitutions were checked for code equivalence and do not alter the scientific algorithms.
 
@@ -21,19 +21,25 @@ python -m unittest discover -s reference_implementation/tests -v
 
 These tests exercise the selection rules, mixed pushforward, local growth map, native response metric, utility action, and finite-time ordering algebra without requiring experimental output files.
 
+## Public derived numerical material
+
+See `reproducibility/README.md`. The public derived layer is intentionally limited to project-owned summaries and provenance that can be redistributed without copying third-party assets. It includes the headline values needed to audit the paper's main quantitative claims and the mapping from each analysis family to its retained public source group.
+
+Large per-document arrays, model-facing caches, gradients, full-state captures, copyrighted corpus text/token banks, and third-party model weights are not redistributed here. Where a larger project-owned derived-data bundle is required for an end-to-end numerical reconstruction, it may be obtained from the author on reasonable request. Third-party models and datasets must be obtained from their original providers under their respective licenses.
+
 ## Optional numerical reconstruction
 
-The reconstruction scripts are retained as source code, but their project-owned numerical inputs are not bundled in this repository. When an authorized data bundle is available, point the scripts to it with
+The reconstruction scripts are retained as source code. When an authorized larger derived-data bundle is available, point the scripts to it with
 
 ```sh
 export PROJECT1_DATA_DIR=/path/to/project1-derived-data
 python reference_implementation/reproduce/reproduce_paper.py
 ```
 
-The expected data schema and claim-to-code mapping are documented under `reference_implementation/docs/`. Project-owned numerical outputs may be provided by the author on reasonable request. Third-party model weights and corpora must be obtained from their original providers under their respective licenses.
+The expected data schema and claim-to-code mapping are documented under `reference_implementation/docs/` and `reproducibility/`.
 
 ## Historical model-facing code
 
-Use `PUBLIC_CODE_MANIFEST.tsv` to choose an experiment/source group and `PUBLIC_SOURCE_BINDINGS.tsv` for individual scripts. Full model-facing reruns require the pinned upstream models/corpora and the retained private raw inputs and execution environments. Do not import historical execution scripts casually: some execute at module top level.
+Use `PUBLIC_CODE_MANIFEST.tsv` to choose an experiment/source group and `PUBLIC_SOURCE_BINDINGS.tsv` for individual scripts. Full model-facing reruns require the pinned upstream models/corpora and the retained large intermediate inputs/execution environments. Do not import historical execution scripts casually: some execute at module top level.
 
-No model weights, copyrighted corpus text/token banks, gradients, full-state captures, or private research notes are redistributed. Project-owned code is MIT licensed; upstream assets retain their own licenses.
+Project-owned code is MIT licensed; upstream assets retain their own licenses.

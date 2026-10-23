@@ -1,0 +1,11 @@
+manuscript_analysis	public_source_group	main_object_or_claim	inferential_unit
+fixed-routing response	experiments/routefreeze	separates expert-parameter response from routing-state change	relabeling controls provide numerical resolution; not trained-model replicates
+copied-state router selection	experiments/copiedselection	first-order child-sector accessibility under copied parent/child structure	paired training seed
+full expert-block tangent	experiments/fulltangent	construct-validity check beyond restricted feature probe	whole seed
+expert-side copied selection	experiments/expertsideselection	A-sector expert-side branch with router fixed	seed after averaging four parameter directions
+background mode conversion	experiments/modeconversion	state-dependent parameter-to-response pushforward	seed after averaging nuisance directions
+local instability	experiments/formation	Hessian threshold and exact discrete-time local growth	locality-valid grid cell with sign-paired trajectory checks
+native six-control tomography	experiments/nativeolmoe	longitudinal response operators in a frozen control subspace	paired documents with balanced-domain resampling
+objective visibility	experiments/objectivevisibility	objective-response second moment and signed coherence boundary	paired documents
+held-out utility	experiments/utility	frozen two-scalar router-logit intervention versus baseline and 39 matched controls	paired held-out documents
+finite-time propagation	experiments/finitetime	fixed-reference mean vs realized-sequence mean vs ordered product	matched stream/arm case
