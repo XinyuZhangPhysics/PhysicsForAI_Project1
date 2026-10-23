@@ -1,7 +1,8 @@
 # Reproducibility levels
 
-1. **Publicly reproducible frozen outputs:** run `python reproduce/reproduce_paper.py` then verify generated output hashes/tolerances. This checks selected numerical claims from compact derived arrays and tables.
-2. **Internally reproducible full chain:** requires retained raw maps, gradients, banks and historically executed sources, plus upstream models/corpus. The archive manifest records exact member hashes; remote content verification remains pending for large volumes.
-3. **Provenance only / not fully reproducible:** used where execution identity or inputs are unresolved. A matching source SHA alone does not establish which exact script was executed.
+1. **Public code-level reproducibility.** The clean operator implementations and data-independent unit tests are public and can be run from a fresh clone.
+2. **Paper-level numerical reconstruction with supplied inputs.** The reconstruction scripts are public, while the project-owned derived numerical inputs are not bundled. They may be obtained from the author on reasonable request and supplied through `PROJECT1_DATA_DIR`.
+3. **Full model-facing rerun.** This additionally requires retained raw banks/captures, historically executed sources and environments, and third-party model/corpus assets obtained under their original licenses.
+4. **Provenance-only historical records.** Some archived source records establish provenance but do not by themselves establish exact execution identity.
 
-No PDF pixel-identity requirement applies to scientific numerical outputs. Full model-facing reruns are not turnkey in this repository.
+The source-only public release does not contain frozen result arrays or output checksums.

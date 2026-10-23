@@ -1,29 +1,33 @@
-# Expert-Private Response in Mixture-of-Experts
+# Expert-Specific Response in Mixture-of-Experts — reference implementation
 
-Expert-private learning-response channels in mixture-of-experts networks. This 2026-10-21 public reconstruction is mapped to the manuscript and technical companion dated **2026-10-21**; the frozen numerical inputs come from the retained scientific archive and are bound by the published provenance manifests and hashes. The research question is how copy symmetry selects accessible response sectors, mixed curvature forms a local private instability, native geometry makes that response visible to an objective, and batch-conditioned maps propagate it over finite time.
+This directory contains the clean mathematical implementation used to audit the operators and numerical analysis in the paper. The current public release is source-only: experimental output arrays, frozen result tables, and intermediate captures are not bundled here.
 
-## Quick reproduction
+## Code-level checks
 
-Python 3.12 is the tested interpreter. From a fresh clone:
+From `reference_implementation/`:
 
 ```sh
 python3.12 -m venv .venv
 source .venv/bin/activate
 python -m pip install -r requirements-lock.txt
 python -m unittest discover -s tests -v
-python reproduce/reproduce_paper.py
-python reproduce/verify_release.py
-sha256sum -c expected/OUTPUT_SHA256SUMS.txt
 ```
 
-The last command checks generated text/CSV outputs; figure/PDF pixels are not a scientific identity requirement. On macOS, `shasum -a 256 -c expected/OUTPUT_SHA256SUMS.txt` can replace `sha256sum` if coreutils is unavailable. Generated tables, figures and `verification.json` are in `results/`.
+The unit tests require no experimental data. They independently check the expert-index projectors and selection rule, the signed mixed pushforward, cross-Hessian adjointness and exact-discrete growth, the native response metric, the router-bias action, and finite-time ordering/cumulant identities.
 
-## What this reconstructs
+## Optional paper-level reconstruction
 
-The public frozen-output layer checks 10,752 selection coordinates, signed conversion residuals, formation discrete rates and primary/confirmation errors, native scalar and split gates, 41-arm anonymous utility NLL/bootstrap, and 360 finite-time case/sector records including the 88.756436 reference/ordered ratio. See `docs/PAPER_RESULT_MAP.md` and `docs/REPRODUCIBILITY_LEVELS.md` for claim-specific limits. `expected/OUTPUT_SHA256SUMS.txt` and `PUBLIC_CHECKSUMS.json` are the machine checks.
+The reconstruction code is retained so that the reported numerical summaries can be regenerated from an authorized project-owned derived-data bundle. The data bundle is not part of this repository. Set
 
-## Scope and limits
+```sh
+export PROJECT1_DATA_DIR=/path/to/project1-derived-data
+python reproduce/reproduce_paper.py
+```
 
-The six public modules are clean mathematical/reconstruction implementations. They are **not** the historically executed end-to-end model pipelines. A full model-facing rerun requires externally obtained pinned model/corpus assets, retained frozen banks, raw captures, archived execution sources and original environments. Historical source hashes are provenance references. No model weights, corpus text, logits caches or private paths are redistributed. In particular, the public finite-time summary does not replay the 885,312-dimensional raw map sequence. Exact manuscript-PDF clean-build pixel equivalence is an open manuscript-build issue, independent of the numerical checks here.
+The script fails explicitly if the external data directory is absent. The required filenames and claim-to-code correspondence are summarized in `docs/PAPER_RESULT_MAP.md`. Project-owned numerical outputs may be obtained from the author on reasonable request, subject to practical transfer constraints.
 
-Code/documentation are MIT; project-owned derived data are CC BY 4.0. Upstream assets retain their licenses. Cite `CITATION.cff`. Data archive: **DOI pending**; the archival data DOI will be added upon deposit. No publication status or DOI is implied.
+## Scope
+
+The modules under `src/` are clean analysis/reference implementations; they are not the historically executed model-facing pipelines. Historical experiment source snapshots are kept separately under the repository-level `experiments/` tree. Full end-to-end reruns additionally require third-party model/corpus assets, retained raw banks/captures, and the historical execution environments.
+
+No model weights, corpus text, logits caches, gradients, frozen result arrays, or private paths are redistributed in this source-only release. Code and documentation are MIT licensed; upstream assets retain their own licenses.

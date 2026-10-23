@@ -1,7 +1,11 @@
-"""Re-render numerical figures; styling is independent of historical PDF assets."""
+"""Re-render numerical figures from reconstructed outputs and an external derived-data bundle."""
 from pathlib import Path
 import os,csv,json
-ROOT=Path(__file__).resolve().parents[1];OUT=ROOT/'results';FIG=OUT/'figures';FIG.mkdir(exist_ok=True)
+ROOT=Path(__file__).resolve().parents[1]
+DATA=Path(os.environ.get('PROJECT1_DATA_DIR', str(ROOT/'data/derived'))).expanduser().resolve()
+if not DATA.exists():
+    raise FileNotFoundError("Set PROJECT1_DATA_DIR to the external project-owned derived-data bundle.")
+OUT=ROOT/'results';FIG=OUT/'figures';FIG.mkdir(exist_ok=True)
 os.environ.setdefault('MPLCONFIGDIR',str(OUT/'.mplconfig'))
 import numpy as np
 import matplotlib
@@ -16,7 +20,7 @@ for i in range(4):
     for j in range(3):ax.text(j,i,f'{values[i,j]:.3f}%',ha='center',va='center')
 fig.colorbar(im,ax=ax,label='Absolute relative log-rate error (%)');save(fig,'formation_closure')
 rr=rows(OUT/'zeta.csv');fig,ax=plt.subplots(figsize=(5.5,3.7));x=np.logspace(-2,2,300);ax.plot(x,x/(1+x),label='Near-threshold limit');ax.scatter([float(r['zeta']) for r in rr],[float(r['sigma_norm_predicted']) for r in rr],label='Exact discrete');ax.scatter([float(r['zeta']) for r in rr],[float(r['sigma_norm_fitted']) for r in rr],marker='x',label='Frozen fit');ax.set(xscale='log',xlabel='zeta',ylabel='Normalized per-update increment');ax.legend();save(fig,'zeta_crossover')
-rr=rows(ROOT/'data/derived/MODE_CONVERSION_SIGNED_SUMMARY.csv');fig,axes=plt.subplots(1,2,figsize=(9,3.5))
+rr=rows(DATA/'MODE_CONVERSION_SIGNED_SUMMARY.csv');fig,axes=plt.subplots(1,2,figsize=(9,3.5))
 for ax,family in zip(axes,['S1','S2']):
     for g in [2,4,8]:
         rs=sorted([r for r in rr if r['family']==family and r['g']==str(g) and r['sector']=='M' and r['coordinate']=='0'],key=lambda r:float(r['s']))

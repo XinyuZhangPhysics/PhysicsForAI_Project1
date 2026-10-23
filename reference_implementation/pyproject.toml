@@ -1,11 +1,13 @@
 [build-system]
 requires = ["setuptools>=68"]
 build-backend = "setuptools.build_meta"
+
 [project]
 name = "moe-private-response"
-version = "2026.10.21"
-description = "Frozen paper-output reconstruction for expert-private MoE response"
+version = "2026.10.23"
+description = "Source-only reference implementation for expert-specific MoE response"
 requires-python = ">=3.12"
 dependencies = ["numpy==2.5.3", "scipy==1.18.1", "matplotlib==3.11.2"]
+
 [tool.setuptools.packages.find]
 where = ["src"]

@@ -1,21 +1,23 @@
-# Paper result map — 2026-10-21
+# Paper result map — source-only release
 
-This map describes reconstruction from frozen project-owned derived data. It is not a model-training recipe.
+This document maps manuscript claims to the public analysis code. Numerical result files are not bundled in the repository; paper-level reconstruction requires the author-supplied project-owned derived-data bundle via `PROJECT1_DATA_DIR`.
 
-| ID | Manuscript claim | Clean implementation | Public data | Output/check |
-|---|---|---|---|---|
-| P1-E01 | native route-freeze response | `src/moe_private_response/native_tomography.py` | no direct public file | PROVENANCE_ONLY / NOT FULLY REPRODUCIBLE for complete claim; PARTIAL: no full headline expected value |
-| P1-E02 | copied router-side two-sided selection; B(0)=0; g=1 dependence | `src/moe_private_response/selection.py` | data/derived/R63_COORDINATE_CLOSURE_SUMMARY.csv; data/derived/R63_EXPERT_SIDE_SELECTION.csv; data/derived/R63_MAIN_FIGURE_DATA.csv | PUBLICLY_REPRODUCIBLE selected frozen checks; YES: expected/OUTPUT_SHA256SUMS.txt |
-| P1-E03 | full expert-block tangent sector purity | `src/moe_private_response/selection.py` | data/derived/FULL_TANGENT_CELL_DIAGNOSTICS.csv; data/derived/FULL_TANGENT_Q3_EXISTING_SUMMARIES.csv | PROVENANCE_ONLY / NOT FULLY REPRODUCIBLE for complete claim; PARTIAL: no full headline expected value |
-| P1-E04 | expert-parent selection branch | `src/moe_private_response/selection.py` | data/derived/R63_EXPERT_SIDE_SELECTION.csv | PROVENANCE_ONLY / NOT FULLY REPRODUCIBLE for complete claim; PARTIAL: no full headline expected value |
-| P1-E05 | background-assisted signed mode conversion | `src/moe_private_response/mode_conversion.py` | data/derived/MODE_CONVERSION_COORDINATE0_FIGURE_DATA.csv; data/derived/MODE_CONVERSION_SIGNED_SUMMARY.csv; data/derived/MODE_CONVERSION_SIX_CELLS.csv | PUBLICLY_REPRODUCIBLE selected frozen checks; YES: expected/OUTPUT_SHA256SUMS.txt |
-| P1-E06 | measured mixed curvature and local threshold | `src/moe_private_response/formation.py` | data/derived/formation/spectrum.npz; data/derived/formation/spectrum_binding.json | PROVENANCE_ONLY / NOT FULLY REPRODUCIBLE for complete claim; PARTIAL: no full headline expected value |
-| P1-E07 | pretrained exact-discrete growth, anisotropy and mobility crossover | `src/moe_private_response/formation.py` | data/derived/formation/P2J_DISCRETE_KINETICS.csv; data/derived/formation/P2J_FROZEN_CELL_PREDICTIONS.csv | PUBLICLY_REPRODUCIBLE selected frozen checks; YES: expected/OUTPUT_SHA256SUMS.txt |
-| P1-E08 | separate high-mobility confirmation | `src/moe_private_response/formation.py` | data/derived/formation/confirmation.json | PUBLICLY_REPRODUCIBLE selected frozen checks; YES: expected/OUTPUT_SHA256SUMS.txt |
-| P1-E09 | six-control OLMoE response geometry and generalized contraction | `src/moe_private_response/native_tomography.py` | data/derived/TOMO_BOOTSTRAP_QUANTILES.csv; data/derived/TOMO_ENDPOINT_EIGENVALUES.csv; data/derived/TOMO_L15_5033_SECONDARY_GEOMETRY.csv | PUBLICLY_REPRODUCIBLE selected frozen checks; YES: expected/OUTPUT_SHA256SUMS.txt |
-| P1-E10 | persistent L15 leading mode, vector/principal angles, participation dimension | `src/moe_private_response/native_tomography.py` | data/derived/TOMO_ENDPOINT_EIGENVALUES.csv; data/derived/TOMO_L15_5033_SECONDARY_GEOMETRY.csv | PROVENANCE_ONLY / NOT FULLY REPRODUCIBLE for complete claim; PARTIAL: no full headline expected value |
-| P1-E11 | local/objective eigenspaces, second moment, unresolved signed mean | `src/moe_private_response/native_tomography.py` | data/derived/LOCAL_OBJECTIVE_ENDPOINT_72_RATIOS.csv; data/derived/LOCAL_OBJECTIVE_SIGNED_COHERENCE.csv; data/derived/TOMO_BOOTSTRAP_QUANTILES.csv | PROVENANCE_ONLY / NOT FULLY REPRODUCIBLE for complete claim; PARTIAL: no full headline expected value |
-| P1-E12 | router-intervention utility null; candidate rank and contrast D | `src/moe_private_response/q3.py` | data/derived/FULL_TANGENT_Q3_EXISTING_SUMMARIES.csv; data/derived/q3_expected.json; data/derived/q3_losses.npz | PUBLICLY_REPRODUCIBLE selected frozen checks; YES: expected/OUTPUT_SHA256SUMS.txt |
-| P1-E13 | ordered, sequence-mean and reference-mean full-state propagation | `src/moe_private_response/finite_time.py` | data/derived/FINITE_TIME_THREE_WAY_CASES.csv; data/derived/FINITE_TIME_THREE_WAY_SUMMARY.csv | PUBLICLY_REPRODUCIBLE selected frozen checks; YES: expected/OUTPUT_SHA256SUMS.txt |
-| P1-E14 | four-map matched sampling control and 1.024807 ratio | `src/moe_private_response/finite_time.py` | data/derived/FINITE_TIME_FOUR_MAP_SAMPLING_CONTROL.csv; data/derived/FINITE_TIME_STREAM_BOOTSTRAP_DRAWS.npz; data/derived/FINITE_TIME_STREAM_MEAN_AGGREGATES.csv | PROVENANCE_ONLY / NOT FULLY REPRODUCIBLE for complete claim; PARTIAL: no full headline expected value |
-| P1-E15 | sector/log hierarchy and F2=0.9975059; replication streams | `src/moe_private_response/finite_time.py` | data/derived/FINITE_TIME_CUMULANTS.csv; data/derived/FINITE_TIME_CUMULANT_AGGREGATES.csv; data/derived/FINITE_TIME_CUMULANT_PROJECTED_NORMS.csv | PUBLICLY_REPRODUCIBLE selected frozen checks; YES: expected/OUTPUT_SHA256SUMS.txt |
+| ID | Manuscript component | Clean implementation | External numerical input required for paper-level reconstruction |
+|---|---|---|---|
+| P1-E01 | native route-freeze response | `src/moe_private_response/native_tomography.py` | yes |
+| P1-E02 | copied router-side two-sided selection | `src/moe_private_response/selection.py` | yes |
+| P1-E03 | full expert-block tangent sector purity | `src/moe_private_response/selection.py` | yes |
+| P1-E04 | expert-parent selection branch | `src/moe_private_response/selection.py` | yes |
+| P1-E05 | background-assisted signed mode conversion | `src/moe_private_response/mode_conversion.py` | yes |
+| P1-E06 | measured mixed curvature and local threshold | `src/moe_private_response/formation.py` | yes |
+| P1-E07 | exact-discrete local growth and mobility crossover | `src/moe_private_response/formation.py` | yes |
+| P1-E08 | high-mobility confirmation | `src/moe_private_response/formation.py` | yes |
+| P1-E09 | native six-control response geometry | `src/moe_private_response/native_tomography.py` | yes |
+| P1-E10 | persistent leading response eigendirection | `src/moe_private_response/native_tomography.py` | yes |
+| P1-E11 | local/objective response and signed-control tests | `src/moe_private_response/native_tomography.py` | yes |
+| P1-E12 | router-intervention utility comparison | `src/moe_private_response/q3.py` | yes |
+| P1-E13 | ordered, sequence-mean, and reference-mean propagation | `src/moe_private_response/finite_time.py` | yes |
+| P1-E14 | matched finite-time sampling control | `src/moe_private_response/finite_time.py` | yes |
+| P1-E15 | cumulant/log hierarchy and replication streams | `src/moe_private_response/finite_time.py` | yes |
+
+The data-independent identities underlying these analyses are exercised by `tests/test_paper.py`. Full model-facing reruns require the additional private and third-party inputs described in `MODEL_FACING_RERUNS.md`.

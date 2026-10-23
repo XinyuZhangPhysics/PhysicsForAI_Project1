@@ -1,3 +1,18 @@
-# 2026-10-21
+# 2026-10-23 — source-only release
 
-Code and derived data accompanying "Expert-Private Response in Mixture-of-Experts". This release maps the existing frozen-output reconstruction to the manuscript and technical companion dated 2026-10-21. It includes clean operator implementations, compact numerical inputs, tests, expected hashes, experiment and result maps. It does not claim that the manuscript is published, that a DOI exists, or that public scripts perform full historical model-facing reruns. Model weights, corpus content, raw scientific captures and private execution code are excluded.
+The public tree has been converted from the earlier frozen-output reconstruction to a source-only code release for *Expert-Specific Response in Mixture-of-Experts*.
+
+Included:
+- sanitized historical experiment/analysis source snapshots;
+- clean mathematical/reference implementations;
+- configuration and environment files;
+- data-independent unit tests;
+- reconstruction scripts that accept an external data directory;
+- provenance and claim-to-code documentation.
+
+Not included:
+- project-owned experimental output arrays or frozen result tables;
+- expected-output hash files tied to those arrays;
+- model weights, corpus content, gradients, full-state captures, or private research records.
+
+Project-owned numerical outputs required for optional reconstruction may be provided by the author on reasonable request. This release does not claim to provide a turnkey end-to-end rerun of third-party model-facing experiments.

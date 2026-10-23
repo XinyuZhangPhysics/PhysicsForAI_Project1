@@ -1,23 +1,39 @@
-# PhysicsForAI Project 1 — 2026-10-21
+# PhysicsForAI Project 1 — source release
 
 Code accompanying *Expert-Specific Response in Mixture-of-Experts*.
 
-`experiments/` contains sanitized versions of actual retained experiment and analysis source snapshots. Every script is bound to the private archived source path and SHA256 in `PUBLIC_SOURCE_BINDINGS.tsv`; `PUBLIC_CODE_MANIFEST.tsv` summarizes experiment coverage. Path substitutions are reversible and were checked with Python AST equivalence; scientific algorithms were not rewritten. A few historical source records are candidates rather than execution-bound; their binding column states this explicitly.
+The current public release is **source-only**: it contains implementation code, configuration templates, tests, environment specifications, and provenance metadata, but no project-owned experimental output arrays, frozen result tables, or intermediate scientific captures.
 
-`reference_implementation/` preserves the previously prepared clean mathematics, compact derived data, tests and table/figure reconstruction. It is a later clean implementation and is not represented as historical execution source.
+`experiments/` contains sanitized versions of retained historical experiment and analysis source snapshots. Every script is bound to the corresponding archived source record in `PUBLIC_SOURCE_BINDINGS.tsv`; `PUBLIC_CODE_MANIFEST.tsv` summarizes coverage. Path substitutions were checked for code equivalence and do not alter the scientific algorithms.
 
-## Frozen numerical reconstruction
+`reference_implementation/` contains a clean implementation of the mathematical operators used in the paper, unit tests, and optional reconstruction scripts. The clean implementation is not represented as the historically executed end-to-end model pipeline.
+
+## Source-level verification
+
+Python 3.12 is the tested interpreter.
 
 ```sh
 python3.12 -m venv .venv
 source .venv/bin/activate
 python -m pip install -r requirements-analysis.txt
 python -m unittest discover -s reference_implementation/tests -v
+```
+
+These tests exercise the selection rules, mixed pushforward, local growth map, native response metric, utility action, and finite-time ordering algebra without requiring experimental output files.
+
+## Optional numerical reconstruction
+
+The reconstruction scripts are retained as source code, but their project-owned numerical inputs are not bundled in this repository. When an authorized data bundle is available, point the scripts to it with
+
+```sh
+export PROJECT1_DATA_DIR=/path/to/project1-derived-data
 python reference_implementation/reproduce/reproduce_paper.py
 ```
 
+The expected data schema and claim-to-code mapping are documented under `reference_implementation/docs/`. Project-owned numerical outputs may be provided by the author on reasonable request. Third-party model weights and corpora must be obtained from their original providers under their respective licenses.
+
 ## Historical model-facing code
 
-Use `PUBLIC_CODE_MANIFEST.tsv` to choose the experiment/run source group and `PUBLIC_SOURCE_BINDINGS.tsv` for individual scripts. Obtain pinned upstream weights/corpus under their licenses and the necessary private raw inputs. Recreate the historical relative input layout in a writable working directory as identified by the archived source and run seals. Copy `configs/paths.template.json` to a local configuration, fill each required path for that script, and set `PROJECT1_PATHS_FILE`. Use writable working copies for output paths. The private archive's per-experiment README and protocol/config seals identify entry points and the historical environment. Install `requirements-experiments.txt` in a separate environment matched to those seals. Do not import execution scripts casually: some execute at module top level. No model-facing experiment is automatically run by the numerical reconstruction commands above.
+Use `PUBLIC_CODE_MANIFEST.tsv` to choose an experiment/source group and `PUBLIC_SOURCE_BINDINGS.tsv` for individual scripts. Full model-facing reruns require the pinned upstream models/corpora and the retained private raw inputs and execution environments. Do not import historical execution scripts casually: some execute at module top level.
 
-Raw model weights, copyrighted text/token banks, gradients, full-state captures and private research notes are excluded. Project-owned code is MIT; project-owned derived data are CC BY 4.0; upstream assets keep their own licenses. Full model-facing reruns require those external/private assets. Data DOI pending. The 2026-10-21 release snapshot is the manuscript-content reference; PDF pixel identity is a separate build issue.
+No model weights, copyrighted corpus text/token banks, gradients, full-state captures, or private research notes are redistributed. Project-owned code is MIT licensed; upstream assets retain their own licenses.

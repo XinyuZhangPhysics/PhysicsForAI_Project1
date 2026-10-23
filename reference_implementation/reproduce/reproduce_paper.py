@@ -1,4 +1,4 @@
-"""Reconstruct declared paper outputs from frozen numerical sufficient inputs."""
+"""Reconstruct declared paper outputs from an external project-owned derived-data bundle."""
 from pathlib import Path
 import os,sys,csv,json,math,hashlib
 ROOT=Path(__file__).resolve().parents[1]
@@ -7,7 +7,13 @@ sys.path.insert(0,str(ROOT/'src'))
 import numpy as np
 from moe_private_response import formation,native_tomography as native,q3
 from verify_release import verify
-DATA=ROOT/'data/derived';OUT=ROOT/'results';OUT.mkdir(exist_ok=True)
+DATA=Path(os.environ.get('PROJECT1_DATA_DIR', str(ROOT/'data/derived'))).expanduser().resolve()
+if not DATA.exists():
+    raise FileNotFoundError(
+        "Paper-level reconstruction requires the external project-owned derived-data bundle. "
+        "Set PROJECT1_DATA_DIR to that directory."
+    )
+OUT=ROOT/'results';OUT.mkdir(exist_ok=True)
 def rows(n):return list(csv.DictReader((DATA/n).open()))
 def read(n):return json.loads((DATA/n).read_text())
 def close(a,b):
