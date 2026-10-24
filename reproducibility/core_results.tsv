@@ -7,21 +7,36 @@ copied_router_selection	S2_loglog_slope_PB_vs_g	2.94	dimensionless	seed-fixed-ef
 copied_full_tangent	max_off_sector_ratio	<1e-30	dimensionless	double-precision numerical zero for (P_A+P_M)/P_C
 copied_expert_selection	S1_g1_RMS	3.19e-5	response RMS	A-sector expert-side branch at parent-anisotropic background
 copied_expert_selection	S2_g1_RMS	2.97e-6	response RMS	A-sector expert-side branch at parent-anisotropic background
-formation	mu	0.017010007119361258	curvature	chosen equal to measured leading singular value rho_1 for threshold calibration
-formation	eta_X	11.757784614467004	per update	eta_X*mu=0.2
-formation	rate_prediction_relative_error	0.002023886	dimensionless	aggregate exact discrete-time growth/decay closure error on locality-valid cells
-formation	boundary_span_over_16x_mobility	3.44e-3	epsilon coordinate	measured onset variation across r_eta=0.25,1,4
+formation	mu	0.017010007119361258	curvature	historical calibration point equal to measured rho_1
+formation	eta_X	11.757784614467004	per update	eta_X*mu=0.2 at historical calibration
+formation	rate_prediction_relative_error	0.002023886	dimensionless	aggregate exact discrete-time growth/decay closure error on historical locality-valid cells
+formation	boundary_span_over_16x_mobility	3.44e-3	epsilon coordinate	historical onset variation across r_eta=0.25,1,4
+formation_E4a	max_relative_rate_error	0.00753477	dimensionless	maximum over f=0.5,2 and epsilon=+-0.08; damping-decoupling test
+formation_E4a	lambda_d_ratio_f0.5_over_f2	4.0	fold	physical predicted threshold moves fourfold when mu changes by factors 1/2 and 2
+formation_E4a	epsilon_hat_f0.5	-0.0011551202804083588	epsilon coordinate	static interpolation around shifted threshold
+formation_E4a	epsilon_hat_f2	-0.000787987079867325	epsilon coordinate	static interpolation around shifted threshold
+formation_E4b	Delta_lambda	0.17830234894232475	fraction of lambda_d(s=0)	threshold span across stationary backgrounds s=-1,0,+1
+formation_E4b	max_relative_rate_error	0.00481517948161041	dimensionless	maximum over four nonzero-background cells
+formation_E4b	epsilon_hat_s-1	-0.0008477910678705985	epsilon coordinate	static interpolation at s=-1
+formation_E4b	epsilon_hat_s+1	-0.0011151172280361027	epsilon coordinate	static interpolation at s=+1
 native_tomography	L7_local_trace_contraction_41B_to_5033B	2138.6165	fold	generalized spectral-trace contraction
 native_tomography	L15_local_trace_contraction_41B_to_5033B	166.2880	fold	generalized spectral-trace contraction
 native_tomography	L15_deff_41B	2.7043	dimensionless	participation-ratio effective dimension
 native_tomography	L15_deff_5033B	2.4424	dimensionless	participation-ratio effective dimension
 objective_response	L15_control1_sqrt_M2_5033B	5.33e-3	RMS signed derivative	objective-response second moment remains resolved
 objective_response	L15_control1_mu_nu_5033B	1.19e-4	mean signed derivative	95% CI [-3.79e-4,6.24e-4]
-utility	candidate_utility	-9.57e-5	NLL improvement baseline-minus-candidate	candidate versus baseline; 95% CI [-2.35e-4,4.36e-5]
-utility	candidate_minus_random	4.57e-6	NLL utility contrast	95% CI [-9.91e-5,1.11e-4], conditional on frozen 39-control ensemble
-utility	candidate_rank_nonbaseline	16/40	rank	candidate among non-baseline intervention arms
+objective_response_E2	T_CF	3.4262352079117116e-4	signed derivative	cross-fitted symmetric held-out derivative; 95% interval [-5.522633347007458e-4,9.070379389587289e-4]
+objective_response_E2	cos_H_vA_vB	-0.5177396274232766	dimensionless	metric cosine between independently fitted half-sample descent directions
+utility	candidate_utility_heldout	-9.569126580455389e-5	NLL improvement baseline-minus-candidate	held-out candidate versus baseline; 95% CI [-2.350222202949226e-4,4.357438634282765e-5]
+utility	candidate_minus_random_heldout	4.565080580027522e-6	NLL utility contrast	95% CI [-9.910408867994005e-5,1.112183566194956e-4], conditional on frozen 39-control ensemble
+utility	candidate_rank_heldout_nonbaseline	16/40	rank	candidate among non-baseline intervention arms
+utility_E3	candidate_minus_random_reserve	2.5790918763757276e-5	NLL utility contrast	reserve-only 95% interval [-5.330079795437522e-5,1.0579362327141668e-4]
+utility_E3	candidate_rank_reserve_nonbaseline	14/40	rank	independent reserve set; frozen 39-control ensemble
 finite_time	median_E_refmean_over_E_ord_analysis	88.76	fold	paired-case median over six analysis streams
 finite_time	median_E_seqmean_over_E_ord_analysis	1.025	fold	paired-case median over six analysis streams
 finite_time	E_refmean_over_E_ord_replication	146.10	fold	independent replication summary
 finite_time	E_seqmean_over_E_ord_replication	1.011	fold	independent replication summary
 finite_time	F2_median	0.9975059	fraction	second-order commutator reconstruction of the ordered-vs-sequence-mean residual only
+finite_time_E1	R_population_h32	0.8019399665523629	E_population/E_reference	cross-stream population operator improves the fixed reference at h=32
+finite_time_E1	R_population_h32_stability_interval	[0.751004290899911,0.9127933216859254]	whole-stream stability interval	20,000 whole-heldout-stream resamples
+finite_time_E1	R_oracle_h32	72.71037468351508	E_population/E_realized_sequence_mean	realized-sample conditioning remains much larger correction than population shift
