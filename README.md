@@ -2,7 +2,7 @@
 
 Code and project-owned derived reproducibility material accompanying *Expert-Specific Response in Mixture-of-Experts*.
 
-The public release contains implementation code, configuration templates, tests, environment specifications, provenance metadata, and a reader-facing reproducibility layer under `reproducibility/`. That directory publishes frozen headline numerical summaries, claim-to-source mappings, pinned model/data revisions, protocol/basis hashes, and the statistical-unit conventions used in the manuscript.
+The public release contains implementation code, configuration templates, tests, environment specifications, provenance metadata, and a reader-facing reproducibility layer under `reproducibility/`. That directory publishes frozen headline numerical summaries, claim-to-source mappings, pinned model/data revisions, protocol/basis hashes, statistical-unit conventions, and the final E1–E4 follow-up registry used by the integrated manuscript revision.
 
 `experiments/` contains sanitized versions of retained historical experiment and analysis source snapshots. Every script is bound to the corresponding archived source record in `PUBLIC_SOURCE_BINDINGS.tsv`; `PUBLIC_CODE_MANIFEST.tsv` summarizes coverage. Path substitutions were checked for code equivalence and do not alter the scientific algorithms.
 
@@ -25,7 +25,9 @@ These tests exercise the selection rules, mixed pushforward, local growth map, n
 
 See `reproducibility/README.md`. The public derived layer is intentionally limited to project-owned summaries and provenance that can be redistributed without copying third-party assets. It includes the headline values needed to audit the paper's main quantitative claims and the mapping from each analysis family to its retained public source group.
 
-Large per-document arrays, model-facing caches, gradients, full-state captures, copyrighted corpus text/token banks, and third-party model weights are not redistributed here. Where a larger project-owned derived-data bundle is required for an end-to-end numerical reconstruction, it may be obtained from the author on reasonable request. Third-party models and datasets must be obtained from their original providers under their respective licenses.
+The 2026-10-24 integrated revision adds the frozen E1–E4 follow-up record. The new tests separate population operator shift from realized-sample conditioning (E1), cross-fitted signed descent from second-moment visibility (E2), held-out from independent reserve utility (E3), and the calibrated formation law from damping and stationary-background deformations (E4a/E4b). See `reproducibility/postpaper_E1_E4.tsv` and `reproducibility/postpaper_protocols.tsv`.
+
+Large per-document arrays, model-facing caches, gradients, full-state captures, copyrighted corpus text/token banks, and third-party model weights are not redistributed here. Exact larger post-paper result bundles and execution-provenance records are retained in the versioned scientific archive and may be obtained from the author on reasonable request. Third-party models and datasets must be obtained from their original providers under their respective licenses.
 
 ## Optional numerical reconstruction
 
