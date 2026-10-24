@@ -27,7 +27,7 @@ See `reproducibility/README.md`. The public derived layer is intentionally limit
 
 The 2026-10-24 integrated revision adds the frozen E1–E4 follow-up record. The new tests separate population operator shift from realized-sample conditioning (E1), cross-fitted signed descent from second-moment visibility (E2), held-out from independent reserve utility (E3), and the calibrated formation law from damping and stationary-background deformations (E4a/E4b). See `reproducibility/postpaper_E1_E4.tsv` and `reproducibility/postpaper_protocols.tsv`.
 
-Large per-document arrays, model-facing caches, gradients, full-state captures, copyrighted corpus text/token banks, and third-party model weights are not redistributed here. Exact larger post-paper result bundles and execution-provenance records are retained in the versioned scientific archive and may be obtained from the author on reasonable request. Third-party models and datasets must be obtained from their original providers under their respective licenses.
+Large per-document arrays, model-facing caches, gradients, full-state captures, copyrighted corpus text/token banks, and third-party model weights are not redistributed here. Exact larger post-paper result bundles and execution-provenance records are retained in the versioned scientific archive or associated project scientific storage and may be obtained from the author on reasonable request. Third-party models and datasets must be obtained from their original providers under their respective licenses.
 
 ## Optional numerical reconstruction
 
