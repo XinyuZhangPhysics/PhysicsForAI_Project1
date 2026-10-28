@@ -8,7 +8,6 @@ Retained public source groups:
 4. `experiments/modeconversion`
 5. `experiments/formation`
 6. `experiments/finitetime`
+7. `experiments/genericlocal/GENERIC_LOCAL_PUBLIC_SYNC_READY.zip` — recovered exact generic-local historical source/provenance with path-only public sanitization.
 
-The generic non-mode-aligned local-dynamics analysis is active in the manuscript, but its exact historically executed model-facing source remains pending public recovery.
-
-Fixed-routing OLMoE, trained sparse-MoE tomography/objective-response, and utility experiments are outside the active manuscript and are not part of this registry.
+Fixed-routing OLMoE, trained sparse-MoE tomography/objective-response, and utility experiments were removed from the active manuscript and remain absent.

@@ -1,0 +1,14 @@
+{
+  "status": "DESCRIPTIVE_POSTHOC_AUDIT",
+  "source_file": "generic_local_dynamics_long.csv",
+  "source_sha256": "96b94a5dd43b92935400e03049d179b9801be06eceec2581536b24f21c971a34",
+  "selection": "all 32 prespecified arms and all 28 nonzero updates; no filtering",
+  "states": 896,
+  "definition": "e4 = ||P4[(z_n-z_0)-(z_lin_n-z_0)]||_2 / ||P4(z_lin_n-z_0)||_2, P4 = leading four singular-pair two-block subspaces",
+  "median": 9.935217512024226e-07,
+  "max": 2.9193514410033823e-05,
+  "q90": 6.305118376092862e-06,
+  "q95": 1.188609094617688e-05,
+  "q99": 2.2523063353778953e-05,
+  "scientific_role": "supporting descriptive diagnostic only; not a preregistered success gate"
+}

@@ -1,9 +1,9 @@
 # Model-facing rerun boundary
 
-The public modules implement retained mathematical operators, not turnkey historical model-facing pipelines. Full reruns require frozen banks, seeds, protocol seals, pinned upstream revisions, numerical precision settings, and retained scientific inputs.
+The public clean modules implement retained mathematical operators; they are not turnkey historical model-facing pipelines. Full reruns require frozen scientific inputs, seeds/protocol seals, pinned upstream revisions, precision settings, and the applicable historical execution environment.
 
-Formation/local-dynamics analyses use the copied dense SmolLM2-135M origin and measured mixed curvature. Finite-time maps are batch-conditioned at that frozen copied origin. Selection and mode-conversion experiments use their frozen copied-state protocols.
+For the 2026-10-27 generic non-mode-aligned local-dynamics experiment, the exact executed model-facing source has now been recovered. Its seven Python files are byte-identical to the historical package; only two path strings in the launcher/configuration were sanitized for publication. The public archive is `experiments/genericlocal/GENERIC_LOCAL_PUBLIC_SYNC_READY.zip`.
 
-The 2026-10-27 generic non-mode-aligned local-dynamics experiment has a sealed numerical record, but its exact historically executed model-facing source has not yet been recovered for public release. No reconstructed execution code is represented as original.
+That sanitized partial tree cannot pass the original full-package verifier by itself because the sealed run depended on private F0/operator inputs and the original package manifest/layout. This is an explicit dependency boundary, not a missing-source ambiguity.
 
-Removed fixed-routing OLMoE, trained sparse-MoE tomography/objective-response, and utility programs have been withdrawn from the current branch.
+Removed fixed-routing OLMoE, trained sparse-MoE tomography/objective-response, and utility programs remain withdrawn.

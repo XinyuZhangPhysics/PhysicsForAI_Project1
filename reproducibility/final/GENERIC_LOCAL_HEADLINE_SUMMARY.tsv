@@ -1,0 +1,4 @@
+quantity	value	scope	source	source_sha256
+full_state_max_normalized_error	1.4925042386344722e-06	all 896 nonzero saved states; all 32 prespecified arms	generic_local_dynamics_long.csv	96b94a5dd43b92935400e03049d179b9801be06eceec2581536b24f21c971a34
+min_valid_increment_cosine	0.99999999999865741	all valid nonzero saved states; all 32 prespecified arms	generic_local_dynamics_long.csv	96b94a5dd43b92935400e03049d179b9801be06eceec2581536b24f21c971a34
+max_abs_central_state_discrepancy	1.6706625632978166e-09	all 896 nonzero saved states; all 32 prespecified arms	generic_local_dynamics_long.csv	96b94a5dd43b92935400e03049d179b9801be06eceec2581536b24f21c971a34

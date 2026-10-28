@@ -1,13 +1,12 @@
-# 2026-10-28 — active-manuscript scope withdrawal
+# 2026-10-28 — final active-manuscript synchronization
 
-Withdrawn from the current branch because the corresponding experiments were removed from the active manuscript:
+This revision completes the current-branch public synchronization to *Expert-Specific Response in Mixture-of-Experts*.
 
-- fixed-routing OLMoE control;
-- trained sparse-MoE native response/tomography;
-- objective-visibility / cross-fitted signed-descent E2;
-- held-out/reserve utility E3;
-- clean-reference modules, tests, configs, source bindings, numerical summaries, and protocol metadata that existed only for those lines.
+Added:
+- recovered exact generic-local executed source/provenance in a public-safe archive;
+- compact generic-local headline, leading-four, diagonal-ablation, and spectrum-reconstruction evidence;
+- P2J/P2L growth-figure identity records;
+- stationary-background common-absolute-lambda evidence and source hashes;
+- updated claim/source, result, asset, and statistical-design registries.
 
-Retained: copied-state selection/full-tangent validation, expert-side selection, background mode conversion, duplication-state formation/local dynamics, finite-time propagation, and E1/E4a/E4b records.
-
-Generic-local executed-source recovery remains an open provenance item; no reconstruction is represented as the historical source.
+The four previously withdrawn experiment families (routefreeze, nativeolmoe, objectivevisibility, utility) remain absent. No scientific experiment was rerun and no frozen result was changed.

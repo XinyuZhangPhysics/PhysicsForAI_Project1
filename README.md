@@ -2,11 +2,21 @@
 
 Code and project-owned reproducibility material accompanying *Expert-Specific Response in Mixture-of-Experts*.
 
-The current public tree is scoped to analyses retained in the active manuscript: copied-state sector selection, full expert-block tangent validation, expert-side selection, background-dependent mode conversion, duplication-state local instability/dynamics, and finite-time batch-conditioned propagation. Experimental programs removed from the manuscript are not retained in the current branch.
+The 2026-10-28 public tree is synchronized to the active manuscript. It contains the retained copied-state sector-selection, full-tangent, expert-side, background-conversion, duplication-state local-dynamics, and finite-time analysis families. The fixed-routing OLMoE, trained sparse-MoE tomography/objective-response, and utility programs removed from the manuscript remain withdrawn from the current branch.
 
-`experiments/` contains sanitized historical execution/analysis source only for retained manuscript families. `PUBLIC_CODE_MANIFEST.tsv` summarizes coverage and `PUBLIC_SOURCE_BINDINGS.tsv` binds individual public files to archived source records. `reference_implementation/` contains clean mathematical implementations and data-independent tests for retained operators.
+## Generic non-mode-aligned local dynamics
+
+The historically executed source for the 2026-10-27 generic-local experiment has been recovered and cryptographically bound to its archived execution record. The public-safe source/provenance handoff is:
+
+`experiments/genericlocal/GENERIC_LOCAL_PUBLIC_SYNC_READY.zip`
+
+Its seven Python files are byte-identical to the recovered historical package. Only one launcher path and one preferred-model path string were sanitized; the archive records original/public hashes and the reversible substitutions. The public archive is source/provenance only: model weights, corpus text, F0/input arrays, binary results, caches, credentials, and private paths are excluded.
+
+Compact manuscript-facing evidence is under `reproducibility/final/`. Full large scientific tables remain in the retained scientific archive and are bound by SHA-256 in `PUBLIC_EVIDENCE_BINDINGS.tsv`.
 
 ## Verification
+
+Python 3.12 is the tested interpreter for the clean operator checks:
 
 ```sh
 python3.12 -m venv .venv
@@ -15,10 +25,10 @@ python -m pip install -r requirements-analysis.txt
 python -m unittest discover -s reference_implementation/tests -v
 ```
 
-The retained post-baseline records are E1 and E4a/E4b. E2/E3 and the trained sparse-MoE fixed-routing/response/utility program were removed from the active manuscript and have been withdrawn from the current public branch.
+The clean tests cover expert-index selection, signed mixed pushforward, mixed-Hessian adjointness/exact-discrete local growth, and finite-time ordering/cumulant identities. The sanitized generic-local historical package is not a standalone rerun bundle because its original sealed package also requires retained private inputs and the pinned upstream model.
 
-## Generic-local provenance status
+## Evidence identity
 
-The active manuscript also contains the 2026-10-27 generic non-mode-aligned local-dynamics test. Its sealed numerical outputs and manifest are retained in the scientific archive. The exact historically executed model-facing source has not yet been recovered in the public-release audit, so no reconstructed source is presented as the historical execution source.
+The growth figure preserves the 11-cell P2J primary aggregate and the separately frozen P2L confirmation; P2L is never substituted into the primary aggregate. The stationary-background common-absolute-`lambda` record explicitly labels the nonzero-background values at `lambda=lambda_c(0)` as theory-only references, not measured trajectories. The diagonal-only comparison is explicitly a leading-four projected-subspace ablation, not a full-state diagonal-only reconstruction.
 
-Large model-facing caches, gradients, full-state captures, copyrighted corpus text/token banks, and third-party model weights are not redistributed. Full model-facing reruns require pinned upstream models/datasets and retained scientific inputs. Project-owned code is MIT licensed; upstream assets retain their own licenses.
+Project-owned code/documentation are MIT licensed; upstream assets retain their original licenses.

@@ -24,3 +24,11 @@ finite_time	F2_median	0.9975059	fraction	second-order commutator reconstruction 
 finite_time_E1	R_population_h32	0.8019399665523629	E_population/E_reference	cross-stream population operator improves the fixed reference at h=32
 finite_time_E1	R_population_h32_stability_interval	[0.751004290899911,0.9127933216859254]	whole-stream stability interval	20,000 whole-heldout-stream resamples
 finite_time_E1	R_oracle_h32	72.71037468351508	E_population/E_realized_sequence_mean	realized-sample conditioning remains much larger correction than population shift
+generic_local	full_state_max_normalized_error	1.4925042386344722e-6	normalized increment error	maximum over all 896 nonzero states and all 32 prespecified arms
+generic_local	min_valid_increment_cosine	0.9999999999986574	dimensionless	minimum valid observed/predicted increment cosine over the frozen generic-state run
+generic_local	max_abs_central_state_discrepancy	1.6706625632978166e-9	central-state norm	maximum absolute central-state prediction discrepancy
+generic_local_leading4	full_mixed_median_error	9.935218590268794e-7	projected increment error	leading-four singular-pair projected-subspace audit over 896 nonzero states
+generic_local_leading4	full_mixed_max_error	2.9193492030501205e-5	projected increment error	leading-four singular-pair projected-subspace audit
+generic_local_diagonal_ablation	diagonal_only_median_error	0.3233738859263083	projected increment error	leading-four projected-subspace diagonal-restoring-only baseline
+generic_local_diagonal_ablation	diagonal_only_cosine_median	0.9524794314325913	dimensionless	projected observed/diagonal-only increment cosine median
+generic_local_spectrum	rho1_over_rho2	2.0464044491673996	dimensionless	post-hoc deterministic recurrence reconstruction; original spectrum NPZ remains authoritative
