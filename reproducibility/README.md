@@ -17,6 +17,6 @@ Final synchronization additions are under `final/`:
 - stationary-background common-absolute-`lambda` figure data;
 - SHA bindings for larger frozen records not redistributed in GitHub.
 
-The exact generic-local executed source/provenance is published separately at `experiments/genericlocal/GENERIC_LOCAL_PUBLIC_SYNC_READY.zip`. It is a source/provenance handoff rather than a turnkey rerun package.
+The exact generic-local model-facing runner, local scientific dependency, and public protocol are published under `experiments/genericlocal/`. The runner is split into three exact text chunks; their concatenation is hash-bound to the recovered historical source.
 
 Removed fixed-routing OLMoE, trained sparse-MoE tomography/objective-response, and utility experiments remain outside the active public evidence layer.

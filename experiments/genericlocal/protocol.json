@@ -1,0 +1,30 @@
+{
+  "protocol_id": "Project1_GenericLocalDynamics_PRX_v1_2026-10-27",
+  "model_repo": "HuggingFaceTB/SmolLM2-135M",
+  "model_commit": "28e66ca6931668447a3bac213f23d990ad3b0e2b",
+  "preferred_model_path": "/PATH/TO/MODELS/SmolLM2-135M/28e66ca6931668447a3bac213f23d990ad3b0e2b",
+  "layer_zero_based": 20,
+  "mu": 0.017010007119361258,
+  "eta_X": 11.757784614467004,
+  "r_eta": 1.0,
+  "epsilon": {"stable": -0.08, "unstable": 0.08},
+  "horizon": 28,
+  "direction_seeds": [2026102701, 2026102702, 2026102703, 2026102704, 2026102705, 2026102706, 2026102707, 2026102708],
+  "direction_rng": "numpy.random.Generator(PCG64)",
+  "a0_aligned_raw": 0.017926377843768725,
+  "amplitudes": {"large": "A_align", "small": "A_align/2"},
+  "delta_rule": "1e-12*A_large",
+  "operator_representation": "matrix-free exact F0 factorization from frozen h, phi, g with H=-C and C actions matching archived P2H source",
+  "F0_file_sha256": "90b69399e16f424c5524fdbfe7f788e2c0bbef9731ac7cddb3d45efac7d2b16b",
+  "F0_array_sha256": "b235df753d6f13ecee9f116bd0ee58714646eab454e807786542591f8ad8757a",
+  "spectrum_file_sha256": "3e97497498767484bb010098f3ef2ce25718d8bd0f4ba204f09ae4f8e866f5d1",
+  "archived_reference_runtime": {
+    "full_F0_gradient_evaluations": 912,
+    "elapsed_seconds": 2641.398308667005,
+    "backend": "CPU",
+    "threads": 8,
+    "torch": "2.14.0",
+    "transformers": "5.17.0",
+    "numpy": "2.5.3"
+  }
+}

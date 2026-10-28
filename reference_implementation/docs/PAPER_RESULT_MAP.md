@@ -8,7 +8,7 @@
 | P1-E04 | background-assisted signed mode conversion | `src/moe_private_response/mode_conversion.py` |
 | P1-E05 | mixed curvature, local threshold, exact-discrete growth | `src/moe_private_response/formation.py` |
 | P1-E06 | stationary-background threshold/rate shift | `reproducibility/final/background_absolute_lambda_data_with_provenance.csv` |
-| P1-E07 | generic non-mode-aligned frozen-map propagation | `experiments/genericlocal/GENERIC_LOCAL_PUBLIC_SYNC_READY.zip` + `reproducibility/final/GENERIC_LOCAL_HEADLINE_SUMMARY.tsv` |
+| P1-E07 | generic non-mode-aligned frozen-map propagation | `experiments/genericlocal/` + `reproducibility/final/GENERIC_LOCAL_HEADLINE_SUMMARY.tsv` |
 | P1-E08 | leading-four mixed-block ablation | `reproducibility/final/analyze_diag_baseline.py` + summary JSON |
 | P1-E09 | ordered/sequence-mean/reference-mean finite-time propagation | `src/moe_private_response/finite_time.py` |
 

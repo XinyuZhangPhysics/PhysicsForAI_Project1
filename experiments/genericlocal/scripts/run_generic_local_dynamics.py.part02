@@ -1,0 +1,104 @@
+    h,phi,g=capture_operator(model,dense,ids); op=FrozenCOperator(h,phi,g)
+    rv=norm_t(op.c(v[:,:,0])-s[0]*u[:,0])/float(s[0]); ru=norm_t(op.ct(u[:,0])-s[0]*v[:,:,0])/float(s[0])
+    if max(rv,ru)>5e-5: raise RuntimeError(f'archived operator smoke mismatch: c(v)={rv}, ct(u)={ru}')
+    # Verify the mode-aligned 2D discrete map, including sign convention, on both sides.
+    aligned_map_smoke=[]
+    for side,eps in [('stable',-0.08),('unstable',0.08)]:
+        lam=MU*(1-eps); rho=float(s[0])
+        A2=np.array([[-ETA_X*MU, ETA_X*rho],[ETA_U*rho,-ETA_U*lam]],dtype=np.float64)
+        vals,vecs=np.linalg.eig(A2); k=int(np.argmax(vals.real)); sigma=float(vals[k].real); e=vecs[:,k].real; e=e/np.linalg.norm(e)
+        z=(float(P['a0_aligned_raw'])*e[0]*v[:,:,0],float(P['a0_aligned_raw'])*e[1]*u[:,0])
+        z1=linear_step(z,op,lam)
+        expected=((1+sigma)*z[0],(1+sigma)*z[1])
+        er=combined_norm(z1[0]-expected[0],z1[1]-expected[1])/(combined_norm(expected[0],expected[1])+1e-30)
+        if er>5e-5: raise RuntimeError(f'aligned map smoke mismatch {side}: {er}')
+        aligned_map_smoke.append(dict(side=side,epsilon=eps,sigma_plus=sigma,gamma_disc=math.log(abs(1+sigma)),e_M=float(e[0]),e_U=float(e[1]),relative_map_error=er))
+    # Verify all archived top-four singular pairs to diagnose exact model/data binding.
+    pair_res=[]
+    for k in range(4):
+        pair_res.append(dict(k=k+1,c_v=norm_t(op.c(v[:,:,k])-s[k]*u[:,k])/float(s[k]),ct_u=norm_t(op.ct(u[:,k])-s[k]*v[:,:,k])/float(s[k])))
+    RUN_STATE['stage']='OPERATOR_SMOKE_PASS'
+    # Save exact matrix-free factorization before trajectories.
+    Aalign=aligned_central_amplitude(float(P['a0_aligned_raw']),MU); amps={'large':Aalign,'small':Aalign/2}; delta=1e-12*Aalign
+    directions=[]
+    for seed in P['direction_seeds']:
+        Xd,Ud=make_generic_direction(int(seed),(576,1536),(576,),MU)
+        directions.append((Xd.astype(np.float32),Ud.astype(np.float32)))
+    np.savez_compressed(out/'generic_local_dynamics_operator.npz',h=h.numpy(),phi=phi.numpy(),g=g.numpy(),s=s.numpy(),u=u.numpy(),v=v.numpy(),direction_seeds=np.asarray(P['direction_seeds'],dtype=np.int64),X_directions=np.stack([x for x,_ in directions]),U_directions=np.stack([y for _,y in directions]),mu=np.asarray(MU),eta_X=np.asarray(ETA_X),eta_U=np.asarray(ETA_U),A_large=np.asarray(Aalign),A_small=np.asarray(Aalign/2))
+    smoke=dict(status='PASS',model_dir=str(model_dir),model_commit=P['model_commit'],F0_file_sha256=sha256_file(F0_PATH),F0_array_sha256=array_sha256(ids.numpy()),spectrum_file_sha256=sha256_file(SPEC_PATH),pair_residuals=pair_res,aligned_map_smoke=aligned_map_smoke,operator_factorization_sha256=sha256_file(out/'generic_local_dynamics_operator.npz'),eta_X_mu=ETA_X*MU,A_align=Aalign,delta=delta)
+    jwrite(out/'SMOKE_TEST.json',smoke); print('SMOKE_TEST PASS',json.dumps(smoke,indent=2),flush=True)
+    if args.smoke_only: return
+    RUN_STATE['stage']='GENERIC_TRAJECTORIES'
+    moe=PrivateMoE(dense); model.model.layers[20].mlp=moe
+    if [n for n,p in model.named_parameters() if p.requires_grad]!=['model.layers.20.mlp.M','model.layers.20.mlp.U']: raise RuntimeError('trainable parameter mismatch')
+    hidden=[prefix_one(model,row) for row in ids]
+    rows=[]; failures=[]; gradient_evals=0
+    for side,eps in [('stable',-0.08),('unstable',0.08)]:
+        lam=MU*(1-eps)
+        for di,(Xd,Ud) in enumerate(directions,1):
+            for aname,A in [('small',amps['small']),('large',amps['large'])]:
+                X0=torch.from_numpy((A*Xd).astype(np.float32)); U0=torch.from_numpy((A*Ud).astype(np.float32)); z0=(X0,U0); state=(X0.clone(),U0.clone()); pred=(X0.clone(),U0.clone())
+                # Diagnostic-only coupling activity. These quantities never gate, filter, reorder, or exclude a direction.
+                CX0=op.c(X0); CTU0=op.ct(U0)
+                diag0=combined_norm(-ETA_X*MU*X0,-ETA_U*lam*U0)
+                offdiag0=combined_norm(ETA_X*CTU0,ETA_U*CX0)
+                coupling_diag=dict(coupling_CX0_raw=norm_t(CX0),coupling_CT_U0_raw=norm_t(CTU0),first_step_diag_raw=diag0,first_step_offdiag_raw=offdiag0,coupling_activity_ratio=offdiag0/(diag0+delta),coupling_diagnostic_only=True)
+                # Both sides intentionally share these exact initial bytes for each direction/amplitude.
+                for n in range(H+1):
+                    rec=dict(side=side,epsilon=eps,lambda_=lam,direction=di,seed=int(P['direction_seeds'][di-1]),amplitude=aname,A=float(A),step=n); rec.update(coupling_diag)
+                    met=project_metrics(state,pred,z0,v,u,delta); rec.update({k:finite_or_none(val) for k,val in met.items()})
+                    cd=cubic_diag(state[1],h,delta); rec.update(cd); rec['F0_NLL_before_update']=''
+                    if n<H:
+                        try:
+                            gm,gu,nll=bank_gradient(model,moe,ids,hidden,state,lam); gradient_evals+=1; RUN_STATE['gradient_evaluations']=gradient_evals; rec['F0_NLL_before_update']=nll
+                            if not torch.isfinite(gm).all() or not torch.isfinite(gu).all(): raise FloatingPointError('nonfinite gradient')
+                            state=((state[0].double()-ETA_X*gm).float(),(state[1].double()-ETA_U*gu).float())
+                            pred=linear_step(pred,op,lam)
+                        except Exception as e:
+                            failures.append(dict(side=side,direction=di,amplitude=aname,step=n,error_type=type(e).__name__,error=str(e))); RUN_STATE['failures']=failures; rows.append(rec); RUN_STATE['rows']=rows; raise
+                    rows.append(rec); RUN_STATE['rows']=rows
+                print(f'COMPLETE {side} direction={di} amp={aname} elapsed={time.monotonic()-t0:.1f}s',flush=True)
+    RUN_STATE['stage']='WRITE_RESULTS'
+    write_csv(out/'generic_local_dynamics_long.csv',rows)
+    endpoints=[r for r in rows if int(r['step'])==H]; write_csv(out/'generic_local_dynamics_endpoints.csv',endpoints)
+    jwrite(out/'generic_local_dynamics_summary.json',summarize(rows))
+    plot_pdf(out/'Fig_generic_local_dynamics_diagnostic.pdf',endpoints)
+    outputs=['generic_local_dynamics_long.csv','generic_local_dynamics_endpoints.csv','generic_local_dynamics_operator.npz','generic_local_dynamics_summary.json','Fig_generic_local_dynamics_diagnostic.pdf','SMOKE_TEST.json']
+    manifest=dict(status='COMPLETE',execution_stage='COMPLETE',scientific_protocol_unchanged=True,diagnostic_only_fields=['coupling_CX0_raw','coupling_CT_U0_raw','first_step_diag_raw','first_step_offdiag_raw','coupling_activity_ratio'],protocol_id=P['protocol_id'],model_dir=str(model_dir),model_commit=P['model_commit'],layer_zero_based=20,F0_shape=list(ids.shape),mu=MU,eta_X=ETA_X,eta_U=ETA_U,eta_X_mu=ETA_X*MU,epsilon=P['epsilon'],horizon=H,seeds=P['direction_seeds'],direction_rng=P['direction_rng'],amplitudes=amps,delta=delta,gradient_evaluations=gradient_evals,expected_gradient_evaluations=2*8*2*H,pair_residuals=pair_res,failures=failures,elapsed_seconds=time.monotonic()-t0,runtime=dict(python=sys.executable,python_version=sys.version,platform=platform.platform(),torch=torch.__version__,transformers=__import__('transformers').__version__,numpy=np.__version__,threads=8,backend='CPU',deterministic=True),input_sha256={'F0.npy':sha256_file(F0_PATH),'P2H_CROSS_HESSIAN_SPECTRUM.npz':sha256_file(SPEC_PATH),'P2J_FROZEN_CELL_PREDICTIONS.csv':sha256_file(ROOT/'inputs/P2J_FROZEN_CELL_PREDICTIONS.csv'),'P2J_TRAINING_COMPLETION.json':sha256_file(ROOT/'inputs/P2J_TRAINING_COMPLETION.json'),'P2J_AMPLITUDE_GATE.csv':sha256_file(ROOT/'inputs/P2J_AMPLITUDE_GATE.csv')},output_sha256={x:sha256_file(out/x) for x in outputs})
+    jwrite(out/'generic_local_dynamics_manifest.json',manifest)
+    print('GENERIC_LOCAL_DYNAMICS COMPLETE',flush=True)
+
+def write_stop_manifest(exc):
+    out=Path(RUN_STATE['output']) if RUN_STATE.get('output') else ROOT/'results/generic_local_dynamics_2026-10-27'
+    out.mkdir(parents=True,exist_ok=True)
+    rows=RUN_STATE.get('rows') or []
+    partial=None
+    if rows:
+        partial=out/'generic_local_dynamics_partial.csv'
+        try: write_csv(partial,rows)
+        except Exception: partial=None
+    manifest={
+        'status':'STOP',
+        'protocol_id':P.get('protocol_id'),
+        'scientific_protocol_unchanged':True,
+        'execution_stage':RUN_STATE.get('stage'),
+        'error_type':type(exc).__name__,
+        'error':str(exc),
+        'gradient_evaluations':int(RUN_STATE.get('gradient_evaluations',0)),
+        'expected_gradient_evaluations':2*8*2*H,
+        'failures':RUN_STATE.get('failures',[]),
+        'model_dir':RUN_STATE.get('model_dir'),
+        'started_utc':RUN_STATE.get('started_utc'),
+        'stopped_utc':__import__('datetime').datetime.now(__import__('datetime').timezone.utc).isoformat(),
+        'partial_output_sha256': ({partial.name:sha256_file(partial)} if partial and partial.exists() else {}),
+        'runtime':{'python':sys.executable,'python_version':sys.version,'platform':platform.platform(),'torch':torch.__version__,'transformers':__import__('transformers').__version__,'numpy':np.__version__},
+    }
+    jwrite(out/'generic_local_dynamics_manifest.json',manifest)
+
+if __name__=='__main__':
+    try: main()
+    except Exception as e:
+        traceback.print_exc()
+        try: write_stop_manifest(e)
+        except Exception: traceback.print_exc()
+        sys.exit(1)

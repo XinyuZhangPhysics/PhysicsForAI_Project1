@@ -3,7 +3,7 @@
 This revision completes the current-branch public synchronization to *Expert-Specific Response in Mixture-of-Experts*.
 
 Added:
-- recovered exact generic-local executed source/provenance in a public-safe archive;
+- recovered exact generic-local model-facing source/provenance, with the runner stored as exact concatenable text chunks;
 - compact generic-local headline, leading-four, diagonal-ablation, and spectrum-reconstruction evidence;
 - P2J/P2L growth-figure identity records;
 - stationary-background common-absolute-lambda evidence and source hashes;

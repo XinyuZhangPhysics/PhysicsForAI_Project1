@@ -8,6 +8,6 @@ Retained public source groups:
 4. `experiments/modeconversion`
 5. `experiments/formation`
 6. `experiments/finitetime`
-7. `experiments/genericlocal/GENERIC_LOCAL_PUBLIC_SYNC_READY.zip` — recovered exact generic-local historical source/provenance with path-only public sanitization.
+7. `experiments/genericlocal/` — recovered generic-local historical model-facing runner, local dependency, and protocol; runner stored in three exact concatenable text chunks.
 
 Fixed-routing OLMoE, trained sparse-MoE tomography/objective-response, and utility experiments were removed from the active manuscript and remain absent.
