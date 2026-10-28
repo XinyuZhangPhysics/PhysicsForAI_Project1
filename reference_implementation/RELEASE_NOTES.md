@@ -1,18 +1,13 @@
-# 2026-10-23 — source-only release
+# 2026-10-28 — active-manuscript scope withdrawal
 
-The public tree has been converted from the earlier frozen-output reconstruction to a source-only code release for *Expert-Specific Response in Mixture-of-Experts*.
+Withdrawn from the current branch because the corresponding experiments were removed from the active manuscript:
 
-Included:
-- sanitized historical experiment/analysis source snapshots;
-- clean mathematical/reference implementations;
-- configuration and environment files;
-- data-independent unit tests;
-- reconstruction scripts that accept an external data directory;
-- provenance and claim-to-code documentation.
+- fixed-routing OLMoE control;
+- trained sparse-MoE native response/tomography;
+- objective-visibility / cross-fitted signed-descent E2;
+- held-out/reserve utility E3;
+- clean-reference modules, tests, configs, source bindings, numerical summaries, and protocol metadata that existed only for those lines.
 
-Not included:
-- project-owned experimental output arrays or frozen result tables;
-- expected-output hash files tied to those arrays;
-- model weights, corpus content, gradients, full-state captures, or private research records.
+Retained: copied-state selection/full-tangent validation, expert-side selection, background mode conversion, duplication-state formation/local dynamics, finite-time propagation, and E1/E4a/E4b records.
 
-Project-owned numerical outputs required for optional reconstruction may be provided by the author on reasonable request. This release does not claim to provide a turnkey end-to-end rerun of third-party model-facing experiments.
+Generic-local executed-source recovery remains an open provenance item; no reconstruction is represented as the historical source.

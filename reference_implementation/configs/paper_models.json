@@ -1,13 +1,4 @@
 {
-  "q3": {
-    "repository": "allenai/OLMoE-1B-7B-0924",
-    "revision": "e5642d2d7b37c138775ddf59f685f91788e173b7",
-    "layers": [
-      7,
-      15
-    ],
-    "action": "64 FP32 logits bias before Top-k; two scalar amplitudes"
-  },
   "formation": {
     "repository": "HuggingFaceTB/SmolLM2-135M",
     "revision": "28e66ca6931668447a3bac213f23d990ad3b0e2b",
@@ -16,39 +7,9 @@
   "selection": {
     "S1": "EleutherAI/pythia-70m, layer 3",
     "S2": "HuggingFaceTB/SmolLM2-135M, layer 19",
-    "revisions": "historical selection revisions must be obtained from retained seals; not inferred"
-  },
-  "native": {
-    "repository": "allenai/OLMoE-1B-7B-0924",
-    "checkpoints": [
-      {
-        "tokens_B": 41,
-        "revision": "e5642d2d7b37c138775ddf59f685f91788e173b7"
-      },
-      {
-        "tokens_B": 146,
-        "revision": "608f483a04570e8dca8d7be3cc0da6ee54dce350"
-      },
-      {
-        "tokens_B": 503,
-        "revision": "cecae3d36575569db9b2ccf1eef095af7820f22a"
-      },
-      {
-        "tokens_B": 1740,
-        "revision": "6b019278dd3beb6005268dd72a1285363f3ad171"
-      },
-      {
-        "tokens_B": 5033,
-        "revision": "b99743a400844e532bec7ce4575d97a3a39dcd4d"
-      }
-    ],
-    "historical_environment_audit_sha256": "d5d5882005f2232183d5a471ae52158a91ed8a138ecb5f2a560955695f9efff2",
-    "layers": [
-      7,
-      15
-    ],
-    "forward_dtype": "BF16",
-    "clean_tangent_dtype": "FP32",
-    "reductions": "FP64 CPU"
+    "revisions": {
+      "S1": "a39f36b100fe8a5377810d56c3f4789b9c53ac42",
+      "S2": "28e66ca6931668447a3bac213f23d990ad3b0e2b"
+    }
   }
 }

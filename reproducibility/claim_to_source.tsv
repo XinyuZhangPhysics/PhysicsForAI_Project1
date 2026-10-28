@@ -1,5 +1,4 @@
 manuscript_analysis	public_source_group	main_object_or_claim	inferential_unit
-fixed-routing response	experiments/routefreeze	separates expert-parameter response from routing-state change	relabeling controls provide numerical resolution; not trained-model replicates
 copied-state router selection	experiments/copiedselection	first-order child-sector accessibility under copied parent/child structure	paired training seed
 full expert-block tangent	experiments/fulltangent	construct-validity check beyond restricted feature probe	whole seed
 expert-side copied selection	experiments/expertsideselection	A-sector expert-side branch with router fixed	seed after averaging four parameter directions
@@ -7,10 +6,5 @@ background mode conversion	experiments/modeconversion	state-dependent parameter-
 local instability	experiments/formation	Hessian threshold and exact discrete-time local growth	locality-valid grid cell with sign-paired trajectory checks
 formation damping decoupling E4a	experiments/formation + reproducibility/postpaper_protocols.tsv	formation law after independent expert-curvature variation	four frozen cells, sign-paired trajectories; scientific locality gates unchanged
 formation stationary-background bridge E4b	experiments/formation + reproducibility/postpaper_protocols.tsv	newly measured mixed curvature predicts background-shifted onset and exact-discrete rates	three frozen Hessian backgrounds; four nonzero-background cells with sign-paired trajectories
-native six-control tomography	experiments/nativeolmoe	longitudinal response operators in a frozen control subspace	paired documents with balanced-domain resampling
-objective visibility	experiments/objectivevisibility	objective-response second moment and signed coherence boundary	paired documents
-cross-fitted signed descent E2	experiments/objectivevisibility + reproducibility/postpaper_protocols.tsv	whether six-control objective response yields a held-out coherent signed descent direction	deterministic 32/32 split within each of seven Bank-T domains; balanced-document resampling refits both directions
-held-out utility	experiments/utility	frozen two-scalar router-logit intervention versus baseline and 39 matched controls	paired held-out documents
-reserve utility E3	experiments/utility + reproducibility/postpaper_protocols.tsv	independent-data reserve replication of candidate versus frozen random-control ensemble	paired reserve documents; 96 documents per domain across seven domains
 finite-time propagation	experiments/finitetime	fixed-reference mean vs realized-sequence mean vs ordered product	matched stream/arm case
 population operator shift E1	experiments/finitetime + reproducibility/postpaper_protocols.tsv	out-of-sample cross-stream population mean versus fixed reference and realized-sequence mean	matched stream/arm case; whole held-out stream for stability resampling

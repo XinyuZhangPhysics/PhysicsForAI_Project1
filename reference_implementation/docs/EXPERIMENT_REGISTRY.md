@@ -1,3 +1,14 @@
-# Experiment registry — 2026-10-21
+# Active experiment registry — 2026-10-28
 
-Fifteen stable experiment IDs follow the scientific argument in Sections II–V and the supplement. The complete machine-readable table, including controls, archive status and external dependencies, accompanies this release as `data/manifests/EXPERIMENT_REGISTRY.tsv`. Empty or generic fields indicate that the exact execution seal must be consulted; they are not inferred.
+Retained public source groups:
+
+1. `experiments/copiedselection`
+2. `experiments/fulltangent`
+3. `experiments/expertsideselection`
+4. `experiments/modeconversion`
+5. `experiments/formation`
+6. `experiments/finitetime`
+
+The generic non-mode-aligned local-dynamics analysis is active in the manuscript, but its exact historically executed model-facing source remains pending public recovery.
+
+Fixed-routing OLMoE, trained sparse-MoE tomography/objective-response, and utility experiments are outside the active manuscript and are not part of this registry.

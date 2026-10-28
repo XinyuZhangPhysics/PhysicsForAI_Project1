@@ -1,14 +1,8 @@
 analysis_family	independent_or_primary_unit	resampling_or_summary	interpretive_scope
-route_freeze	12 domain coordinates are measurement coordinates; 16 relabelings are numerical controls	10000 replacement resamples of the fixed 16 relabelings	resolution diagnostic only; not independent trained-model replication
 copied_router_selection	paired training seed	20000 whole-seed resamples; coordinates/nuisance quantities nested within seed	small-G resampling is a stability summary, not population-level significance
 full_tangent	whole seed	20000 whole-seed resamples	same small-G interpretation
 expert_side_selection	seed after averaging four parameter directions	20000 whole-seed resamples	directions/pairs are nuisance units
 mode_conversion	seed after averaging four nuisance directions	20000 whole-seed resamples	backgrounds/sectors/signs/amplitudes remain nested within seed
-native_tomography	paired document with domain balance	2000 balanced-domain paired-document resamples; identical draws across layers/probes/checkpoints	Bank-T sampling variability conditional on the externally frozen control family
-objective_response	paired document with domain balance	balanced-domain paired-document bootstrap	second moment and signed mean are distinct endpoints
-crossfit_signed_response_E2	paired document within frozen domain/half strata	20000 balanced-document draws; refit both metric-steepest directions in every draw	conditional stability interval for the frozen Bank-T six-control construction
-utility_heldout	paired held-out document	10000 stratified paired bootstrap replicates with same document indices across arms	candidate-vs-random inference conditional on fixed 39-control ensemble
-utility_reserve_E3	paired reserve document	10000 domain-stratified paired draws; same sampled indices across all 41 arms	independent-data reserve replication; decision to use reserve was post-heldout but pre-reserve-outcome
 formation_E4a	frozen cell with sign-paired trajectory validation	no resampling; deterministic exact-discrete prediction and fixed locality/rate gates	damping-decoupling test; secondary quantities cannot alter label
 formation_E4b	stationary Hessian background plus frozen sign-paired trajectory cell	no resampling; s=0 recovery, rank-one mode gap, background threshold span, exact-discrete rate and boundary gates	controlled stationary common-expert family only; not arbitrary anisotropic background
 finite_time	matched stream/arm case	form ratios within each matched case before medians; six analysis streams plus two replication streams	small stream counts support descriptive stability/replication rather than population-level significance

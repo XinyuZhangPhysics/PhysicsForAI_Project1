@@ -1,7 +1,4 @@
 analysis	quantity	value	units_or_scale	interpretation
-route_freeze	B_rms	4.69717e-3	response RMS	fixed-routing expert-specific response
-route_freeze	E_MC	9.655e-4	response RMS	relabeling numerical/permutation resolution
-route_freeze	B_rms_over_E_MC	4.8648	dimensionless	signal-to-resolution diagnostic; not a p value
 copied_router_selection	S1_loglog_slope_PB_vs_g	2.71	dimensionless	seed-fixed-effect slope; 95% seed-resampling interval [1.87,3.45]
 copied_router_selection	S2_loglog_slope_PB_vs_g	2.94	dimensionless	seed-fixed-effect slope; 95% seed-resampling interval [2.43,3.49]
 copied_full_tangent	max_off_sector_ratio	<1e-30	dimensionless	double-precision numerical zero for (P_A+P_M)/P_C
@@ -19,19 +16,6 @@ formation_E4b	Delta_lambda	0.17830234894232475	fraction of lambda_d(s=0)	thresho
 formation_E4b	max_relative_rate_error	0.00481517948161041	dimensionless	maximum over four nonzero-background cells
 formation_E4b	epsilon_hat_s-1	-0.0008477910678705985	epsilon coordinate	static interpolation at s=-1
 formation_E4b	epsilon_hat_s+1	-0.0011151172280361027	epsilon coordinate	static interpolation at s=+1
-native_tomography	L7_local_trace_contraction_41B_to_5033B	2138.6165	fold	generalized spectral-trace contraction
-native_tomography	L15_local_trace_contraction_41B_to_5033B	166.2880	fold	generalized spectral-trace contraction
-native_tomography	L15_deff_41B	2.7043	dimensionless	participation-ratio effective dimension
-native_tomography	L15_deff_5033B	2.4424	dimensionless	participation-ratio effective dimension
-objective_response	L15_control1_sqrt_M2_5033B	5.33e-3	RMS signed derivative	objective-response second moment remains resolved
-objective_response	L15_control1_mu_nu_5033B	1.19e-4	mean signed derivative	95% CI [-3.79e-4,6.24e-4]
-objective_response_E2	T_CF	3.4262352079117116e-4	signed derivative	cross-fitted symmetric held-out derivative; 95% interval [-5.522633347007458e-4,9.070379389587289e-4]
-objective_response_E2	cos_H_vA_vB	-0.5177396274232766	dimensionless	metric cosine between independently fitted half-sample descent directions
-utility	candidate_utility_heldout	-9.569126580455389e-5	NLL improvement baseline-minus-candidate	held-out candidate versus baseline; 95% CI [-2.350222202949226e-4,4.357438634282765e-5]
-utility	candidate_minus_random_heldout	4.565080580027522e-6	NLL utility contrast	95% CI [-9.910408867994005e-5,1.112183566194956e-4], conditional on frozen 39-control ensemble
-utility	candidate_rank_heldout_nonbaseline	16/40	rank	candidate among non-baseline intervention arms
-utility_E3	candidate_minus_random_reserve	2.5790918763757276e-5	NLL utility contrast	reserve-only 95% interval [-5.330079795437522e-5,1.0579362327141668e-4]
-utility_E3	candidate_rank_reserve_nonbaseline	14/40	rank	independent reserve set; frozen 39-control ensemble
 finite_time	median_E_refmean_over_E_ord_analysis	88.76	fold	paired-case median over six analysis streams
 finite_time	median_E_seqmean_over_E_ord_analysis	1.025	fold	paired-case median over six analysis streams
 finite_time	E_refmean_over_E_ord_replication	146.10	fold	independent replication summary

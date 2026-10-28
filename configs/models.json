@@ -1,13 +1,4 @@
 {
-  "q3": {
-    "repository": "allenai/OLMoE-1B-7B-0924",
-    "revision": "e5642d2d7b37c138775ddf59f685f91788e173b7",
-    "layers": [
-      7,
-      15
-    ],
-    "action": "64 FP32 logits bias before Top-k; two scalar amplitudes"
-  },
   "formation": {
     "repository": "HuggingFaceTB/SmolLM2-135M",
     "revision": "28e66ca6931668447a3bac213f23d990ad3b0e2b",
@@ -21,48 +12,7 @@
       "S2": "28e66ca6931668447a3bac213f23d990ad3b0e2b"
     }
   },
-  "native": {
-    "repository": "allenai/OLMoE-1B-7B-0924",
-    "checkpoints": [
-      {
-        "tokens_B": 41,
-        "revision": "e5642d2d7b37c138775ddf59f685f91788e173b7"
-      },
-      {
-        "tokens_B": 146,
-        "revision": "608f483a04570e8dca8d7be3cc0da6ee54dce350"
-      },
-      {
-        "tokens_B": 503,
-        "revision": "cecae3d36575569db9b2ccf1eef095af7820f22a"
-      },
-      {
-        "tokens_B": 1740,
-        "revision": "6b019278dd3beb6005268dd72a1285363f3ad171"
-      },
-      {
-        "tokens_B": 5033,
-        "revision": "b99743a400844e532bec7ce4575d97a3a39dcd4d"
-      }
-    ],
-    "historical_environment_audit_sha256": "d5d5882005f2232183d5a471ae52158a91ed8a138ecb5f2a560955695f9efff2",
-    "layers": [
-      7,
-      15
-    ],
-    "forward_dtype": "BF16",
-    "clean_tangent_dtype": "FP32",
-    "reductions": "FP64 CPU"
-  },
-  "route_freeze": {
-    "model": "allenai/OLMoE-1B-7B-0924",
-    "revision": "6d84c48581ece794365f2b8e9cfb043c68ade9c5",
-    "layer": 15,
-    "dataset": "SlimPajama-6B",
-    "dataset_revision": "00683529288a1d2fe7ec3cf852b5e2449d27e472"
-  },
   "datasets": {
-    "copied_training_formation_finite_time": "SlimPajama-6B@b5f90f419b7489cdba26fdbc8c022fcb5562f968",
-    "native_control_bank": "allenai/OLMoE-mix-0924@efe872cfd4bcd7b9233fdb1f7289b3295f120f3a"
+    "copied_training_formation_finite_time": "SlimPajama-6B@b5f90f419b7489cdba26fdbc8c022fcb5562f968"
   }
 }

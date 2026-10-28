@@ -2,10 +2,10 @@ cff-version: 1.2.0
 message: "Please cite the paper and this code release."
 title: "Expert-Specific Response in Mixture-of-Experts"
 type: software
-version: "2026-10-24"
-date-released: 2026-10-24
+version: "2026-10-28-scope-withdrawal"
+date-released: 2026-10-28
 authors:
   - family-names: Zhang
     given-names: Xinyu
 license: MIT
-abstract: "Source code, clean operator implementations, tests, provenance metadata, and final E1–E4 reproducibility summaries for Expert-Specific Response in Mixture-of-Experts."
+abstract: "Source code, clean operator implementations, tests, and provenance metadata for the analysis families retained in Expert-Specific Response in Mixture-of-Experts."

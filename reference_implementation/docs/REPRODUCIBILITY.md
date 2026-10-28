@@ -1,10 +1,8 @@
-# Reproducibility and paper-output mapping — 2026-10-23
+# Reproducibility — active manuscript scope
 
-The manuscript is the public claim reference. The repository is source-only.
+1. Run data-independent operator tests with `python -m unittest discover -s tests -v`.
+2. Use the repository-level `experiments/` source groups and `PUBLIC_SOURCE_BINDINGS.tsv` for retained historical execution-source provenance.
+3. Use `reproducibility/` for retained numerical summaries, frozen asset hashes, and statistical-unit semantics.
+4. Full model-facing reruns require pinned third-party models/corpora and retained scientific inputs.
 
-1. Run the data-independent operator/unit tests with
-   `python -m unittest discover -s tests -v`.
-2. For paper-level numerical reconstruction, obtain the project-owned derived-data bundle from the author and set `PROJECT1_DATA_DIR` before running `python reproduce/reproduce_paper.py`.
-3. Full historical model-facing reruns additionally require pinned third-party models/corpora, retained raw inputs, and the historical execution environment.
-
-See `PAPER_RESULT_MAP.md` for the claim-to-code mapping, `REPRODUCIBILITY_LEVELS.md` for the public/private boundary, and `MODEL_FACING_RERUNS.md` for model-facing requirements. No experimental outputs are bundled in the current public tree.
+The generic-local exact executed source is the one unresolved public-provenance item and is not reconstructed here.

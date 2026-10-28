@@ -1,8 +1,8 @@
 # Reproducibility levels
 
-1. **Public code-level reproducibility.** The clean operator implementations and data-independent unit tests are public and can be run from a fresh clone.
-2. **Paper-level numerical reconstruction with supplied inputs.** The reconstruction scripts are public, while the project-owned derived numerical inputs are not bundled. They may be obtained from the author on reasonable request and supplied through `PROJECT1_DATA_DIR`.
-3. **Full model-facing rerun.** This additionally requires retained raw banks/captures, historically executed sources and environments, and third-party model/corpus assets obtained under their original licenses.
-4. **Provenance-only historical records.** Some archived source records establish provenance but do not by themselves establish exact execution identity.
+1. **Public code-level reproducibility:** clean active-operator implementations and data-independent tests.
+2. **Public source provenance:** retained historical source families and source bindings for active manuscript analyses.
+3. **Public numerical audit:** retained project-owned summary/provenance tables in `reproducibility/`.
+4. **Full model-facing rerun:** additionally requires frozen private scientific inputs and third-party assets.
 
-The source-only public release does not contain frozen result arrays or output checksums.
+The exact historical source for the generic-local run is currently missing from the public-release archive; this limitation is stated explicitly rather than filled by reconstructed model-facing code.
