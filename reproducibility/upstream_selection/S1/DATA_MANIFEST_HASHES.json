@@ -1,0 +1,36 @@
+{
+  "status": "BANKS_FROZEN",
+  "dataset_revision": "b5f90f419b7489cdba26fdbc8c022fcb5562f968",
+  "old_bank_manifest_sha256": {
+    "calibration": "0c22544c9d028c4fb081255fd3300691363bef0b27f2ea6e308b45bac21c4f72",
+    "audit": "921ab745bcd834fd58a54b79eeaadaf4b1c89bf686f095ca2443bc37599aa9d7"
+  },
+  "old_holdout_hashes": 4096,
+  "eligible_unique_docs_per_domain": {
+    "RedPajamaArXiv": 13036,
+    "RedPajamaGithub": 196228,
+    "RedPajamaWikipedia": 250323,
+    "RedPajamaStackExchange": 273930
+  },
+  "calibration_rows": 2048,
+  "audit_rows": 2048,
+  "calibration_audit_old_text_hash_overlap": 0,
+  "training_pool_rows": 729421,
+  "training_pool_holdout_hash_overlap": 0,
+  "gate_sequences": 256,
+  "benchmark_training_tokens": 100000,
+  "benchmark_seed": 2026100198,
+  "pair_seeds": {
+    "calibration": 2026100191,
+    "audit": 2026100192
+  },
+  "manifest_sha256": {
+    "calibration": "7ae939bf0a5fc731c0e3426842d95ad20648920cf25a8cd1e926d3857619231b",
+    "audit": "e24294781a9ae67ca9fc50edec8713a4c30285234e77b62ad92dc3b8f2f46ba8",
+    "calibration_pairs": "a222238dbef3c5277ad24b10398331495b72b1f9667839dad21bb4bc5b044157",
+    "audit_pairs": "fe44510eb0ea8f2966ad561bcc8c0411d54df36655fd357cefdec107ca1a8a47",
+    "training_pool_content": "829aa5930b8f2a873c46e3bf1ae8318e4095c4da6c8999d718e43ac29af4c9eb",
+    "training_pool_compressed": "24b03b0a2cd265cbbcd33966c175e59629f484c9db6d47031ded12159e9e30c1",
+    "benchmark_source": "5cdc8de01ccc1a3f0ff999c204ccdbc84ce2525f5999bec729b797233072249c"
+  }
+}

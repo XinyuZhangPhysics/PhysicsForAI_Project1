@@ -1,0 +1,66 @@
+{
+  "status": "FROZEN",
+  "selection": "SHA256(EXP-S1-v1-train|seed|domain|text_sha256) ascending on eligible globally unique train pool",
+  "model_revision": "a39f36b100fe8a5377810d56c3f4789b9c53ac42",
+  "dataset_revision": "b5f90f419b7489cdba26fdbc8c022fcb5562f968",
+  "pool_sha256": "24b03b0a2cd265cbbcd33966c175e59629f484c9db6d47031ded12159e9e30c1",
+  "sequence_length": 256,
+  "tokens_per_domain_per_seed": 64000,
+  "nonpadding_tokens_per_seed": 256000,
+  "domain_interleave_order": [
+    "RedPajamaArXiv",
+    "RedPajamaGithub",
+    "RedPajamaWikipedia",
+    "RedPajamaStackExchange"
+  ],
+  "seeds": {
+    "2026100101": {
+      "manifest_sha256": "81c42913dc1ce9519d3b1904571a080d5e865b755db66dc8931513c47827b837",
+      "tensor_sha256": "62a7db4927021c9a91bef06d19d7965d6bb8c6ba56c3199b73445b51996d23c1",
+      "sequences": 1000,
+      "nonpadding_tokens": 256000
+    },
+    "2026100102": {
+      "manifest_sha256": "e8d723947a50050b63700c579b097d90f16f30b1848ca6252afed26bd0e14b83",
+      "tensor_sha256": "ed9f4ce8b8427359c23480fe0908d7a886def36055f814810f0754b0731237b5",
+      "sequences": 1000,
+      "nonpadding_tokens": 256000
+    },
+    "2026100103": {
+      "manifest_sha256": "1fb45b1fa9c058e81e8ff9b989d2b428da798ca83c5fcf7c9589bf3aa9d1adbc",
+      "tensor_sha256": "33f58618016bb226518766d97b26aa66e8b5af817ef267e2fad2182db200b0d3",
+      "sequences": 1000,
+      "nonpadding_tokens": 256000
+    },
+    "2026100104": {
+      "manifest_sha256": "ea47c39e3adf364c25ca398b8af4468708654e4d35974dcba2915f27f14b6e7f",
+      "tensor_sha256": "cd58939fd3462f22cd9c5c6689a2f87c14622040995fc7a2901143c3e0a5d900",
+      "sequences": 1000,
+      "nonpadding_tokens": 256000
+    },
+    "2026100105": {
+      "manifest_sha256": "c957b213d22af79e6aff1c1eb7528fed801279122214bb828ec8ca273a30f650",
+      "tensor_sha256": "9673ab1989b124e8c6236794dd56d1377ea939df3ab0f6e81784ecfd5014324d",
+      "sequences": 1000,
+      "nonpadding_tokens": 256000
+    },
+    "2026100106": {
+      "manifest_sha256": "b8f6b9aa110ebd763109f980a6b4574a5f6631f4327ae2411d13c9155a6ab4cc",
+      "tensor_sha256": "1ea57e3dcbce6fbe03da5cc4aee8856e6a073834fc3eaa1b8cf4a854038e39e0",
+      "sequences": 1000,
+      "nonpadding_tokens": 256000
+    },
+    "2026100107": {
+      "manifest_sha256": "f79edd6cfe1f8f3bebb3d2ec2623e5e4e9fb2291245296f9873e426c9eb09aaa",
+      "tensor_sha256": "61daeb9c21541f5e592d2447da7f901ad43520195d605bc54ac614d7d218b6f6",
+      "sequences": 1000,
+      "nonpadding_tokens": 256000
+    },
+    "2026100108": {
+      "manifest_sha256": "80a0d04904339545f7d7fb2306d5bab7b01bfc015a74440725f909ea10e986aa",
+      "tensor_sha256": "54b74b3f36286a36cc7347d96ba39cf4eff1ab03b028bda48addc4be0a758654",
+      "sequences": 1000,
+      "nonpadding_tokens": 256000
+    }
+  }
+}

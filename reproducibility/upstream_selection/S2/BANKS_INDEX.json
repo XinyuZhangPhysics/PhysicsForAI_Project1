@@ -1,0 +1,61 @@
+{
+  "status": "BANK_IDS_FROZEN_PRE_SCIENCE",
+  "dataset_id": "DKYoon/SlimPajama-6B",
+  "dataset_revision": "b5f90f419b7489cdba26fdbc8c022fcb5562f968",
+  "tokenizer_model_revision": "28e66ca6931668447a3bac213f23d990ad3b0e2b",
+  "salt": "EXP-S2-v1-fresh-banks|",
+  "pair_seeds": {
+    "future_calibration": 2026110291,
+    "future_audit": 2026110292
+  },
+  "training_seeds": [
+    2026110201, 2026110202, 2026110203, 2026110204,
+    2026110205, 2026110206, 2026110207, 2026110208
+  ],
+  "counts": {
+    "future_calibration": 2048,
+    "future_audit": 2048,
+    "preflight_benchmark": 2048,
+    "future_training": 9356
+  },
+  "eligible_counts": {
+    "RedPajamaArXiv": 12012,
+    "RedPajamaGithub": 195204,
+    "RedPajamaWikipedia": 249299,
+    "RedPajamaStackExchange": 272906
+  },
+  "checks": {
+    "calibration_audit_overlap": 0,
+    "preflight_future_overlap": 0,
+    "future_banks_prior_holdout_overlap": 0,
+    "prior_holdout_hash_count": 8192,
+    "all_partitions_pairwise_disjoint": true
+  },
+  "historical_bank_manifest_sha256": {
+    "s1_calibration": "7ae939bf0a5fc731c0e3426842d95ad20648920cf25a8cd1e926d3857619231b",
+    "s1_audit": "e24294781a9ae67ca9fc50edec8713a4c30285234e77b62ad92dc3b8f2f46ba8",
+    "legacy_g0_calibration": "0c22544c9d028c4fb081255fd3300691363bef0b27f2ea6e308b45bac21c4f72",
+    "legacy_g0_audit": "921ab745bcd834fd58a54b79eeaadaf4b1c89bf686f095ca2443bc37599aa9d7"
+  },
+  "manifest_sha256": {
+    "future_calibration": "b33e8938ed314c258ca2ae7cd109216fd79ce142f09faae2f54b1cd2173fecc9",
+    "future_audit": "b217d0ec0f16464aeac34c196f2a2b5020ce23615685b4ea403e0d755c976595",
+    "preflight_benchmark": "127b698feff2719aa2bd171dfd66bb6ac00e1e33d8c12cd4f4b002f74d58e1a9",
+    "future_training": "18a2d69a423f3bcc6498cd06a4d1e8dd4a7e6973cfc86e6318c99a0ea204d401",
+    "future_calibration_pairs": "ce1e22cb9256fd58b6d93b1fa92e7f80b615ca5c9e7204c949cb0bff9337d7f5",
+    "future_audit_pairs": "9c4a4ae91536c4c280235119abdc578d326cd9ab0c793b647420fcc9a41c8b74",
+    "future_training_seed_2026110201": "81e80db0a2b1d0ed29dd9514e4641bbc23ab1bc4d08b8db98727d25acf0a055c",
+    "future_training_seed_2026110202": "35f931ae6c6627b71f5cc7a5f595ba6fc98524c8b67ea9374639a5087a0dfae1",
+    "future_training_seed_2026110203": "faf9f18134638e8458520b8f147aae8d12bc5c3f10124a0a23fb76582849bd84",
+    "future_training_seed_2026110204": "9dbe685bbf9dbb402022b6b0cc7c9c67904dd231d529a1b86d76e01fd1b65dce",
+    "future_training_seed_2026110205": "d91c1a00dde979616e870b76e976b7df101d0f1d5fa88f1856db33466c693648",
+    "future_training_seed_2026110206": "97002e7f9525e38eed36396285264e77c7698cacfe2796ddaf63239ca0ca9cb7",
+    "future_training_seed_2026110207": "a20546bc149c3cb5a556004106149738d942d6bdc72b25a9962fd33d88f8d41c",
+    "future_training_seed_2026110208": "ba5bd3f11e71a9b34bfdcb86b930fcd284f5055f475d125ed7e9718db91c8e20",
+    "preflight_benchmark_tensor": "6cfbde2cf613f520e623881eee518d32d1a16c4fa58c81a0ba61cab797f79122"
+  },
+  "preflight_benchmark_tokens": 100000,
+  "preflight_benchmark_source_docs_used": 89,
+  "scientific_response_observables_computed": false,
+  "publication_note": "Historical local path labels were replaced by neutral labels only; scientific values and hashes are unchanged."
+}
