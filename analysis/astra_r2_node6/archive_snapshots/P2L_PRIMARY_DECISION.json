@@ -1,0 +1,65 @@
+{
+  "verdict": "P2L_MOBILITY_CONFIRMATION_SUPPORTED",
+  "decided_utc": "2026-10-08T14:14:41.654527+00:00",
+  "execution_node": "P2M",
+  "protocol_id": "P2L_MOBILITY_ONLY_CONFIRMATION_v1",
+  "gates": {
+    "all_cells_rate_valid": true,
+    "mobility_ordering": true,
+    "mobility_ratios": true,
+    "direct_rate_replication": true,
+    "mode_preservation": true
+  },
+  "cells": [
+    {
+      "cell": 0,
+      "r_eta": 0.25,
+      "gamma_mean": 0.009627382469233968,
+      "predicted_gamma": 0.009642906291405429,
+      "sign_rate_asymmetry": 1.4200883183473446e-07,
+      "sign_asymmetry_pass": true,
+      "RATE_VALID": true
+    },
+    {
+      "cell": 1,
+      "r_eta": 1.0,
+      "gamma_mean": 0.0250767265482192,
+      "predicted_gamma": 0.02511676944481798,
+      "sign_rate_asymmetry": 8.453222932114574e-08,
+      "sign_asymmetry_pass": true,
+      "RATE_VALID": true
+    },
+    {
+      "cell": 2,
+      "r_eta": 4.0,
+      "gamma_mean": 0.04394388934313419,
+      "predicted_gamma": 0.0440328694761044,
+      "sign_rate_asymmetry": 7.193897563812043e-08,
+      "sign_asymmetry_pass": true,
+      "RATE_VALID": true
+    }
+  ],
+  "direct_rate_relative_L2": 0.0019147108833466775,
+  "direct_rate_Pearson": 0.9999999590546484,
+  "all_mean_rates_positive": true,
+  "all_six_runs_local": true,
+  "historical_P2J_verdict": "DETERMINISTIC_FIXED_BANK_R1_BRIDGE_UNRESOLVED",
+  "counters": {
+    "NEW_MODEL_DOWNLOAD_BYTES": 0,
+    "NEW_DATA_DOWNLOAD_BYTES": 0,
+    "NEW_BANK_COUNT": 0,
+    "OUTCOME_DEPENDENT_PROTOCOL_CHANGE_COUNT": 0,
+    "MODEL_FILES_NEWLY_DOWNLOADED": 0,
+    "DATA_FILES_NEWLY_DOWNLOADED": 0,
+    "BYTES_NEWLY_DOWNLOADED": 0
+  },
+  "primary_sha256": {
+    "P2L_PREFLIGHT_SEAL.json": "6cf8f6d3d3f0d7f94a6cf15e8547ff3987ac0d55994310898a1f45c23ffa47f5",
+    "P2L_TRAJECTORIES.parquet": "9d7c437916ed29ff795463d52c752a465b14df0ab3f22991384fcda276cb4bd2",
+    "P2L_CHECKPOINT_INDEX.json": "97a185066f209a5a40b8c05c9e1a9e0834b24e9d5bb24c976b847e041ea4c3ff",
+    "P2L_TRAINING_COMPLETION.json": "4dcfbe98ca95c924905843716fc3f45957864eae4de189e44b1587dee7522202",
+    "P2L_RATE_FITS.csv": "15a6b1037fe24b7877385fc6ff72b3cc347384ad1b2fb7ad27c69b38c94511b1",
+    "P2L_MOBILITY_RATIOS.csv": "b0d1de0744e5b3b40c57c2bd87bbdf2a07494924770820760a8db27288f9cfae",
+    "P2L_MODE_PRESERVATION.csv": "a39d4aa1e5e8c2df5f4eaf1e483d240e848fdea4e248a342118f7cd6dd58395e"
+  }
+}

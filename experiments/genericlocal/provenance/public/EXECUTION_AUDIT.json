@@ -1,0 +1,58 @@
+{
+  "original_package_sha256": "b72026ba5c45f2cfe3591a1c0de7387f4e7d6ee7e56d7404e4e5705182812d33",
+  "scientific_source_edits": [],
+  "path_adaptations": {
+    "PFAI_PYTHON": "/REDACTED/USER/AI_Workspace/Projects/Codex/2026-10-28/hi/work/pfai-venv312/bin/python",
+    "PFAI_SMOLLM2_DIR": "/REDACTED/USER/AI_Workspace/ResearchModels/smollm2_135m"
+  },
+  "environment_reconstruction": "uv venv --offline Python 3.12.13; uv pip install --offline numpy==2.5.3 torch==2.14.0 transformers==5.17.0 matplotlib",
+  "model_asset_hashes_verified": {
+    "model_name": "SmolLM2 135M",
+    "repo": "HuggingFaceTB/SmolLM2-135M",
+    "revision": "28e66ca6931668447a3bac213f23d990ad3b0e2b",
+    "canonical_path": "/REDACTED/USER/AI_Workspace/ResearchModels/smollm2_135m",
+    "file_hashes": {
+      "/REDACTED/USER/AI_Workspace/ResearchModels/smollm2_135m/model.safetensors": "80521b40281d6ce74e35c9282c22539e75aa0ac8578892b2a59955ef78d55da1",
+      "/REDACTED/USER/AI_Workspace/ResearchModels/smollm2_135m/tokenizer_config.json": "4bb9af56a342753d39374f4016a16574cab299fe088e896f425ce3c433f61424",
+      "/REDACTED/USER/AI_Workspace/ResearchModels/smollm2_135m/special_tokens_map.json": "e786b595b9a23148bf1630df78d9037a048ea671e48bfd3549a1e3c233742bb3",
+      "/REDACTED/USER/AI_Workspace/ResearchModels/smollm2_135m/config.json": "1d556eab73b69c7f11f64c557a2f9c6f440bd4c6b89bb2584a6b498c92603843",
+      "/REDACTED/USER/AI_Workspace/ResearchModels/smollm2_135m/tokenizer.json": "9ca9acddb6525a194ec8ac7a87f24fbba7232a9a15ffa1af0c1224fcd888e47c",
+      "/REDACTED/USER/AI_Workspace/ResearchModels/smollm2_135m/generation_config.json": "2056c988e990b0d13670f63f2f3b87b3b6d07edaf7a3416998ba27dab2d8a059",
+      "/REDACTED/USER/AI_Workspace/ResearchModels/smollm2_135m/README.md": "d0860fbc0ef025be073a64a899fbbb4e14ef2e53f584cba95a635acf1fc398fe",
+      "/REDACTED/USER/AI_Workspace/ResearchModels/smollm2_135m/merges.txt": "0b54e8aa4e53d5383e2e4bc635a56b43f9647f7b13832d5d9ecd8f82dac4f510",
+      "/REDACTED/USER/AI_Workspace/ResearchModels/smollm2_135m/.gitattributes": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "/REDACTED/USER/AI_Workspace/ResearchModels/smollm2_135m/vocab.json": "82b84012e3add4d01d12ba14442026e49b8cbbaead1f79ecf3d919784f82dc79"
+    },
+    "size_bytes": 272444640,
+    "dependent_nodes": [
+      "EXP-S2"
+    ],
+    "license_note": "apache-2.0 declared in local README.md; check full model card before redistribution",
+    "source_path": "/REDACTED/USER/AI_Workspace/Projects/Codex/2026-09-25/ya/work/smollm2-pinned",
+    "status": "COPY_VERIFIED"
+  },
+  "bootstrap_stop": {
+    "stage": "BOOTSTRAP",
+    "cause": "sandbox denied /dev/fd/62 process substitution in run.sh log redirection",
+    "gradient_evaluations": 0,
+    "preserved_at": "/REDACTED/USER/AI_Workspace/Projects/Codex/2026-10-28/hi/outputs/bootstrap_stop",
+    "resolution": "run unchanged run.sh outside sandbox"
+  },
+  "protocol_sha256": "fa5a35776d995cd4e402db210868a764881243a2f66de56eccd69d31db51d315",
+  "status": "COMPLETE",
+  "gradient_evaluations": 896,
+  "postrun_recurrence_verification": {
+    "arms_verified": 32,
+    "max_abs_linear_norm_replay_error": 0.0,
+    "max_abs_linear_projection_replay_error": 0.0,
+    "no_outcome_filtering_checked_by_arm_count": true,
+    "rows_verified": 928,
+    "status": "PASS",
+    "verification": "independent recurrence reconstruction from saved matrix-free factorization and frozen directions"
+  },
+  "delivery_bundle_sha256": "0416209469638564db16543808390efa0ab63ef47064a33a93a60c5896e20f3d",
+  "delivery_manifest_sha256": "efb7d408f8d05975e74484667f121842347076072cb563df59b3ab3c28dd4a14",
+  "numerical_failures": [],
+  "elapsed_seconds": 2522.160556709161,
+  "delivery_verified": true
+}

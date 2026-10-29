@@ -1,0 +1,59 @@
+{
+  "status": "POSTHOC_DETERMINISTIC_RECONSTRUCTION_FROM_SAVED_LINEAR_COEFFICIENTS",
+  "source_file": "evidence/generic_local_dynamics/generic_local_dynamics_long.csv",
+  "source_sha256": "96b94a5dd43b92935400e03049d179b9801be06eceec2581536b24f21c971a34",
+  "manifest_file": "evidence/generic_local_dynamics/generic_local_dynamics_manifest.json",
+  "manifest_sha256": "efb7d408f8d05975e74484667f121842347076072cb563df59b3ab3c28dd4a14",
+  "eta_X": 11.757784614467004,
+  "eta_U": 11.757784614467004,
+  "mu": 0.017010007119361258,
+  "formula": "For each saved transition and singular pair j: m_{n+1}-(1-eta_X mu)m_n = eta_X rho_j u_n; u_{n+1}-(1-eta_U lambda)u_n = eta_U rho_j m_n. rho_j is a combined least-squares reconstruction over all 32 arms and 28 transitions.",
+  "important_scope": "This reconstructs singular-value magnitudes already encoded in the saved frozen-map recurrence; it is not a replacement for the original spectrum NPZ, whose SHA-256 is retained in generic_local_dynamics_manifest.json.",
+  "values": [
+    {
+      "pair": 1,
+      "rho_reconstructed": 0.017010007011404066,
+      "rho_from_X_equation": 0.017010008633600714,
+      "rho_from_U_equation": 0.01701000470147224,
+      "rho_over_rho1": 1.0,
+      "recurrence_relative_L2": 6.081553971230362e-07,
+      "archived_Cv_relative_residual": 1.280388242017762e-06,
+      "archived_CtU_relative_residual": 5.133693023104701e-07
+    },
+    {
+      "pair": 2,
+      "rho_reconstructed": 0.008312143290308405,
+      "rho_from_X_equation": 0.008312143941761514,
+      "rho_from_U_equation": 0.008312138257107813,
+      "rho_over_rho1": 0.488661955561551,
+      "recurrence_relative_L2": 2.1208454510042236e-06,
+      "archived_Cv_relative_residual": 1.661529966684829e-06,
+      "archived_CtU_relative_residual": 1.4792785146684764e-06
+    },
+    {
+      "pair": 3,
+      "rho_reconstructed": 0.006411790690312273,
+      "rho_from_X_equation": 0.00641179105721076,
+      "rho_from_U_equation": 0.006411785724000022,
+      "rho_over_rho1": 0.3769422720410167,
+      "recurrence_relative_L2": 1.0792802214116147e-06,
+      "archived_Cv_relative_residual": 1.3844968434911124e-06,
+      "archived_CtU_relative_residual": 1.7219568712361904e-06
+    },
+    {
+      "pair": 4,
+      "rho_reconstructed": 0.00502240594799805,
+      "rho_from_X_equation": 0.005022415741424257,
+      "rho_from_U_equation": 0.005022206658351736,
+      "rho_over_rho1": 0.29526183878882967,
+      "recurrence_relative_L2": 0.0014309899506626887,
+      "archived_Cv_relative_residual": 0.000958168484018537,
+      "archived_CtU_relative_residual": 1.9148484119793876e-06
+    }
+  ],
+  "leading_gap": {
+    "rho2_over_rho1": 0.488661955561551,
+    "rho1_over_rho2": 2.0464044491673996
+  },
+  "crosscheck_rho1_minus_manifest_mu": -1.0795719179723662e-10
+}

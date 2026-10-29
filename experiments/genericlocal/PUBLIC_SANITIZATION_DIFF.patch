@@ -1,0 +1,24 @@
+# REDACTED REVIEW DIFF: private old path literals replaced by SHA256 placeholders.
+# This public diff is not directly applyable; exact diff retained in private recovery.
+--- original_source/run.sh
++++ public_sanitized_source/run.sh
+@@ -3,7 +3,7 @@
+ export PYTHONDONTWRITEBYTECODE=1
+ ROOT="$(cd "$(dirname "$0")" && pwd)"
+ OUT="$ROOT/results/generic_local_dynamics_2026-10-27"
+-ARCHIVED_PY="<PRIVATE_PATH_SHA256:0ab320995f0e063c981d455f00af0fd931ed88185822ba5e9c32c7ba98214bb9>"
++ARCHIVED_PY="/PATH/TO/compatible-python312/bin/python"
+ mkdir -p "$OUT"
+ STAGE="BOOTSTRAP"
+ PY=""
+--- original_source/protocol.json
++++ public_sanitized_source/protocol.json
+@@ -2,7 +2,7 @@
+   "protocol_id": "Project1_GenericLocalDynamics_PRX_v1_2026-10-27",
+   "model_repo": "HuggingFaceTB/SmolLM2-135M",
+   "model_commit": "28e66ca6931668447a3bac213f23d990ad3b0e2b",
+-  "preferred_model_path": "<PRIVATE_PATH_SHA256:1a97f575bc3cc716f28123f89c0d26dd7c172408f38003dc252ab9dd4796d57f>",
++  "preferred_model_path": "/PATH/TO/MODELS/SmolLM2-135M/28e66ca6931668447a3bac213f23d990ad3b0e2b",
+   "layer_zero_based": 20,
+   "mu": 0.017010007119361258,
+   "eta_X": 11.757784614467004,

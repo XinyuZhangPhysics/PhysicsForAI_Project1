@@ -1,0 +1,14 @@
+[
+  {
+    "file": "run.sh",
+    "replacement": "/PATH/TO/compatible-python312/bin/python",
+    "occurrences": 1,
+    "original_string_sha256": "0ab320995f0e063c981d455f00af0fd931ed88185822ba5e9c32c7ba98214bb9"
+  },
+  {
+    "file": "protocol.json",
+    "replacement": "/PATH/TO/MODELS/SmolLM2-135M/28e66ca6931668447a3bac213f23d990ad3b0e2b",
+    "occurrences": 1,
+    "original_string_sha256": "1a97f575bc3cc716f28123f89c0d26dd7c172408f38003dc252ab9dd4796d57f"
+  }
+]

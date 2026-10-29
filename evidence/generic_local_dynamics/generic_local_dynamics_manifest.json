@@ -1,0 +1,102 @@
+{
+  "F0_shape": [
+    32,
+    256
+  ],
+  "amplitudes": {
+    "large": 0.002338001544530506,
+    "small": 0.001169000772265253
+  },
+  "delta": 2.3380015445305057e-15,
+  "diagnostic_only_fields": [
+    "coupling_CX0_raw",
+    "coupling_CT_U0_raw",
+    "first_step_diag_raw",
+    "first_step_offdiag_raw",
+    "coupling_activity_ratio"
+  ],
+  "direction_rng": "numpy.random.Generator(PCG64)",
+  "elapsed_seconds": 2522.160556709161,
+  "environment_verification_sha256": "42c4164af94c43b22c8389a7a37a6a24c8af7f08ae47d21d3d0a074666f8e9ad",
+  "epsilon": {
+    "stable": -0.08,
+    "unstable": 0.08
+  },
+  "eta_U": 11.757784614467004,
+  "eta_X": 11.757784614467004,
+  "eta_X_mu": 0.2,
+  "execution_stage": "COMPLETE",
+  "expected_gradient_evaluations": 896,
+  "failures": [],
+  "gradient_evaluations": 896,
+  "horizon": 28,
+  "input_sha256": {
+    "F0.npy": "90b69399e16f424c5524fdbfe7f788e2c0bbef9731ac7cddb3d45efac7d2b16b",
+    "P2H_CROSS_HESSIAN_SPECTRUM.npz": "3e97497498767484bb010098f3ef2ce25718d8bd0f4ba204f09ae4f8e866f5d1",
+    "P2J_AMPLITUDE_GATE.csv": "3a7aae7b81554808ce7ad6ce5d8108624ded389e319d8e83accea7b14e5a3f70",
+    "P2J_FROZEN_CELL_PREDICTIONS.csv": "508a090eb8ec1c9ec4985e5d07e898839b7e249ba1f808c771603f617eb9ea17",
+    "P2J_TRAINING_COMPLETION.json": "7bf5a4eda28e33f6f849890ceb6c8969911ffff8f26a9340348ee3b4c5f1a2fd"
+  },
+  "layer_zero_based": 20,
+  "model_commit": "28e66ca6931668447a3bac213f23d990ad3b0e2b",
+  "model_dir": "/REDACTED/USER/AI_Workspace/ResearchModels/smollm2_135m",
+  "mu": 0.017010007119361258,
+  "output_sha256": {
+    "ENVIRONMENT_VERIFICATION.json": "42c4164af94c43b22c8389a7a37a6a24c8af7f08ae47d21d3d0a074666f8e9ad",
+    "Fig_generic_local_dynamics_diagnostic.pdf": "c70ada310b15b84d4e8836c2d59d84be8311bd6cb32a71caa6be5c993df88194",
+    "RESULT_VERIFICATION.json": "ffe719c7934ec7751a89840be2fe9acc590837eede90a8dbb6a63c8a24c73872",
+    "SMOKE_TEST.json": "fb1214a4594afa8b133ba79b5824ed32a18ff110019441633705daca26514c18",
+    "generic_local_dynamics_endpoints.csv": "39755a0096b179426642ac664ac9253f61eee29f3afacac090c33ffa31309e15",
+    "generic_local_dynamics_long.csv": "96b94a5dd43b92935400e03049d179b9801be06eceec2581536b24f21c971a34",
+    "generic_local_dynamics_operator.npz": "8d22f60ce15ab1b75fb86ef5678700ac4bec1a99797ec07578214a986b709b6d",
+    "generic_local_dynamics_summary.json": "27537622e6236c56c48060891f4577e6b334f4acc71bfaf66955c072c484f26c"
+  },
+  "pair_residuals": [
+    {
+      "c_v": 1.280388242017762e-06,
+      "ct_u": 5.133693023104701e-07,
+      "k": 1
+    },
+    {
+      "c_v": 1.661529966684829e-06,
+      "ct_u": 1.4792785146684764e-06,
+      "k": 2
+    },
+    {
+      "c_v": 1.3844968434911124e-06,
+      "ct_u": 1.7219568712361904e-06,
+      "k": 3
+    },
+    {
+      "c_v": 0.000958168484018537,
+      "ct_u": 1.9148484119793876e-06,
+      "k": 4
+    }
+  ],
+  "postrun_recurrence_verification": "PASS",
+  "protocol_id": "Project1_GenericLocalDynamics_PRX_v1_2026-10-27",
+  "result_verification_sha256": "ffe719c7934ec7751a89840be2fe9acc590837eede90a8dbb6a63c8a24c73872",
+  "runtime": {
+    "backend": "CPU",
+    "deterministic": true,
+    "numpy": "2.5.3",
+    "platform": "macOS-27.0.1-arm64-arm-64bit",
+    "python": "/REDACTED/USER/AI_Workspace/Projects/Codex/2026-10-28/hi/work/pfai-venv312/bin/python",
+    "python_version": "3.12.13 (main, Aug  7 2026, 02:15:23) [Clang 22.1.3 ]",
+    "threads": 8,
+    "torch": "2.14.0",
+    "transformers": "5.17.0"
+  },
+  "scientific_protocol_unchanged": true,
+  "seeds": [
+    2026102701,
+    2026102702,
+    2026102703,
+    2026102704,
+    2026102705,
+    2026102706,
+    2026102707,
+    2026102708
+  ],
+  "status": "COMPLETE"
+}

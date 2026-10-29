@@ -1,0 +1,56 @@
+{
+  "diagnostic_additions_not_success_gates": [
+    "coupling_CX0_raw",
+    "coupling_CT_U0_raw",
+    "first_step_diag_raw",
+    "first_step_offdiag_raw",
+    "coupling_activity_ratio",
+    "prediction_error_abs_raw",
+    "prediction_error_abs_central",
+    "cosine_valid",
+    "cosine_reason"
+  ],
+  "explicitly_unchanged_scientific_settings": [
+    "epsilon",
+    "r_eta",
+    "horizon",
+    "direction_seeds",
+    "direction_rng",
+    "amplitudes",
+    "mu",
+    "eta_X",
+    "eta_U",
+    "F0",
+    "model_commit",
+    "layer_zero_based",
+    "operator_definition",
+    "success_criteria",
+    "exclusion_rules"
+  ],
+  "historical_authority": {
+    "aligned_a0_authority": "inputs/P2J_FROZEN_CELL_PREDICTIONS.csv",
+    "amplitude_gate_authority": "inputs/P2J_AMPLITUDE_GATE.csv",
+    "common_frozen_horizon": 28,
+    "frozen_a0": 0.017926377843768725,
+    "horizon_completion_authority": "inputs/P2J_TRAINING_COMPLETION.json",
+    "stable_historical_horizon": 32,
+    "unstable_historical_horizon": 28
+  },
+  "immutable_scientific_file_sha256": {
+    "inputs/F0.npy": "90b69399e16f424c5524fdbfe7f788e2c0bbef9731ac7cddb3d45efac7d2b16b",
+    "inputs/P2H_CROSS_HESSIAN_SPECTRUM.npz": "3e97497498767484bb010098f3ef2ce25718d8bd0f4ba204f09ae4f8e866f5d1",
+    "inputs/P2H_LINEARIZATION_DIAGNOSTICS.json": "cd45ee17d1d07893701a964a7af700766a5c326775965bdd3351a2807754254c",
+    "inputs/P2J_AMPLITUDE_GATE.csv": "3a7aae7b81554808ce7ad6ce5d8108624ded389e319d8e83accea7b14e5a3f70",
+    "inputs/P2J_F0_AND_C_BINDING.json": "cda0619be724386dcbfe650c979a7759846d03d1f80c2504bd7a5fadd1c49c1d",
+    "inputs/P2J_FROZEN_CELL_PREDICTIONS.csv": "508a090eb8ec1c9ec4985e5d07e898839b7e249ba1f808c771603f617eb9ea17",
+    "inputs/P2J_TRAINING_COMPLETION.json": "7bf5a4eda28e33f6f849890ceb6c8969911ffff8f26a9340348ee3b4c5f1a2fd",
+    "protocol.json": "fa5a35776d995cd4e402db210868a764881243a2f66de56eccd69d31db51d315",
+    "reference/node4_frozen_protocol_source.md": "a4a94f19c736269ad1fd455d85eae23002be66774989c2180d0c8a7912c0539f",
+    "reference/p2h_preflight_archived.py": "c5f54c3c59319c15b4d2f1337e035d7054f5bd84e3a7a3889ced3756afaf4659",
+    "reference/p2j_train_primary_archived.py": "8e9e82c6eba51e2f34c8ed2af77d2568cbd25f118eac484113a11b8ef74bb4d3"
+  },
+  "protocol_sha256": "fa5a35776d995cd4e402db210868a764881243a2f66de56eccd69d31db51d315",
+  "scientific_protocol_unchanged_from_v1": true,
+  "seal_version": "reviewed_v2_2026-10-28",
+  "status": "SEALED"
+}

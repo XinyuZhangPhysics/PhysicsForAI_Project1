@@ -1,0 +1,11 @@
+PASS: all 7 Python files are byte-identical and have identical ASTs.
+PASS scripts/finalize_manifest.py: byte-identical; AST identical; static compile passed; no path reversal needed.
+PASS scripts/generic_core.py: byte-identical; AST identical; static compile passed; no path reversal needed.
+PASS scripts/run_generic_local_dynamics.py: byte-identical; AST identical; static compile passed; no path reversal needed.
+PASS scripts/verify_environment.py: byte-identical; AST identical; static compile passed; no path reversal needed.
+PASS scripts/verify_package.py: byte-identical; AST identical; static compile passed; no path reversal needed.
+PASS scripts/verify_results.py: byte-identical; AST identical; static compile passed; no path reversal needed.
+PASS tests/test_protocol.py: byte-identical; AST identical; static compile passed; no path reversal needed.
+PASS: protocol JSON differs only in preferred_model_path; reverse substitution restores exact bytes.
+PASS: run.sh differs only in ARCHIVED_PY; reverse substitution restores exact bytes; bash -n passed.
+No scientific algorithm, numerical default, input hash, model revision, seed, gate, horizon, or output was changed.

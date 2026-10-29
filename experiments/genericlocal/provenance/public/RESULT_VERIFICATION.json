@@ -1,0 +1,9 @@
+{
+  "arms_verified": 32,
+  "max_abs_linear_norm_replay_error": 0.0,
+  "max_abs_linear_projection_replay_error": 0.0,
+  "no_outcome_filtering_checked_by_arm_count": true,
+  "rows_verified": 928,
+  "status": "PASS",
+  "verification": "independent recurrence reconstruction from saved matrix-free factorization and frozen directions"
+}

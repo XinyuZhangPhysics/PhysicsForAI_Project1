@@ -1,0 +1,22 @@
+{
+  "status": "RECOVERED_EXECUTED_SOURCE",
+  "package_files_verified": 27,
+  "bound_source_and_config_files": 9,
+  "python_files_byte_and_ast_identical": 7,
+  "source_path_substitutions": 2,
+  "scientific_changes": 0,
+  "frozen_input_hashes_verified": 5,
+  "frozen_output_hashes_verified": 8,
+  "historical_delivery_bundle_sha256": "0416209469638564db16543808390efa0ab63ef47064a33a93a60c5896e20f3d",
+  "historical_manifest_sha256": "efb7d408f8d05975e74484667f121842347076072cb563df59b3ab3c28dd4a14",
+  "historical_package_manifest_sha256": "87cd5c6c146ba9fb0d3e4119e68568c3dd2915e55845ea35c54e9374f0113487",
+  "archived_log_sha256": "c21129f181854e5ed35a70e5378bafc52d686fef0755f39d444274067d42149c",
+  "live_log_sha256": "12e7191313a9cf9df74647981147d0a9d558691bd66d00a49dfb96c6dda227b8",
+  "archived_log_is_exact_prefix_of_live_log": true,
+  "historical_gradient_evaluations": 896,
+  "historical_arms": 32,
+  "historical_rows": 928,
+  "experiment_rerun": false,
+  "github_push": false,
+  "new_claims_from_reproduction": false
+}

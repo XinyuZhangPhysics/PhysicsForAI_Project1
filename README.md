@@ -2,20 +2,20 @@
 
 Code and project-owned reproducibility material accompanying *Expert-Specific Response in Mixture-of-Experts*.
 
-The 2026-10-28 public tree is synchronized to the active manuscript. It contains the retained copied-state sector-selection, full-tangent, expert-side, background-conversion, duplication-state local-dynamics, and finite-time analysis families. The fixed-routing OLMoE, trained sparse-MoE tomography/objective-response, and utility programs removed from the manuscript remain withdrawn from the current branch.
+The 2026-10-29 public tree is synchronized to the active manuscript. It contains the retained copied-state sector-selection, full-tangent, expert-side, background-conversion, duplication-state local-dynamics, and finite-time analysis families. The fixed-routing OLMoE, trained sparse-MoE tomography/objective-response, and utility programs removed from the manuscript remain withdrawn from the current branch.
 
 ## Generic non-mode-aligned local dynamics
 
-The historically executed source for the 2026-10-27 generic-local experiment has been recovered and cryptographically bound to its archived execution record. The exact model-facing source is published under `experiments/genericlocal/`. The historical runner is stored as three fixed line-boundary text chunks because the connected GitHub write path is text-oriented; concatenating `scripts/run_generic_local_dynamics.py.part00`, `.part01`, and `.part02` reproduces the exact sanitized historical runner with SHA-256 `b5be93f73c40bc4c10ac375813c2e91732dea47c4158d06e18e0183357d25744`. `scripts/generic_core.py` and `protocol.json` are published directly. The seven historical Python files were verified byte-identical during source recovery; only the launcher/config path strings differed in the public-safe recovery handoff. Model weights, corpus text, F0/input arrays, binary results, caches, credentials, and private paths remain excluded.
+The recovered historical source and complete public-safe provenance handoff are canonical under `experiments/genericlocal/`. The full runner is `public_sanitized_source/scripts/run_generic_local_dynamics.py` with SHA-256 `b5be93f73c40bc4c10ac375813c2e91732dea47c4158d06e18e0183357d25744`. All seven Python/test files retain exact historical bytes; only two launcher/config path strings were mechanically substituted. Original and public hashes, redacted execution logs, manifests, seals, audit records and source bindings are published together. See `experiments/genericlocal/README_PUBLIC_SYNC.md`.
 
-Compact manuscript-facing evidence is under `reproducibility/final/`. Full large scientific tables remain in the retained scientific archive and are bound by SHA-256 in `PUBLIC_EVIDENCE_BINDINGS.tsv`.
+Compact generic-local records are under `evidence/generic_local_dynamics/`; diagonal, spectrum, growth and stationary-background records are under `analysis/astra_r2_node1/`, `analysis/astra_r2_node3/` and `analysis/astra_r2_node6/`. `reproducibility/PUBLIC_RELEASE_AUTHORITY_BINDINGS.tsv` records original/public hashes for all 48 canonical handoff and evidence files. The v15 manifest uses the existing hash-bound public account-path normalization; no scientific field changed. Large scientific arrays and the full trajectory table remain in retained scientific storage.
 
 ## Verification
 
-Python 3.12 is the tested interpreter for the clean operator checks:
+This completion audit passed with Python 3.14.7, NumPy 2.5.3 and SciPy 1.18.1. The earlier clean operator release was tested with Python 3.12. To check this release:
 
 ```sh
-python3.12 -m venv .venv
+python3.14 -m venv .venv
 source .venv/bin/activate
 python -m pip install -r requirements-analysis.txt
 python -m unittest discover -s reference_implementation/tests -v

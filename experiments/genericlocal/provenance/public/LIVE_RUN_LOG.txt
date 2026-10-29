@@ -1,0 +1,153 @@
+PYTHON=/REDACTED/USER/AI_Workspace/Projects/Codex/2026-10-28/hi/work/pfai-venv312/bin/python
+{
+  "matplotlib": "3.11.2",
+  "numpy": "2.5.3",
+  "platform": "macOS-27.0.1-arm64-arm-64bit",
+  "python": "/REDACTED/USER/AI_Workspace/Projects/Codex/2026-10-28/hi/work/pfai-venv312/bin/python",
+  "python_major_minor": "3.12",
+  "python_version": "3.12.13 (main, Aug  7 2026, 02:15:23) [Clang 22.1.3 ]",
+  "required_versions": {
+    "numpy": "2.5.3",
+    "torch": "2.14.0",
+    "transformers": "5.17.0"
+  },
+  "status": "PASS",
+  "torch": "2.14.0",
+  "transformers": "5.17.0"
+}
+PACKAGE_VERIFY PASS
+{
+  "F0_shape": [
+    32,
+    256
+  ],
+  "eta_X_mu": 0.2,
+  "historical_authority": {
+    "a0": 0.017926377843768725,
+    "amplitude_gate_rows_passed": 4,
+    "common_frozen_horizon": 28,
+    "stable_historical_horizon": 32,
+    "unstable_historical_horizon": 28
+  },
+  "package_manifest_sha256": "87cd5c6c146ba9fb0d3e4119e68568c3dd2915e55845ea35c54e9374f0113487",
+  "s1": 0.017010007119361258,
+  "scientific_seal_sha256": "71af7e718526f43d6ac6bf2aab7a12f0f3fd3932b769506424c8c6787aef9a4b"
+}
+test_amplitude_rule (test_protocol.ProtocolTests.test_amplitude_rule) ... ok
+test_direction_balancing (test_protocol.ProtocolTests.test_direction_balancing) ... ok
+test_frozen_scientific_settings (test_protocol.ProtocolTests.test_frozen_scientific_settings) ... ok
+test_historical_authority_matches_frozen_a0_and_horizon (test_protocol.ProtocolTests.test_historical_authority_matches_frozen_a0_and_horizon) ... ok
+test_linear_step_uses_frozen_action (test_protocol.ProtocolTests.test_linear_step_uses_frozen_action) ... ok
+test_side_identity (test_protocol.ProtocolTests.test_side_identity) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.837s
+
+OK
+--- full frozen experiment: operator capture + fail-closed smoke tests + 896 generic full-F0 gradients ---
+MODEL /REDACTED/USER/AI_Workspace/ResearchModels/smollm2_135m
+Loading weights:   0%|          | 0/272 [00:00<?, ?it/s]Loading weights: 100%|██████████| 272/272 [00:00<00:00, 9315.04it/s]
+operator capture 8/32
+operator capture 16/32
+operator capture 24/32
+operator capture 32/32
+SMOKE_TEST PASS {
+  "status": "PASS",
+  "model_dir": "/REDACTED/USER/AI_Workspace/ResearchModels/smollm2_135m",
+  "model_commit": "28e66ca6931668447a3bac213f23d990ad3b0e2b",
+  "F0_file_sha256": "90b69399e16f424c5524fdbfe7f788e2c0bbef9731ac7cddb3d45efac7d2b16b",
+  "F0_array_sha256": "b235df753d6f13ecee9f116bd0ee58714646eab454e807786542591f8ad8757a",
+  "spectrum_file_sha256": "3e97497498767484bb010098f3ef2ce25718d8bd0f4ba204f09ae4f8e866f5d1",
+  "pair_residuals": [
+    {
+      "k": 1,
+      "c_v": 1.280388242017762e-06,
+      "ct_u": 5.133693023104701e-07
+    },
+    {
+      "k": 2,
+      "c_v": 1.661529966684829e-06,
+      "ct_u": 1.4792785146684764e-06
+    },
+    {
+      "k": 3,
+      "c_v": 1.3844968434911124e-06,
+      "ct_u": 1.7219568712361904e-06
+    },
+    {
+      "k": 4,
+      "c_v": 0.000958168484018537,
+      "ct_u": 1.9148484119793876e-06
+    }
+  ],
+  "aligned_map_smoke": [
+    {
+      "side": "stable",
+      "epsilon": -0.08,
+      "sigma_plus": -0.007840063948851173,
+      "gamma_disc": -0.007870958834743187,
+      "e_M": 0.7210991742988171,
+      "e_U": 0.6928318560989847,
+      "relative_map_error": 3.7935334526750923e-07
+    },
+    {
+      "side": "unstable",
+      "epsilon": 0.08,
+      "sigma_plus": 0.008159936051148857,
+      "gamma_disc": 0.008126823780354158,
+      "e_M": -0.6928318560989847,
+      "e_U": -0.7210991742988171,
+      "relative_map_error": 3.998147038884112e-07
+    }
+  ],
+  "operator_factorization_sha256": "8d22f60ce15ab1b75fb86ef5678700ac4bec1a99797ec07578214a986b709b6d",
+  "eta_X_mu": 0.2,
+  "A_align": 0.002338001544530506,
+  "delta": 2.3380015445305057e-15
+}
+COMPLETE stable direction=1 amp=small elapsed=89.4s
+COMPLETE stable direction=1 amp=large elapsed=171.4s
+COMPLETE stable direction=2 amp=small elapsed=250.9s
+COMPLETE stable direction=2 amp=large elapsed=329.1s
+COMPLETE stable direction=3 amp=small elapsed=410.2s
+COMPLETE stable direction=3 amp=large elapsed=489.4s
+COMPLETE stable direction=4 amp=small elapsed=568.1s
+COMPLETE stable direction=4 amp=large elapsed=645.3s
+COMPLETE stable direction=5 amp=small elapsed=722.1s
+COMPLETE stable direction=5 amp=large elapsed=800.2s
+COMPLETE stable direction=6 amp=small elapsed=877.5s
+COMPLETE stable direction=6 amp=large elapsed=954.9s
+COMPLETE stable direction=7 amp=small elapsed=1032.1s
+COMPLETE stable direction=7 amp=large elapsed=1108.9s
+COMPLETE stable direction=8 amp=small elapsed=1187.0s
+COMPLETE stable direction=8 amp=large elapsed=1263.0s
+COMPLETE unstable direction=1 amp=small elapsed=1339.0s
+COMPLETE unstable direction=1 amp=large elapsed=1414.9s
+COMPLETE unstable direction=2 amp=small elapsed=1490.9s
+COMPLETE unstable direction=2 amp=large elapsed=1569.0s
+COMPLETE unstable direction=3 amp=small elapsed=1650.0s
+COMPLETE unstable direction=3 amp=large elapsed=1731.7s
+COMPLETE unstable direction=4 amp=small elapsed=1811.0s
+COMPLETE unstable direction=4 amp=large elapsed=1888.8s
+COMPLETE unstable direction=5 amp=small elapsed=1965.2s
+COMPLETE unstable direction=5 amp=large elapsed=2042.1s
+COMPLETE unstable direction=6 amp=small elapsed=2119.0s
+COMPLETE unstable direction=6 amp=large elapsed=2195.3s
+COMPLETE unstable direction=7 amp=small elapsed=2271.9s
+COMPLETE unstable direction=7 amp=large elapsed=2352.8s
+COMPLETE unstable direction=8 amp=small elapsed=2432.9s
+COMPLETE unstable direction=8 amp=large elapsed=2509.6s
+Matplotlib is building the font cache; this may take a moment.
+GENERIC_LOCAL_DYNAMICS COMPLETE
+{
+  "arms_verified": 32,
+  "max_abs_linear_norm_replay_error": 0.0,
+  "max_abs_linear_projection_replay_error": 0.0,
+  "no_outcome_filtering_checked_by_arm_count": true,
+  "rows_verified": 928,
+  "status": "PASS",
+  "verification": "independent recurrence reconstruction from saved matrix-free factorization and frozen directions"
+}
+FINAL_MANIFEST PASS
+FINAL_COMPLETENESS_CHECK PASS
+RESULT_BUNDLE=/REDACTED/USER/AI_Workspace/Projects/Codex/2026-10-28/hi/work/Project1_GenericLocalDynamics_Codex_Package_REVIEWED_v2_2026-10-28/results/generic_local_dynamics_2026-10-27_RESULT_BUNDLE.zip

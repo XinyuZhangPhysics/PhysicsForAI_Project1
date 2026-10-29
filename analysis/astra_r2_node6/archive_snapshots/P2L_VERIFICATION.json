@@ -1,0 +1,117 @@
+{
+  "status": "PASS",
+  "verified_utc": "2026-10-08T14:14:48.989634+00:00",
+  "verdict": "P2L_MOBILITY_CONFIRMATION_SUPPORTED",
+  "analytic_predictions": [
+    {
+      "r_eta": 0.25,
+      "rho_plus": 1.0096895489152091,
+      "gamma_plus": 0.009642906291405429,
+      "N": 24,
+      "endpoint": 1.2604007815651417
+    },
+    {
+      "r_eta": 1.0,
+      "rho_plus": 1.0254348529922268,
+      "gamma_plus": 0.025116769444817916,
+      "N": 9,
+      "endpoint": 1.253639505248667
+    },
+    {
+      "r_eta": 4.0,
+      "rho_plus": 1.0450167034754942,
+      "gamma_plus": 0.04403286947610449,
+      "N": 6,
+      "endpoint": 1.302385023255163
+    }
+  ],
+  "independent_OLS_method": "numpy.linalg.lstsq from checkpoint projections; training analysis used centered covariance",
+  "independent_eigen_method": "closed-form eigenvalues of dimensionless generator plus first-row eigenvector",
+  "checkpoint_hashes_verified": 84,
+  "all_integer_checkpoint_observables_verified": true,
+  "locality_extrema": [
+    {
+      "cell": 0,
+      "sign": -1,
+      "F1_min": 1.0000000216027007,
+      "C_plus_min": 0.9999999997465057,
+      "E_pm_max": 3.773945604591826e-08,
+      "amplitude_ratio_min": 1.0,
+      "amplitude_ratio_max": 1.2599273792249341
+    },
+    {
+      "cell": 0,
+      "sign": 1,
+      "F1_min": 1.000000021604414,
+      "C_plus_min": 0.9999999997466703,
+      "E_pm_max": 3.773945604591826e-08,
+      "amplitude_ratio_min": 1.0,
+      "amplitude_ratio_max": 1.2599273129343644
+    },
+    {
+      "cell": 1,
+      "sign": -1,
+      "F1_min": 1.000000022650956,
+      "C_plus_min": 0.9999999981488544,
+      "E_pm_max": 8.966676041798352e-09,
+      "amplitude_ratio_min": 1.0,
+      "amplitude_ratio_max": 1.2531867629937556
+    },
+    {
+      "cell": 1,
+      "sign": 1,
+      "F1_min": 1.0000000226507784,
+      "C_plus_min": 0.9999999981495569,
+      "E_pm_max": 8.966676041798352e-09,
+      "amplitude_ratio_min": 1.0,
+      "amplitude_ratio_max": 1.2531867429839578
+    },
+    {
+      "cell": 2,
+      "sign": -1,
+      "F1_min": 1.0000000223459646,
+      "C_plus_min": 0.99999998360285,
+      "E_pm_max": 1.897644764596446e-08,
+      "amplitude_ratio_min": 1.0,
+      "amplitude_ratio_max": 1.3016689920949438
+    },
+    {
+      "cell": 2,
+      "sign": 1,
+      "F1_min": 1.000000022346467,
+      "C_plus_min": 0.9999999836016202,
+      "E_pm_max": 1.897644764596446e-08,
+      "amplitude_ratio_min": 1.0,
+      "amplitude_ratio_max": 1.3016690086812486
+    }
+  ],
+  "sign_rate_asymmetries": [
+    1.4200883183473406e-07,
+    8.453223789904897e-08,
+    7.193897232214739e-08
+  ],
+  "mobility_ratio_relative_errors": [
+    1.5625174313749213e-05,
+    0.00042717781981505
+  ],
+  "direct_rate_relative_L2": 0.0019147108833544417,
+  "direct_rate_Pearson": 0.9999999590546488,
+  "provenance_order_verified": true,
+  "seal_utc": "2026-10-08T14:10:34.899792+00:00",
+  "training_started_utc": "2026-10-08T14:10:49.999394+00:00",
+  "training_finished_utc": "2026-10-08T14:14:36.271810+00:00",
+  "decision_utc": "2026-10-08T14:14:41.654527+00:00",
+  "exact_reused_assets_unchanged": true,
+  "primary_updates": 78,
+  "primary_runs": 6,
+  "counters": {
+    "NEW_MODEL_DOWNLOAD_BYTES": 0,
+    "NEW_DATA_DOWNLOAD_BYTES": 0,
+    "NEW_BANK_COUNT": 0,
+    "OUTCOME_DEPENDENT_PROTOCOL_CHANGE_COUNT": 0,
+    "MODEL_FILES_NEWLY_DOWNLOADED": 0,
+    "DATA_FILES_NEWLY_DOWNLOADED": 0,
+    "BYTES_NEWLY_DOWNLOADED": 0
+  },
+  "training_rerun_updates": 0
+}

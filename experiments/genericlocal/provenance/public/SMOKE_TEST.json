@@ -1,0 +1,54 @@
+{
+  "A_align": 0.002338001544530506,
+  "F0_array_sha256": "b235df753d6f13ecee9f116bd0ee58714646eab454e807786542591f8ad8757a",
+  "F0_file_sha256": "90b69399e16f424c5524fdbfe7f788e2c0bbef9731ac7cddb3d45efac7d2b16b",
+  "aligned_map_smoke": [
+    {
+      "e_M": 0.7210991742988171,
+      "e_U": 0.6928318560989847,
+      "epsilon": -0.08,
+      "gamma_disc": -0.007870958834743187,
+      "relative_map_error": 3.7935334526750923e-07,
+      "side": "stable",
+      "sigma_plus": -0.007840063948851173
+    },
+    {
+      "e_M": -0.6928318560989847,
+      "e_U": -0.7210991742988171,
+      "epsilon": 0.08,
+      "gamma_disc": 0.008126823780354158,
+      "relative_map_error": 3.998147038884112e-07,
+      "side": "unstable",
+      "sigma_plus": 0.008159936051148857
+    }
+  ],
+  "delta": 2.3380015445305057e-15,
+  "eta_X_mu": 0.2,
+  "model_commit": "28e66ca6931668447a3bac213f23d990ad3b0e2b",
+  "model_dir": "/REDACTED/USER/AI_Workspace/ResearchModels/smollm2_135m",
+  "operator_factorization_sha256": "8d22f60ce15ab1b75fb86ef5678700ac4bec1a99797ec07578214a986b709b6d",
+  "pair_residuals": [
+    {
+      "c_v": 1.280388242017762e-06,
+      "ct_u": 5.133693023104701e-07,
+      "k": 1
+    },
+    {
+      "c_v": 1.661529966684829e-06,
+      "ct_u": 1.4792785146684764e-06,
+      "k": 2
+    },
+    {
+      "c_v": 1.3844968434911124e-06,
+      "ct_u": 1.7219568712361904e-06,
+      "k": 3
+    },
+    {
+      "c_v": 0.000958168484018537,
+      "ct_u": 1.9148484119793876e-06,
+      "k": 4
+    }
+  ],
+  "spectrum_file_sha256": "3e97497498767484bb010098f3ef2ce25718d8bd0f4ba204f09ae4f8e866f5d1",
+  "status": "PASS"
+}

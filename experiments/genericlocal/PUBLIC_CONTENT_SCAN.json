@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "files_scanned": 28,
+  "checks": [
+    "UTF-8 text extension and size allowlist",
+    "no private account path or username",
+    "credential-pattern scan",
+    "no original/private subtree",
+    "no model, corpus, F0/token-bank, arrays, or cache payload"
+  ],
+  "method_limit": "pattern scan plus explicit source/provenance-only file selection; not a semantic guarantee for arbitrary secrets"
+}
