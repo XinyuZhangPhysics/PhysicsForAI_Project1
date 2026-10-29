@@ -1,0 +1,20 @@
+{
+  "protocol_id": "Project1_E5_AmplitudeDomainLocality_v1_2026-10-29",
+  "parent_protocol_id": "Project1_GenericLocalDynamics_PRX_v1_2026-10-27",
+  "parent_public_commit": "8f087523d936d80af6edb20dd7c7d3659c3eaf67",
+  "parent_runner_sha256": "b5be93f73c40bc4c10ac375813c2e91732dea47c4158d06e18e0183357d25744",
+  "amplitude_reference": "A_align = a0_aligned_raw * sqrt(mu)",
+  "q_grid": [1, 2, 4, 8, 16, 32, 64, 128, 256],
+  "quadratic_fit_q": [4, 8, 16, 32],
+  "epsilon": {"stable": -0.08, "unstable": 0.08},
+  "direction_seeds": [2026102701, 2026102702, 2026102703, 2026102704, 2026102705, 2026102706, 2026102707, 2026102708],
+  "steps_per_cell": 1,
+  "expected_gradient_evaluations": 144,
+  "primary_error": "one-step relative local-map error e1 = ||Delta z_obs - Delta z_lin||_c / (||Delta z_lin||_c + delta)",
+  "secondary_errors": ["absolute central residual", "increment cosine", "pointwise tanh remainder diagnostics"],
+  "small_amplitude_anchor_gate": "median e1(q=1) < 5e-6 on each side",
+  "quadratic_scaling_gate": "OLS slope alpha of log median(e1) vs log q over q={4,8,16,32} lies in [1.5,2.5] on each side",
+  "one_percent_radius": "smallest q with median e1 >= 0.01, otherwise q_1pct > 256",
+  "five_percent_radius": "smallest q with median e1 >= 0.05, otherwise q_5pct > 256",
+  "no_rescue": true
+}
