@@ -2,7 +2,7 @@
 
 Code and project-owned reproducibility material accompanying *Expert-Specific Response in Mixture-of-Experts*.
 
-The public tree is synchronized to the active manuscript. It contains the retained copied-state sector-selection, full-tangent, expert-side, background-conversion, duplication-state local-dynamics, and finite-time analysis families. Experiment families removed from the manuscript remain outside the active scope.
+The public tree is synchronized to the active manuscript. It contains the retained copied-state sector-selection, full-tangent, expert-side, background-conversion, duplication-state local-dynamics, amplitude-domain locality, and finite-time analysis families. Experiment families removed from the manuscript remain outside the active scope.
 
 ## Reproducing the model-facing experiments
 
@@ -14,11 +14,13 @@ Third-party weights and corpus text are not redistributed. Readers obtain the pi
 
 The recovered historical source and public-safe provenance handoff are canonical under `experiments/genericlocal/`. The full runner is `public_sanitized_source/scripts/run_generic_local_dynamics.py` with historical SHA-256 `b5be93f73c40bc4c10ac375813c2e91732dea47c4158d06e18e0183357d25744`. See `experiments/genericlocal/README_PUBLIC_SYNC.md`.
 
+The E5 amplitude-domain extension is under `experiments/genericlocal/amplitude_domain/`, with its frozen preanalysis, protocol, one-step runner, and analyzer. Its all-cell primary table and compact aggregate are under `evidence/amplitude_domain/`. The frozen q=4,8,16,32 scaling window gives exponents 1.9763 (stable) and 1.9769 (unstable); neither the 1% nor 5% median-error threshold is crossed through q=256.
+
 Compact generic-local records are under `evidence/generic_local_dynamics/`; diagonal, spectrum, growth, and stationary-background records are under `analysis/astra_r2_node1/`, `analysis/astra_r2_node3/`, and `analysis/astra_r2_node6/`. `reproducibility/PUBLIC_RELEASE_AUTHORITY_BINDINGS.tsv` records original/public hashes for canonical handoff/evidence files.
 
 ## Verification
 
-The completion audit used Python 3.14.7, NumPy 2.5.3, and SciPy 1.18.1; the clean operator release was also tested with Python 3.12.
+The completion audit used Python 3.14.7, NumPy 2.5.3, and SciPy 1.18.1; the clean operator release was also tested with Python 3.12. The E5 scientific execution used Python 3.12.13, NumPy 2.5.3, PyTorch 2.14.0, and Transformers 5.17.0 after independently rebuilding the frozen F0 input and mixed spectrum from the pinned upstream revisions.
 
 ```sh
 python3.14 -m venv .venv
@@ -31,6 +33,6 @@ For model-facing reconstruction, follow `reproducibility/UPSTREAM_RECONSTRUCTION
 
 ## Evidence identity
 
-The growth figure preserves the 11-cell P2J primary aggregate and the separately frozen P2L confirmation; P2L is never substituted into the primary aggregate. The stationary-background common-absolute-`lambda` record labels nonzero-background values at `lambda=lambda_c(0)` as theory-only references, not measured trajectories. The diagonal-only comparison is a leading-four projected-subspace ablation, not a full-state diagonal-only reconstruction.
+The growth figure preserves the 11-cell P2J primary aggregate and the separately frozen P2L confirmation; P2L is never substituted into the primary aggregate. The stationary-background common-absolute-`lambda` record labels nonzero-background values at `lambda=lambda_c(0)` as theory-only references, not measured trajectories. The diagonal-only comparison is a leading-four projected-subspace ablation, not a full-state diagonal-only reconstruction. The E5 amplitude-domain claim is a one-step locality result; it does not establish long-time accuracy at q=256.
 
 Project-owned code/documentation and selection metadata are MIT licensed; upstream assets retain their original licenses.
