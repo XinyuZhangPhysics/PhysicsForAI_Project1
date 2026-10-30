@@ -32,3 +32,16 @@ generic_local_leading4	full_mixed_max_error	2.9193492030501205e-5	projected incr
 generic_local_diagonal_ablation	diagonal_only_median_error	0.3233738859263083	projected increment error	leading-four projected-subspace diagonal-restoring-only baseline
 generic_local_diagonal_ablation	diagonal_only_cosine_median	0.9524794314325913	dimensionless	projected observed/diagonal-only increment cosine median
 generic_local_spectrum	rho1_over_rho2	2.0464044491673996	dimensionless	post-hoc deterministic recurrence reconstruction; original spectrum NPZ remains authoritative
+heldout_E6	E_source	0.068788841	normalized increment error	prospective generic-state source-map transfer; six-bank aggregate
+heldout_E6	C_source	0.99763324	dimensionless	prospective generic-state source-map increment cosine
+heldout_E6	R_mix	1.38203676	E_source/E_diagonal	fixed F0 mixed block does not improve unseen-bank prediction at 32-sequence bank size
+heldout_E6	target_oracle_error	7.28459877e-7	normalized increment error	median across six primary target-bank medians after remeasuring the target operator
+heldout_E6b	E_source	1.000703711	normalized increment error	prospective source-leading-pair transfer to new target banks
+heldout_E6b	C_source	0.01686346775	dimensionless	source leading-pair increment cosine on new target banks
+heldout_E6b	R_mix	1.711013104	E_source/E_diagonal	source leading numerical mode is not a coherent unseen-bank predictor
+heldout_E6b	target_oracle_error	4.347149673e-5	normalized increment error	target-specific operator restores local closure
+heldout_E6b	top1_bilinear_ratio	0.01844128459	dimensionless	u1^T C_T v1 / rho1 across primary target-bank medians
+pythia_E7v2	max_relative_log_rate_error	0.005797518446	dimensionless	maximum over six aligned eight-step rate cells
+pythia_E7v2	min_endpoint_pair_capture	0.9999987299	fraction	minimum leading-pair endpoint capture over six aligned cells
+pythia_E7v2	generic_median_increment_error	0.00013962267	normalized increment error	median over 16 generic one-step states
+pythia_E7v2	generic_min_increment_cosine	0.9999999864	dimensionless	minimum over 16 generic one-step states
