@@ -1,0 +1,13 @@
+grade	check	criterion	observed	result
+A	E_full	<=0.50	0.103451202	PASS
+A	R	<=0.75	0.176324712	PASS
+A	median_C_full	>=0.90	0.996431295	PASS
+A	direction_pairs_full_better	>=10/12	12/12	PASS
+A	bootstrap_R_upper	<1.0	0.213240521	PASS
+A	R_a001	<1.0	0.176487337	PASS
+A	median_C_full_a001	>0	0.995593687	PASS
+A	sign_pair_locality	positive alignment; no catastrophic sign reversal	0.991661308	PASS
+A+	median_support_turnover	<=0.01	0.0480375744	FAIL
+A+	p95_support_turnover	<=0.05	0.0517508371	FAIL
+A+	R_a001	<1.0	0.176487337	PASS
+A+	R_a004	<1.0	0.180507764	PASS

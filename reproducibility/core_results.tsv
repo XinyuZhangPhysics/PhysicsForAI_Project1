@@ -45,3 +45,12 @@ pythia_E7v2	max_relative_log_rate_error	0.005797518446	dimensionless	maximum ove
 pythia_E7v2	min_endpoint_pair_capture	0.9999987299	fraction	minimum leading-pair endpoint capture over six aligned cells
 pythia_E7v2	generic_median_increment_error	0.00013962267	normalized increment error	median over 16 generic one-step states
 pythia_E7v2	generic_min_increment_cosine	0.9999999864	dimensionless	minimum over 16 generic one-step states
+nmix	E_full_a0.02	0.103451202	normalized gradient-increment error	Bank-A full restricted Hessian predicting disjoint Bank-B nonlinear gradient increments
+nmix	E_no_mixed_a0.02	0.586708	normalized gradient-increment error	same Hessian after deleting only router-expert mixed blocks
+nmix	R_a0.02	0.176324712	E_full/E_no_mixed	primary mixed-block necessity ratio; paired-direction 95% CI [0.140634,0.213240521]
+nmix	median_full_cosine_a0.02	0.996431295	dimensionless	median Bank-B observed/predicted gradient-increment cosine
+nmix	direction_pairs_full_better	12/12	direction pairs	all tested direction pairs improve when mixed blocks are retained
+nmix	R_a0.01	0.176487337	E_full/E_no_mixed	neighboring-amplitude stability
+nmix	R_a0.04	0.180507764	E_full/E_no_mixed	neighboring-amplitude stability
+nmix	median_support_turnover_a0.02	0.0480375744	fraction	fails the stricter Grade-A+ <=1% low-turnover qualifier
+nmix	p95_support_turnover_a0.02	0.0517508371	fraction	fails the stricter Grade-A+ <=5% low-turnover qualifier

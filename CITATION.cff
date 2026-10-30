@@ -1,11 +1,11 @@
 cff-version: 1.2.0
 message: "Please cite the paper and this code release."
-title: "Expert-Specific Response in Mixture-of-Experts"
+title: "Local Symmetry Breaking and Router–Expert Coupling in Mixture-of-Experts"
 type: software
-version: "2026-10-29"
-date-released: 2026-10-29
+version: "2026-10-30-nmix-sync-candidate"
+date-released: 2026-10-30
 authors:
   - family-names: Zhang
     given-names: Xinyu
 license: MIT
-abstract: "Source code, recovered execution provenance, clean operator implementations, tests, and compact reproducibility evidence for the active manuscript Expert-Specific Response in Mixture-of-Experts."
+abstract: "Source code, recovered execution provenance, clean operator implementations, tests, and compact reproducibility evidence for the active manuscript Local Symmetry Breaking and Router–Expert Coupling in Mixture-of-Experts. The NMIX synchronization is a candidate until the exact revision-4 production source and compact per-direction sufficient statistics are exported from the sealed project bundle."

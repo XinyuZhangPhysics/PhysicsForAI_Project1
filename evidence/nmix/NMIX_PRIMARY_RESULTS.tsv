@@ -1,0 +1,5 @@
+scope	amplitude	E_full	E_no_mixed	R	median_full_cosine	improved_direction_pairs	bootstrap_R_lower95	bootstrap_R_upper95	full_cosine_lower95	full_cosine_upper95
+cross_bank	0.01	0.105164	0.595874	0.176487	0.995594	12				
+cross_bank	0.02	0.103451202	0.586708	0.176324712	0.996431295	12	0.140634	0.213240521	0.994285	0.997539
+cross_bank	0.04	0.106409	0.589498	0.180507764	0.996456	12				
+same_bank_A_secondary	0.02	0.048170		0.080382	0.999118					

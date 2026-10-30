@@ -1,0 +1,81 @@
+{
+  "schema": "Project1_NMIX_v1_public_protocol",
+  "status": "GRADE_A_DELETE_NATIVE_QUALIFICATION",
+  "model": {
+    "repository": "allenai/OLMoE-1B-7B-0924",
+    "checkpoint_branch": "step1200000-tokens5033B",
+    "revision": "b99743a400844e532bec7ce4575d97a3a39dcd4d",
+    "layer_zero_based": 15,
+    "num_hidden_layers": 16,
+    "num_experts": 64,
+    "top_k": 8,
+    "gate_bias": false,
+    "renormalize_selected_topk_probabilities": false
+  },
+  "bank": {
+    "records": 448,
+    "domains": ["algebraic-stack", "arxiv", "dclm", "open-web-math", "pes2o", "starcoder", "wiki"],
+    "records_per_domain": 64,
+    "bank_A_per_domain": 32,
+    "bank_B_per_domain": 32,
+    "split_rule": "within each domain, sort ascending by SHA256(UTF-8 immutable document_id); first 32 -> A, last 32 -> B",
+    "archived_jsonl_sha256": "0dd17c1eaa7f3106d92080d99b0d1386cf3b9cdae0edea75e2012321a8d09d2a",
+    "archived_jsonl_bytes": 1539879,
+    "sequence_rule": "use first 96 archived token IDs from each 256-token record; no retokenization",
+    "predicted_tokens_per_sequence": 95,
+    "raw_token_bank_redistributed": false
+  },
+  "coordinates": {
+    "dimension": 12,
+    "expert_sector_dimension": 6,
+    "router_sector_dimension": 6,
+    "expert_parameterization": "radial gains of selected expert down projections",
+    "router_parameterization": "radial factors of native router rows",
+    "contrast_construction": "outcome-independent centered QR contrasts",
+    "contrast_seed": 2026103001,
+    "direction_seed": 2026103002,
+    "direction_pairs": 12,
+    "equal_expert_router_sector_norms": true,
+    "both_signs": true,
+    "amplitudes": [0.01, 0.02, 0.04],
+    "primary_amplitude": 0.02
+  },
+  "objective": {
+    "language_model_term": "native causal cross entropy per predicted token",
+    "router_auxiliary_coefficient": 0.001,
+    "router_auxiliary_pooling": "assignment fractions and mean router probabilities pooled over all 16 layers and all bank routing tokens before multiplication",
+    "independent_chunk_auxiliary_averaging": false
+  },
+  "prediction": {
+    "source_operator": "full restricted Hessian measured on Bank A only",
+    "target": "nonlinear gradient increments on Bank B relative to the zero-control state",
+    "no_mixed_baseline": "same Bank-A Hessian with only router-expert mixed blocks set to zero",
+    "no_B_dependent_refit": true,
+    "no_alignment_or_basis_rotation": true,
+    "no_direction_selection": true
+  },
+  "bootstrap": {
+    "replicates": 10000,
+    "generator": "NumPy PCG64",
+    "seed": 2026103003,
+    "unit": "12 direction sign-pairs",
+    "document_bootstrap": false
+  },
+  "grade_A": {
+    "E_full_max": 0.50,
+    "R_max": 0.75,
+    "median_full_cosine_min": 0.90,
+    "direction_pairs_full_better_min": 10,
+    "bootstrap_R_upper_strict_max": 1.0,
+    "neighbor_amplitude_R_strict_max": 1.0
+  },
+  "grade_A_plus": {
+    "median_support_turnover_max": 0.01,
+    "p95_support_turnover_max": 0.05
+  },
+  "technical_seals": {
+    "pre_primary_utc": "2026-10-30T06:00:27Z",
+    "primary_results_utc": "2026-10-30T06:03:49Z",
+    "completed_execution_revision": 4
+  }
+}

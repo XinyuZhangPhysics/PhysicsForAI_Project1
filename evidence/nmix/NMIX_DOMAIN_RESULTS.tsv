@@ -1,0 +1,8 @@
+domain	amplitude	E_full	E_no_mixed	R	median_full_cosine	role
+algebraic-stack	0.02	0.428729	0.720699	0.594880	0.943076	descriptive_nonadjudicative
+arxiv	0.02	0.264140	0.639911	0.412776	0.972177	descriptive_nonadjudicative
+dclm	0.02	0.470169	0.675292	0.696246	0.930963	descriptive_nonadjudicative
+open-web-math	0.02	0.270326	0.620005	0.436006	0.966729	descriptive_nonadjudicative
+pes2o	0.02	0.282263	0.648698	0.435123	0.962940	descriptive_nonadjudicative
+starcoder	0.02	0.470082	0.670205	0.701399	0.940303	descriptive_nonadjudicative
+wiki	0.02	0.413545	0.661081	0.625559	0.922983	descriptive_nonadjudicative
