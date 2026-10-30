@@ -4,7 +4,7 @@ This directory binds the exact public-safe revision-4 production source and the 
 
 The source files are the executed revision-4 source, byte-identical except for the explicitly documented private-home path substitutions in `source/preflight.py` and `source/run.py`. Original and public hashes are recorded in `PUBLIC_EXPORT_MANIFEST.tsv` and `PATH_SANITIZATION.tsv`.
 
-The public numerical record includes the deterministic Bank-A/Bank-B identities and hashes, all 72 signed Bank-B state metrics across amplitudes 0.01/0.02/0.04, all 10,000 paired-direction bootstrap replicates, support-turnover diagnostics, domainwise summaries, the final adjudication, and exact text exports of the frozen contrast basis, direction array, and raw/symmetrized Bank-A Hessians. `ARRAY_EXPORT_METADATA.json` records the original `.npy` SHA-256 values and verifies exact numerical round-trip of each text export.
+The public numerical record includes the deterministic Bank-A/Bank-B identities and hashes, all 72 signed Bank-B state metrics across amplitudes 0.01/0.02/0.04, the exact control-space states/responses and frozen bootstrap seed needed to reconstruct all 10,000 paired-direction bootstrap replicates, support-turnover diagnostics, domainwise summaries, the final adjudication, and exact text exports of the frozen contrast basis, direction array, and raw/symmetrized Bank-A Hessians. `ARRAY_EXPORT_METADATA.json` records the original `.npy` SHA-256 values and verifies exact numerical round-trip of each text export.
 
 Run:
 
