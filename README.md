@@ -2,7 +2,7 @@
 
 Code and project-owned reproducibility material accompanying *Expert-Specific Response in Mixture-of-Experts*.
 
-The public tree is synchronized to the active manuscript. It contains the retained copied-state sector-selection, full-tangent, expert-side, background-conversion, duplication-state local-dynamics, amplitude-domain locality, and finite-time analysis families. Experiment families removed from the manuscript remain outside the active scope.
+The public tree is synchronized to the active manuscript. It contains the retained copied-state sector-selection, full-tangent, expert-side, background-conversion, duplication-state local-dynamics, amplitude-domain locality, finite-time analysis, prospective held-out-bank scope checks, and Pythia cross-model replication. Experiment families removed from the manuscript remain outside the active scope.
 
 ## Reproducing the model-facing experiments
 
@@ -18,9 +18,15 @@ The E5 amplitude-domain extension is under `experiments/genericlocal/amplitude_d
 
 Compact generic-local records are under `evidence/generic_local_dynamics/`; diagonal, spectrum, growth, and stationary-background records are under `analysis/astra_r2_node1/`, `analysis/astra_r2_node3/`, and `analysis/astra_r2_node6/`. `reproducibility/PUBLIC_RELEASE_AUTHORITY_BINDINGS.tsv` records original/public hashes for canonical handoff/evidence files.
 
+## Finite-sample operator scope and Pythia cross-model replication
+
+The prospective held-out-bank tests reported in the Supplemental Material have compact bank-level evidence under `evidence/heldout_transfer/`, with frozen package identities and decision endpoints recorded in `reproducibility/postpaper_protocols.tsv`. E6 tests generic-state source-operator transfer to six primary and two blind 32-sequence target banks; E6b tests transfer of the source leading singular pair to a fresh eight-bank population. Both establish the scope boundary used in the manuscript: remeasuring the operator on each target bank restores local closure, whereas a fixed numerical mixed operator from one small empirical bank is not an unseen-bank predictor.
+
+The minimal Pythia-70M cross-model replication has compact aligned-rate and generic one-step evidence under `evidence/pythia_crossmodel/`, with its frozen package identity and protocol endpoint recorded in `reproducibility/postpaper_protocols.tsv`. E7v2 independently remeasures the local operator at Pythia layer 3 and reproduces the six aligned growth/decay rates and the non-mode-aligned one-step closure reported in the manuscript. The original E7 stopped before primary science at its frozen amplitude gate; E7v2 is a separately frozen protocol whose projected-mode observable hierarchy was fixed before its primary outcomes.
+
 ## Verification
 
-The completion audit used Python 3.14.7, NumPy 2.5.3, and SciPy 1.18.1; the clean operator release was also tested with Python 3.12. The E5 scientific execution used Python 3.12.13, NumPy 2.5.3, PyTorch 2.14.0, and Transformers 5.17.0 after independently rebuilding the frozen F0 input and mixed spectrum from the pinned upstream revisions.
+The completion audit used Python 3.14.7, NumPy 2.5.3, and SciPy 1.18.1; the clean operator release was also tested with Python 3.12. The model-facing E5/E6/E6b/E7v2 executions used pinned Python 3.12 environments with the scientific package versions bound by their frozen packages and verified the exact model/data assets before science.
 
 ```sh
 python3.14 -m venv .venv
@@ -29,10 +35,10 @@ python -m pip install -r requirements-analysis.txt
 python -m unittest discover -s reference_implementation/tests -v
 ```
 
-For model-facing reconstruction, follow `reproducibility/UPSTREAM_RECONSTRUCTION.md`.
+For model-facing reconstruction, follow `reproducibility/UPSTREAM_RECONSTRUCTION.md`; the exact post-paper extension package identities and endpoints are recorded in `reproducibility/postpaper_protocols.tsv`.
 
 ## Evidence identity
 
-The growth figure preserves the 11-cell P2J primary aggregate and the separately frozen P2L confirmation; P2L is never substituted into the primary aggregate. The stationary-background common-absolute-`lambda` record labels nonzero-background values at `lambda=lambda_c(0)` as theory-only references, not measured trajectories. The diagonal-only comparison is a leading-four projected-subspace ablation, not a full-state diagonal-only reconstruction. The E5 amplitude-domain claim is a one-step locality result; it does not establish long-time accuracy at q=256.
+The growth figure preserves the 11-cell P2J primary aggregate and the separately frozen P2L confirmation; P2L is never substituted into the primary aggregate. The stationary-background common-absolute-`lambda` record labels nonzero-background values at `lambda=lambda_c(0)` as theory-only references, not measured trajectories. The diagonal-only comparison is a leading-four projected-subspace ablation, not a full-state diagonal-only reconstruction. The E5 amplitude-domain claim is a one-step locality result; it does not establish long-time accuracy at q=256. E6/E6b are scope tests of a fixed finite-sample numerical operator, not failures of the within-objective local construction. E7v2 tests cross-model reproduction after remeasuring the operator; it does not assert transfer of the SmolLM2 numerical matrix to Pythia.
 
 Project-owned code/documentation and selection metadata are MIT licensed; upstream assets retain their original licenses.
