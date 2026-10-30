@@ -60,7 +60,7 @@ assert all(x["pass"] for x in adj["grade_A_checks"].values())
 assert not adj["grade_A_plus_checks"]["median_support_turnover"]["pass"]
 assert not adj["grade_A_plus_checks"]["p95_support_turnover"]["pass"]
 
-print("NMIX revision-4 public core: PASS")
+print("NMIX reproducibility core: PASS")
 print("E_full =",p["E_full"])
 print("E_no_mixed =",p["E_diag"])
 print("R =",p["R"])

@@ -2,8 +2,6 @@
 
 Code and project-owned reproducibility material accompanying *Local Symmetry Breaking and Router–Expert Coupling in Mixture-of-Experts*.
 
-> **NMIX synchronization status.** The revision-4 public core is complete under `evidence/nmix/revision4_public/`: executed production source, frozen protocol/configuration, exact Bank-A/Bank-B identities and hashes, 72 signed Bank-B state metrics, raw/symmetrized Bank-A Hessians, frozen directions/contrast basis, and deterministic replay inputs for the reported bootstrap/adjudication. See `evidence/nmix/RELEASE_COMPLETENESS.md`.
-
 The public tree otherwise tracks the active manuscript: copied-state sector selection, full-tangent and expert-side checks, background conversion, duplication-state local dynamics, amplitude-domain locality, finite-time analysis, the prospective small-bank held-out scope boundary, Pythia cross-model replication, and the mature native sparse-MoE mixed-block necessity test. Experiment families removed from the manuscript remain outside the active scope.
 
 ## Mature native sparse-MoE mixed-block necessity (NMIX)
@@ -18,7 +16,7 @@ For the established S1/S2/Pythia experiment families, all project-owned informat
 
 Third-party weights and corpus text are not redistributed. Readers obtain the pinned Pythia-70M, SmolLM2-135M, and SlimPajama-6B revisions recorded in `configs/models.json`. Generated token banks, representation captures, F0 arrays, mixed operators/spectra, checkpoints, and trajectory tables are reproducible intermediate outputs rather than additional private dependencies.
 
-For NMIX, the public release supplies the pinned OLMoE revision, exact archived-bank hash and split identities, S96 rule, coordinate dimensions/seeds, objective/bootstrapping metadata, executed revision-4 source, compact raw control-space responses/states, Hessians, aggregate results, and adjudication. `evidence/nmix/revision4_public/verify_revision4_core.py` reconstructs the reported primary errors, paired-direction bootstrap interval, support-turnover summary, and frozen decision from the released records.
+For NMIX, `evidence/nmix/` supplies the pinned OLMoE revision, exact archived-bank hash and split identities, S96 rule, coordinate dimensions/seeds, objective/bootstrapping metadata, executed source, compact raw control-space responses/states, Hessians, aggregate results, and adjudication. `evidence/nmix/verify_nmix_core.py` reconstructs the reported primary errors, paired-direction bootstrap interval, support-turnover summary, and frozen decision from the released records.
 
 ## Generic non-mode-aligned local dynamics
 
@@ -46,7 +44,7 @@ python -m unittest discover -s reference_implementation/tests -v
 python evidence/nmix/verify_nmix_release.py
 ```
 
-For model-facing reconstruction of the established copied-state/SmolLM2/Pythia families, follow `reproducibility/UPSTREAM_RECONSTRUCTION.md`. NMIX release completeness is separately tracked in `evidence/nmix/RELEASE_COMPLETENESS.md`.
+For model-facing reconstruction of the established copied-state/SmolLM2/Pythia families, follow `reproducibility/UPSTREAM_RECONSTRUCTION.md`. NMIX source, protocol, data, provenance and verification material are under `evidence/nmix/`.
 
 ## Evidence identity and claim discipline
 
