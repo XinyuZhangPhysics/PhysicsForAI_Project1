@@ -1,0 +1,157 @@
+{
+  "protocol_id": "Project1_NMIX_v1",
+  "run_revision": 4,
+  "final_status": "GRADE_A_DELETE_NATIVE_QUALIFICATION",
+  "primary_amplitude": 0.02,
+  "metrics": {
+    "amplitude": 0.02,
+    "E_full": 0.10345120235788188,
+    "E_diag": 0.5867084710549376,
+    "R": 0.17632471229172866,
+    "median_C_full": 0.9964312950179884,
+    "direction_pairs_full_better": 12,
+    "median_support_turnover": 0.048037574404761904,
+    "p95_support_turnover": 0.051750837053571426,
+    "R_bootstrap_ci95": [
+      0.14063407840881267,
+      0.21324052125255263
+    ],
+    "median_C_full_bootstrap_ci95": [
+      0.99428520164464,
+      0.9975391522305148
+    ],
+    "R_a001": 0.17648733715351597,
+    "R_a004": 0.1805077635770362
+  },
+  "grade_A_checks": {
+    "E_full": {
+      "observed": 0.10345120235788188,
+      "threshold": "<=0.50",
+      "pass": true
+    },
+    "R": {
+      "observed": 0.17632471229172866,
+      "threshold": "<=0.75",
+      "pass": true
+    },
+    "median_C_full": {
+      "observed": 0.9964312950179884,
+      "threshold": ">=0.90",
+      "pass": true
+    },
+    "direction_pairs_full_better": {
+      "observed": 12,
+      "threshold": ">=10/12",
+      "pass": true
+    },
+    "bootstrap_R_upper": {
+      "observed": 0.21324052125255263,
+      "threshold": "<1.0",
+      "pass": true
+    },
+    "R_a001": {
+      "observed": 0.17648733715351597,
+      "threshold": "<1.0",
+      "pass": true
+    },
+    "median_C_full_a001": {
+      "observed": 0.9955936865570723,
+      "threshold": ">0",
+      "pass": true
+    },
+    "sign_pair_locality": {
+      "observed": 0.9916613077063535,
+      "threshold": "no catastrophic sign reversal: response(+a) and -response(-a) retain positive alignment",
+      "pass": true
+    }
+  },
+  "grade_A_plus_checks": {
+    "median_support_turnover": {
+      "observed": 0.048037574404761904,
+      "threshold": "<=0.01",
+      "pass": false
+    },
+    "p95_support_turnover": {
+      "observed": 0.051750837053571426,
+      "threshold": "<=0.05",
+      "pass": false
+    },
+    "R_a001": {
+      "observed": 0.17648733715351597,
+      "threshold": "<1.0",
+      "pass": true
+    },
+    "R_a004": {
+      "observed": 0.1805077635770362,
+      "threshold": "<1.0",
+      "pass": true
+    }
+  },
+  "sign_pair_diagnostics": [
+    {
+      "direction_id": 0,
+      "sign_pair_anticorrelation_cosine": 0.9973991343875719,
+      "even_to_odd_norm_ratio": 0.036774737353189965
+    },
+    {
+      "direction_id": 1,
+      "sign_pair_anticorrelation_cosine": 0.9992868292117225,
+      "even_to_odd_norm_ratio": 0.024248678772743577
+    },
+    {
+      "direction_id": 2,
+      "sign_pair_anticorrelation_cosine": 0.9986037226343959,
+      "even_to_odd_norm_ratio": 0.02643884331159997
+    },
+    {
+      "direction_id": 3,
+      "sign_pair_anticorrelation_cosine": 0.9992061295295146,
+      "even_to_odd_norm_ratio": 0.03407702254386608
+    },
+    {
+      "direction_id": 4,
+      "sign_pair_anticorrelation_cosine": 0.9959097414685988,
+      "even_to_odd_norm_ratio": 0.047280371692290636
+    },
+    {
+      "direction_id": 5,
+      "sign_pair_anticorrelation_cosine": 0.9916613077063535,
+      "even_to_odd_norm_ratio": 0.06524978715225452
+    },
+    {
+      "direction_id": 6,
+      "sign_pair_anticorrelation_cosine": 0.9936742311215024,
+      "even_to_odd_norm_ratio": 0.06757842982774248
+    },
+    {
+      "direction_id": 7,
+      "sign_pair_anticorrelation_cosine": 0.9980641168239571,
+      "even_to_odd_norm_ratio": 0.03333990153375281
+    },
+    {
+      "direction_id": 8,
+      "sign_pair_anticorrelation_cosine": 0.9988433550842766,
+      "even_to_odd_norm_ratio": 0.02407358008072869
+    },
+    {
+      "direction_id": 9,
+      "sign_pair_anticorrelation_cosine": 0.9974950801899558,
+      "even_to_odd_norm_ratio": 0.03559649952077983
+    },
+    {
+      "direction_id": 10,
+      "sign_pair_anticorrelation_cosine": 0.9925075558612056,
+      "even_to_odd_norm_ratio": 0.06133255811486454
+    },
+    {
+      "direction_id": 11,
+      "sign_pair_anticorrelation_cosine": 0.9958031273929916,
+      "even_to_odd_norm_ratio": 0.046114848255132575
+    }
+  ],
+  "scientific_evaluation_occurred": true,
+  "notes": [
+    "The prior missing-input blocked run is not a negative scientific result.",
+    "The qualitative no-catastrophe test is evaluated as retained sign-pair odd-response alignment; raw asymmetry values are reported."
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "status": "VERIFIED",
+  "path": "<LOCAL_HOME>/AI_Workspace/ResearchModels/olmoe_5033B",
+  "revision": "b99743a400844e532bec7ce4575d97a3a39dcd4d",
+  "files": [
+    {
+      "name": "config.json",
+      "path": "<LOCAL_HOME>/AI_Workspace/ResearchModels/models--allenai--OLMoE-1B-7B-0924/blobs/1e20b08bfc8656c72a289a937f27fc83324878e7",
+      "sha256": "7b51fed908c2058ab52ba074d13c5dc4e2622b5a883caef91a6770724a093e16",
+      "expected": "7b51fed908c2058ab52ba074d13c5dc4e2622b5a883caef91a6770724a093e16",
+      "matches": true
+    },
+    {
+      "name": "model.safetensors.index.json",
+      "path": "<LOCAL_HOME>/AI_Workspace/ResearchModels/models--allenai--OLMoE-1B-7B-0924/blobs/4c7929b85bfb7ebfeb83cfd2398a4fe0ecfdf90e",
+      "sha256": "0e2e1e0d8d357ac7af817cff28410c3dbad398f060c517a433e4076b2aae5579",
+      "expected": "0e2e1e0d8d357ac7af817cff28410c3dbad398f060c517a433e4076b2aae5579",
+      "matches": true
+    },
+    {
+      "name": "model-00001-of-00003.safetensors",
+      "path": "<LOCAL_HOME>/AI_Workspace/ResearchModels/models--allenai--OLMoE-1B-7B-0924/blobs/8315c8da3cb0599994cb0e2fb9e7cca137c5709feb6fad34cf5fa644adbc6bcf",
+      "sha256": "8315c8da3cb0599994cb0e2fb9e7cca137c5709feb6fad34cf5fa644adbc6bcf",
+      "expected": "8315c8da3cb0599994cb0e2fb9e7cca137c5709feb6fad34cf5fa644adbc6bcf",
+      "matches": true
+    },
+    {
+      "name": "model-00002-of-00003.safetensors",
+      "path": "<LOCAL_HOME>/AI_Workspace/ResearchModels/models--allenai--OLMoE-1B-7B-0924/blobs/3629be37f70d03cd51b150ae09506b772929c64f0d30e3c4b7b4059df63f3aa5",
+      "sha256": "3629be37f70d03cd51b150ae09506b772929c64f0d30e3c4b7b4059df63f3aa5",
+      "expected": "3629be37f70d03cd51b150ae09506b772929c64f0d30e3c4b7b4059df63f3aa5",
+      "matches": true
+    },
+    {
+      "name": "model-00003-of-00003.safetensors",
+      "path": "<LOCAL_HOME>/AI_Workspace/ResearchModels/models--allenai--OLMoE-1B-7B-0924/blobs/205f83526b5700a6b84fbd92c840867895167bac0ccbb565a9edf8b6dec3eea2",
+      "sha256": "205f83526b5700a6b84fbd92c840867895167bac0ccbb565a9edf8b6dec3eea2",
+      "expected": "205f83526b5700a6b84fbd92c840867895167bac0ccbb565a9edf8b6dec3eea2",
+      "matches": true
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "protocol_id": "Project1_NMIX_v1",
+  "purpose": "delete_or_soften_mature_native_sparse_moe_qualification_without_starting_new_research_line",
+  "model": {
+    "search_root": "<LOCAL_HOME>/AI_Workspace/ResearchModels",
+    "repository": "allenai/OLMoE-1B-7B-0924",
+    "checkpoint_label": "step1200000-tokens5033B",
+    "tokens_B": 5033,
+    "revision_commit": "b99743a400844e532bec7ce4575d97a3a39dcd4d",
+    "expected_sha256": {
+      "config.json": "7b51fed908c2058ab52ba074d13c5dc4e2622b5a883caef91a6770724a093e16",
+      "model.safetensors.index.json": "0e2e1e0d8d357ac7af817cff28410c3dbad398f060c517a433e4076b2aae5579",
+      "model-00001-of-00003.safetensors": "8315c8da3cb0599994cb0e2fb9e7cca137c5709feb6fad34cf5fa644adbc6bcf",
+      "model-00002-of-00003.safetensors": "3629be37f70d03cd51b150ae09506b772929c64f0d30e3c4b7b4059df63f3aa5",
+      "model-00003-of-00003.safetensors": "205f83526b5700a6b84fbd92c840867895167bac0ccbb565a9edf8b6dec3eea2"
+    }
+  },
+  "layer": {"label": "L15", "zero_based_index": 15},
+  "bank": {
+    "expected_path": "<LOCAL_HOME>/AI_Workspace/Projects/Codex/2026-10-08/physicsforai-project-1-p2d-agents-md/outputs/P2D_CERTIFIED_RESUME_20261008_103610/Formal_Bank_T_v1.jsonl",
+    "expected_sha256": "0dd17c1eaa7f3106d92080d99b0d1386cf3b9cdae0edea75e2012321a8d09d2a",
+    "documents": 448,
+    "domains": 7,
+    "documents_per_domain": 64,
+    "split_per_domain": {"A": 32, "B": 32},
+    "sequence_length": 96,
+    "split_rule": "sort stable document hashes within each domain; first 32 A, last 32 B"
+  },
+  "control_space": {
+    "experts": 64,
+    "expert_dim": 6,
+    "router_dim": 6,
+    "joint_dim": 12,
+    "contrast_seed": 2026103001,
+    "contrast_normalization": "C=8*Q after mean projection and thin QR; C^T C / 64 = I",
+    "expert_parameter": "L15 expert output/down projection radial row-group scaling",
+    "router_parameter": "L15 native router/gate expert-row radial scaling"
+  },
+  "directions": {
+    "count": 12,
+    "seed": 2026103002,
+    "equal_sector_norm": true,
+    "sign_pairs": true,
+    "amplitudes": [0.01, 0.02, 0.04],
+    "primary_amplitude": 0.02
+  },
+  "bootstrap": {"replicates": 10000, "seed": 2026103003, "unit": "direction_sign_pair"},
+  "hessian": {
+    "preferred_backend": "second_order_autodiff",
+    "fallback": "central_finite_difference_of_control_gradient",
+    "finite_difference_steps": [0.005, 0.01, 0.02],
+    "symmetry_defect_max": 0.05,
+    "step_stability_relative_frobenius_max": 0.10,
+    "symmetrize_after_certification": true
+  },
+  "primary_test": {
+    "operator_bank": "A",
+    "evaluation_bank": "B",
+    "full_predictor": "H_A z",
+    "ablation_predictor": "blockdiag(H_XX,H_UU) z",
+    "no_B_dependent_calibration": true
+  },
+  "grade_A": {
+    "E_full_max": 0.50,
+    "error_ratio_max": 0.75,
+    "median_full_cosine_min": 0.90,
+    "direction_pairs_full_better_min": 10,
+    "direction_pairs_total": 12,
+    "bootstrap_ratio_ci95_upper_lt": 1.0,
+    "low_amplitude_requires_ratio_lt": 1.0
+  },
+  "grade_A_plus": {
+    "median_support_turnover_max": 0.01,
+    "p95_support_turnover_max": 0.05,
+    "full_advantage_required_at_all_amplitudes": true
+  },
+  "forbidden": [
+    "outcome_dependent_basis_refit",
+    "outcome_dependent_direction_selection",
+    "B_dependent_scalar_calibration",
+    "new_model_or_checkpoint",
+    "new_data_bank",
+    "continued_pretraining",
+    "downstream_benchmark",
+    "utility_search",
+    "rescue_experiment_after_failed_primary",
+    "manuscript_editing_during_execution"
+  ]
+}

@@ -19,14 +19,14 @@ The final scope-strengthening experiments are retained as compact frozen release
 
 - `../evidence/heldout_transfer/`: E6/E6b prospective held-out-bank source-map, blind-replication, and target-oracle summaries. These are negative scope results for fixed small-bank numerical operator transfer and remain active manuscript boundaries.
 - `../evidence/pythia_crossmodel/`: E7v2 aligned-rate and generic one-step cross-model summaries after remeasuring the Pythia operator.
-- `../evidence/nmix/`: mature OLMoE Bank-A/Bank-B mixed-block necessity protocol, compact results, adjudication, and candidate-release completeness record.
+- `../evidence/nmix/`: mature OLMoE Bank-A/Bank-B mixed-block necessity protocol, compact results, adjudication, and public-safe revision-4 production/evidence core.
 - `postpaper_protocols.tsv`: frozen package SHA-256 values, endpoints, decision rules, and provenance scope for E6, E6b, and E7v2.
 
-## NMIX candidate-release status
+## NMIX revision-4 public release
 
-The NMIX scientific result is final (`GRADE_A_DELETE_NATIVE_QUALIFICATION`), but this synchronization branch is not yet the final public reproducibility release. The compact protocol and aggregate outcomes are verified. The sealed revision-4 result bundle additionally contains the exact executed production source, frozen contrast/direction arrays, all 72 signed Bank-B states, raw/symmetrized Hessians, support diagnostics, and all 10,000 bootstrap replicates. Those bytes are not currently exportable through the available Project Library surface in this synchronization session.
+The NMIX scientific result is final (`GRADE_A_DELETE_NATIVE_QUALIFICATION`). The public-safe revision-4 core under `../evidence/nmix/revision4_public/` binds the executed production source and frozen protocol/configuration to compact measured control-space evidence: the deterministic Bank-A/Bank-B identities and hashes, frozen directions/contrast basis, raw/symmetrized Bank-A Hessians, all 72 signed Bank-B state metrics, and exact control-space states/responses sufficient to reconstruct the reported primary errors and paired-direction bootstrap. The deterministic checker independently reconstructs the published interval and frozen adjudication.
 
-Accordingly, `../evidence/nmix/RELEASE_COMPLETENESS.md` is binding: `main` should not be advanced to this candidate until exact production source/config plus compact per-direction sufficient statistics (or equivalent raw gradient/Hessian arrays) are publicly bound and independently checked. This makes the Data Availability verification explicit rather than inferring execution identity from a reconstructed implementation.
+The raw 448-record token bank, third-party model weights/tokenizer, and large acceleration/routing-logit caches are not redistributed. Their identities and acquisition/reconstruction requirements are recorded, while the exact private scientific archive has separately passed remote hash readback and archive-only restoration. `../evidence/nmix/RELEASE_COMPLETENESS.md` records the closed public-release gate.
 
 The historical pretrained-OLMoE response-geometry / utility program remains paused and outside the active claim set. It must not be conflated with NMIX.
 

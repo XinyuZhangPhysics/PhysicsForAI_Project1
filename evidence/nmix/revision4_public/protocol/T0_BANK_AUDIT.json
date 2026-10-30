@@ -1,0 +1,27 @@
+{
+  "status": "VERIFIED",
+  "run_revision": 4,
+  "source": "<LOCAL_HOME>/AI_Workspace/Projects/Codex/2026-10-30/Project1_NMIX_v1/run_revision_4/work/Project1_NMIX_Unblock_Resume_Package_v1/inputs/Formal_Bank_T_v1.jsonl",
+  "bytes": 1539879,
+  "records": 448,
+  "sha256": "0dd17c1eaa7f3106d92080d99b0d1386cf3b9cdae0edea75e2012321a8d09d2a",
+  "domains": {
+    "dclm": 64,
+    "starcoder": 64,
+    "pes2o": 64,
+    "arxiv": 64,
+    "open-web-math": 64,
+    "algebraic-stack": 64,
+    "wiki": 64
+  },
+  "split": {
+    "A": 224,
+    "B": 224
+  },
+  "split_rule": "SHA256 of UTF-8 immutable document_id, ascending per domain; first 32 A",
+  "sequence_rule": "Use first 96 archived token_ids for frozen S96; no retokenization. Archived records contain 256 IDs each.",
+  "cross_bank_duplicate_S96_count": 0,
+  "supplied_hash_identical_historical_input": true,
+  "regenerated_or_substituted": false,
+  "bank_B_scientific_evaluated": false
+}

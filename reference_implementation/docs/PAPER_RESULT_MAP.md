@@ -11,7 +11,7 @@
 | P1-E07 | generic non-mode-aligned frozen-map propagation | `experiments/genericlocal/` + `reproducibility/final/GENERIC_LOCAL_HEADLINE_SUMMARY.tsv` |
 | P1-E08 | leading-four mixed-block ablation | `analysis/astra_r2_node1/analyze_diag_baseline.py` + `analysis/astra_r2_node1/generic_local_dynamics_diag_baseline.csv` + summary JSON |
 | P1-E09 | ordered/sequence-mean/reference-mean finite-time propagation | `reference_implementation/src/moe_private_response/finite_time.py` |
-| P1-E10 | mature native OLMoE mixed-block necessity on disjoint Bank B | `evidence/nmix/` — compact protocol/results/adjudication; exact revision-4 production source and per-direction sufficient statistics pending export before candidate branch can replace `main` |
+| P1-E10 | mature native OLMoE mixed-block necessity on disjoint Bank B | `evidence/nmix/` + `evidence/nmix/revision4_public/` — compact protocol/results/adjudication plus public-safe revision-4 production source and measured per-state/control-space evidence |
 
 The saved-recurrence spectrum reconstruction in `analysis/astra_r2_node3/` is an independent reproducibility cross-check and is not represented as the original spectrum NPZ. The historical pretrained-OLMoE response-geometry / utility program remains paused and is not mapped as positive evidence.
 

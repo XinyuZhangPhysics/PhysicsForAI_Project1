@@ -30,7 +30,8 @@ The frozen outcome is `GRADE_A_DELETE_NATIVE_QUALIFICATION`. Grade A+ is not rea
 - `NMIX_DOMAIN_RESULTS.tsv`: seven descriptive domainwise comparisons at the primary amplitude.
 - `NMIX_ADJUDICATION.tsv`: frozen Grade-A / Grade-A+ decision table.
 - `verify_nmix_release.py`: deterministic consistency checks for the compact public record.
-- `RELEASE_COMPLETENESS.md`: what is and is not yet present in this candidate synchronization branch.
+- `revision4_public/`: public-safe revision-4 production source, exact protocol/config bindings, Bank split identities, 72-state control-space evidence, Hessian/direction/contrast exports, and deterministic replay checker.
+- `RELEASE_COMPLETENESS.md`: final public-release completeness record.
 
 ## Data boundary
 

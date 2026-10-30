@@ -1,0 +1,64 @@
+{
+  "T0_CONTRAST_BASIS": {
+    "original_npy_sha256": "dc2e3b5755693171f0bea5bddd34e168d5fcbfc448eac29d7aca7e0cd29401af",
+    "original_npy_bytes": 3200,
+    "dtype": "float64",
+    "shape": [
+      64,
+      6
+    ],
+    "tsv_sha256": "c0b4180dc1760b204b8cd95d04cfb16b2aaae6c78bd7b8fe0fe24eaf363c9d5a",
+    "roundtrip_array_equal": true
+  },
+  "T0_DIRECTIONS": {
+    "original_npy_sha256": "f2689c79cbe54bc9575331e0a3716a3a0d0112bb9147a12145208e731a4d0e96",
+    "original_npy_bytes": 1280,
+    "dtype": "float64",
+    "shape": [
+      12,
+      12
+    ],
+    "tsv_sha256": "cd52ae81757f0ccc666c33606589d7228fb5d6415353d6f893a1b9f20bf76c92",
+    "roundtrip_array_equal": true
+  },
+  "T2_HESSIAN_A_RAW": {
+    "original_npy_sha256": "030f9a4846e3b6fbd43e0e27ecdac8113c5b19298bd974b59dc24ca092f3db05",
+    "original_npy_bytes": 1280,
+    "dtype": "float64",
+    "shape": [
+      12,
+      12
+    ],
+    "tsv_sha256": "acf4bfcc9ca3eb90703196f2c8ea5dd7e57868b28bebf17359dd9f973487cfa8",
+    "roundtrip_array_equal": true
+  },
+  "T2_HESSIAN_A_SYM": {
+    "original_npy_sha256": "3e64a3908f96934a1d392652ad136959af6986ff38cc0ed9f8654d3676ed494d",
+    "original_npy_bytes": 1280,
+    "dtype": "float64",
+    "shape": [
+      12,
+      12
+    ],
+    "tsv_sha256": "a5b2ad2b4bdd22b7b78c0c07092ef62d8788a215924ca7edec4b6ac5f34a22b5",
+    "roundtrip_array_equal": true
+  },
+  "B_CONTROL_SPACE_RAW": {
+    "original_npz_sha256": "5e8f4a66f517acb9e14623fe024493674add151d120b380f888fda8474c911c3",
+    "original_npz_bytes": 56921,
+    "states_shape": [
+      72,
+      12
+    ],
+    "responses_shape": [
+      72,
+      12
+    ],
+    "g0_shape": [
+      12
+    ],
+    "tsv_sha256": "16f8f42fddfdf466de107a641cd04d4509c9a3b28f765e6cedd652e6f65bff9b",
+    "g0_tsv_sha256": "87d5bb71460edd24ee316ee0705adbea0d202a328117cd5da9b6fed6f9c91f9c",
+    "roundtrip_array_equal": true
+  }
+}
