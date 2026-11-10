@@ -1,4 +1,0 @@
-experiment	final_label	primary_quantity	primary_value	uncertainty_or_gate	interpretation
-E1	POPULATION_SHIFT_RESOLVED	R_population(h=32)	0.8019399665523629	whole-stream stability [0.751004290899911,0.9127933216859254]	population-level operator shift improves fixed reference but remains 72.7104x worse than held-out realized-prefix conditioning at h=32
-E4a	MU_DECOUPLING_RESOLVED	max relative rate error	0.00753477	all four cells <=0.02 and both |epsilon_hat|<=0.01	formation law is not an artifact of historical mu=rho1 normalization; physical threshold moves fourfold
-E4b	BACKGROUND_FORMATION_BRIDGE_RESOLVED	Delta_lambda	0.17830234894232475	all four rates <=0.00481518 relative error; both |epsilon_hat|<=0.001116	measured mixed curvature at a stationary physical background predicts shifted onset and local deterministic kinetics

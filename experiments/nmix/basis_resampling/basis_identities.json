@@ -1,0 +1,25 @@
+{
+  "construction": "A~N(0,I) shape (64,6); subtract column means; thin QR; flip each column so its largest-absolute entry is positive; C=8Q",
+  "bases": [
+    {
+      "id": 1,
+      "seed": 2026110902,
+      "sha256": "e8a6fa06cb532cebbe4179ba1ca2bf4fcac2fa20ff21745bdf840907b947f7f4"
+    },
+    {
+      "id": 2,
+      "seed": 2026110903,
+      "sha256": "c4294e23f8dc108b661e87bc3900bed148932aa7a62e799d194185faa738ae44"
+    },
+    {
+      "id": 3,
+      "seed": 2026110904,
+      "sha256": "0ee1775b017e4212ee68e7107d9a359b48340d66ba4ffedce4778cff573c0c26"
+    },
+    {
+      "id": 4,
+      "seed": 2026110905,
+      "sha256": "b9b094c8ebd6ec62200eb902de14ba675e9c2ed8d8eaad4daa855ffe81e53464"
+    }
+  ]
+}
