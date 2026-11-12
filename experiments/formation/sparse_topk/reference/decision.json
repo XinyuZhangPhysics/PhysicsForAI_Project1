@@ -1,0 +1,40 @@
+{
+  "status": "SEALED",
+  "verdict": "SPARSE_FIXED_SUPPORT_BRIDGE_SUPPORTED",
+  "acceptance": {
+    "correct_growth_decay_sign_both_cells": true,
+    "minimum_leading_pair_capture": 0.99,
+    "minimum_top2_top3_margin": 4.0,
+    "pair_mean_relative_rate_error_max": 0.02,
+    "support_turnover_must_equal": 0
+  },
+  "cells": [
+    {
+      "cell": 0,
+      "correct_sign": true,
+      "epsilon": -0.08,
+      "gamma_pred": -0.007870958834743187,
+      "minimum_leading_pair_capture": 0.9999999814736963,
+      "minimum_top2_top3_margin": 7.972843647003174,
+      "pair_mean_gamma_obs": -0.007925923567716197,
+      "pair_mean_relative_error": 0.006983232173746105,
+      "passed": true,
+      "sign_rates_correct": true,
+      "support_turnover_tokens": 0
+    },
+    {
+      "cell": 1,
+      "correct_sign": true,
+      "epsilon": 0.08,
+      "gamma_pred": 0.008126823780354158,
+      "minimum_leading_pair_capture": 0.9999999711995586,
+      "minimum_top2_top3_margin": 7.969856262207031,
+      "pair_mean_gamma_obs": 0.00806136638013648,
+      "pair_mean_relative_error": 0.008054487458669313,
+      "passed": true,
+      "sign_rates_correct": true,
+      "support_turnover_tokens": 0
+    }
+  ],
+  "interpretation_ceiling": "This is a controlled renormalized top-2 fixed-support bridge. It does not reproduce OLMoE's exact no-renormalization routing convention and does not establish native onset."
+}

@@ -10,8 +10,7 @@ This repository contains source code, fixed configurations, random seeds, asset 
 - `evidence/` — compact legacy reference outputs retained for experiments that predate the experiment-local layout.
 - `requirements-*.txt` — tested software requirements.
 
-The mature OLMoE experiments are grouped under `experiments/nmix/` as peer experiments:
-`source_to_heldout`, `orientation`, `basis_resampling`, `document_resampling`, and `fixed_membership`.
+Controlled expert-formation experiments are grouped under `experiments/formation/`, including the dense duplication studies and the fixed-support sparse top-k control. The mature OLMoE experiments are grouped under `experiments/nmix/` as peer experiments: `source_to_heldout`, `orientation`, `basis_resampling`, `document_resampling`, and `fixed_membership`.
 
 ## Reproducibility convention
 
@@ -28,6 +27,8 @@ Local machine paths, model caches, raw third-party datasets, model weights, and 
 ## External assets
 
 For the OLMoE experiments, use `allenai/OLMoE-1B-7B-0924` at the checkpoint/revision specified in `experiments/nmix/common/config.json`. The 448-record bank itself is not redistributed; its SHA-256, size, domain composition, sequence rule, and deterministic source/held-out assignment are recorded in the same directory.
+
+The controlled formation experiments use the model/data identities recorded in their experiment-local configuration and reference metadata. Third-party model and corpus bytes are not redistributed.
 
 ## License
 

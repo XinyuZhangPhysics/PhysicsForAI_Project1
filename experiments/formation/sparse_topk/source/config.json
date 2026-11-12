@@ -1,0 +1,55 @@
+{
+  "experiment_id": "P1_SPARSE_TOPK_BRIDGE_V1",
+  "scientific_authority_commit": "d4280736a16362f0490c8cd28d136520198bb7ea",
+  "model_name": "SmolLM2-135M",
+  "model_revision": "28e66ca6931668447a3bac213f23d990ad3b0e2b",
+  "layer_zero_based": 20,
+  "sequence_count": 32,
+  "sequence_length": 256,
+  "routing": {
+    "num_experts": 4,
+    "top_k": 2,
+    "renormalize_selected": true,
+    "active_experts_zero_based": [0, 1],
+    "inactive_logit_offset": -8.0,
+    "contrast": [0.7071067811865476, -0.7071067811865476, 0.0, 0.0],
+    "minimum_allowed_top2_top3_margin": 4.0
+  },
+  "spectrum": {
+    "block_size": 4,
+    "gaussian_seed": 2026111201,
+    "max_iterations": 512,
+    "minimum_iterations": 24,
+    "check_every": 8,
+    "leading_relative_residual_max": 0.0001,
+    "hvp_relative_error_max": 0.0001
+  },
+  "dynamics": {
+    "epsilon": [-0.08, 0.08],
+    "r_eta": 1.0,
+    "dimensionless_expert_step_alpha": 0.2,
+    "initial_joint_amplitude": 0.0179,
+    "horizon_updates": 8,
+    "signs": [-1, 1]
+  },
+  "preflight_tolerances": {
+    "origin_loss_absolute_max": 1e-7,
+    "origin_output_absolute_max": 1e-7,
+    "separate_tangent_output_absolute_max": 1e-7
+  },
+  "primary_acceptance": {
+    "correct_growth_decay_sign_both_cells": true,
+    "pair_mean_relative_rate_error_max": 0.02,
+    "minimum_leading_pair_capture": 0.99,
+    "support_turnover_must_equal": 0,
+    "minimum_top2_top3_margin": 4.0
+  },
+  "runtime": {
+    "device": "cpu",
+    "torch_dtype": "float32",
+    "reduction_dtype": "float64",
+    "torch_num_threads": 8,
+    "deterministic_algorithms": true,
+    "network_access": false
+  }
+}
