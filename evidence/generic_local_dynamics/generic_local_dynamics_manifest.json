@@ -53,35 +53,35 @@
   },
   "pair_residuals": [
     {
-      "c_v": 1.280388242017762e-06,
-      "ct_u": 5.133693023104701e-07,
+      "c_v": 0.000001280388242017762,
+      "ct_u": 5.133693023104701e-7,
       "k": 1
     },
     {
-      "c_v": 1.661529966684829e-06,
-      "ct_u": 1.4792785146684764e-06,
+      "c_v": 0.000001661529966684829,
+      "ct_u": 0.0000014792785146684764,
       "k": 2
     },
     {
-      "c_v": 1.3844968434911124e-06,
-      "ct_u": 1.7219568712361904e-06,
+      "c_v": 0.0000013844968434911124,
+      "ct_u": 0.0000017219568712361904,
       "k": 3
     },
     {
       "c_v": 0.000958168484018537,
-      "ct_u": 1.9148484119793876e-06,
+      "ct_u": 0.0000019148484119793876,
       "k": 4
     }
   ],
   "postrun_recurrence_verification": "PASS",
-  "protocol_id": "Project1_GenericLocalDynamics_PRX_v1_2026-10-27",
+  "protocol_id": "Project1_GenericLocalDynamics_public_v1",
   "result_verification_sha256": "ffe719c7934ec7751a89840be2fe9acc590837eede90a8dbb6a63c8a24c73872",
   "runtime": {
     "backend": "CPU",
     "deterministic": true,
     "numpy": "2.5.3",
     "platform": "macOS-27.0.1-arm64-arm-64bit",
-    "python": "/REDACTED/USER/AI_Workspace/Projects/Codex/2026-10-28/hi/work/pfai-venv312/bin/python",
+    "python": "/REDACTED/ENV/python",
     "python_version": "3.12.13 (main, Aug  7 2026, 02:15:23) [Clang 22.1.3 ]",
     "threads": 8,
     "torch": "2.14.0",

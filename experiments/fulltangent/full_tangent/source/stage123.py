@@ -6,9 +6,9 @@ _p1_sys.path.insert(0, str(_p1_root))
 from project1_paths import resolve_path as _p1_path
 from common import *
 import importlib.util, types
-man = read(OUT / 'FULL_TANGENT_SOURCE_MANIFEST_v283M.json')
+man = read(OUT / 'FULL_TANGENT_SOURCE_MANIFEST_full_tangent_reference.json')
 assert man['all_required_hashes_pass']
-pr = read(OUT / 'SELECTION_RESPONSE_PROVENANCE_v281M.json')
+pr = read(OUT / 'SELECTION_RESPONSE_PROVENANCE_selection_reference.json')
 recs = man['primary_records']
 refs = pr['evidence_sources']
 checks = []
@@ -16,7 +16,7 @@ checks = []
 def check(name, yes, detail=None):
     checks.append({'name': name, 'pass': bool(yes), 'detail': detail})
     if not yes:
-        write('STAGE123_CHECKS_v283M.json', checks)
+        write('STAGE123_CHECKS_full_tangent_reference.json', checks)
         raise RuntimeError(name)
 
 def addbind(p, expected, role):
@@ -54,8 +54,8 @@ for fam, rev in [('S1', 'a39f36b100fe8a5377810d56c3f4789b9c53ac42'), ('S2', '28e
         c = np.load(famrec['bound_geometry_path'])
         w = load_file(famrec['bound_router_path'])['router.weight']
         check(f"{fam} {g} {famrec['seed']} dimensions/membership", c['h'].shape == (2048, d) and w.shape == (4 * g, d) and (run['g'] == g) and (run['seed'] == famrec['seed']) and (run['arm'] == famrec['arm']) and (run['H'] == 4 * g) and (run['m'] == D // g) and (run['checkpoints']['64000']['horizon_nonpadding_tokens'] == 64000) and all((np.array_equal(c[k], a) for k, a in [('src', src), ('tgt', tgt), ('group', group)])))
-write('FULL_TANGENT_SOURCE_MANIFEST_v283M.json', man)
-(OUT / 'FULL_TANGENT_SOURCE_HASHES_v283M.sha256').write_text(''.join((f"{x['actual_sha256']}  {x['path']}\n" for x in man['entries'])))
+write('FULL_TANGENT_SOURCE_MANIFEST_full_tangent_reference.json', man)
+(OUT / 'FULL_TANGENT_SOURCE_HASHES_full_tangent_reference.sha256').write_text(''.join((f"{x['actual_sha256']}  {x['path']}\n" for x in man['entries'])))
 print('STAGE1 COMPLETE', len(man['entries']), flush=True)
 bind = []
 for fam in ['S1', 'S2']:
@@ -93,9 +93,9 @@ for fam in ['S1', 'S2']:
                 rule = 'full tensor, public output term (experts[0].down.bias)' if common_bias else 'columns [c*m:(c+1)*m] multiplied by g' if 'down' in name else 'rows [c*m:(c+1)*m]'
                 entries.append({'child': c, 'parameter_name': f'experts[p*g+{c}].{name}', 'tensor_source': srcn, 'slice_rule': rule, 'shape': list(t.shape), 'dtype': str(t.dtype), 'included': not common_bias, 'reason': 'S1 forward excludes bias from every child F.linear and adds experts[0].down.bias once as a common output parameter; other copied down.bias tensors are unused' if common_bias else 'independently stored and used child-specific parameter'})
         bind.append({'family': fam, 'g': g, 'd': d, 'D': D, 'm': m, 'parents_identical_verified': True, 'parameters': entries, 'excluded': ['router.weight', 'base attention/norm/other layers', 'shared common output bias (S1 only)'], 'source_sha256': refs[fam.lower() + '_construction']['sha256']})
-write('EXPERT_BLOCK_BINDING_v283M.json', {'utc_before_science': stamp(), 'records': bind, 'S1_bias_rationale': 'Forward child branches call F.linear(...,e.down.weight,None); the public bias is added outside every child branch. It is excluded by the frozen shared/common-parameter rule.'})
-(OUT / 'EXPERT_BLOCK_BINDING_v283M.md').write_text('# Declared child-expert block\n\nBound before any new full-tangent outcomes.\n\nS1: up.weight [m,512], up.bias [m], down.weight [512,m], with copied output columns scaled by g. The source calls child output linear with bias=None and adds experts[0].down.bias once outside the mixture; this common output bias and unused duplicate biases are excluded.\n\nS2: gate_proj.weight [m,576], up_proj.weight [m,576], down_proj.weight [576,m], output columns scaled by g. No biases exist.\n\nAll four parent copies have independent storage and identical tensors for each child. Router, norms and all unrelated/shared base parameters are excluded. Per-child slices and dtypes are in the JSON.\n')
-write('IMPLEMENTATION_PLAN_FREEZE_v283M.json', {'utc': stamp(), 'subset': [{'family': f, 'g': g, 'pair_index': 0 if g == 2 else 11264, 'child': c} for f in ['S1', 'S2'] for g in [2, 8] for c in [0, g - 1]], 'reference': 'all output-coordinate scalar gradient inner products summed; no J or full NTK matrix stored', 'metric': 'I/m, isotropic output trace 1/d', 'analytic_dtype': 'float64', 'historical_device': 'mps float32 with CPU float64 aggregates', 'numeric_tolerance_semantics': 'absolute and aggregate relative errors separately reported; both limits enforced for mandatory aggregate cross-checks', 'bootstrap': {'generator': 'PCG64', 'seed': 2026101201, 'replicates': 20000, 'unit': '8 paired seeds, retain all g and coordinates', 'RMS_normalization': 'normalize separately inside each family x g in every resampled dataset'}, 'sign_floor': 'within-cell restricted floor=max(1e-10,max historical B reproduction discrepancy); full floor=max(1e-10,conservative cross-check B error bound)', 'epsilon_B_propagation': 'max absolute kernel cross-check discrepancy times maximum per-domain mean L1 norm of q_C; extra factor 4 for conservative extrapolation', 'secondary': 'shared sequential PCG64(2026101202) stream, S1 Gaussian [512,4] QR then S2 [576,4] QR, first four Q columns'})
+write('EXPERT_BLOCK_BINDING_full_tangent_reference.json', {'utc_before_science': stamp(), 'records': bind, 'S1_bias_rationale': 'Forward child branches call F.linear(...,e.down.weight,None); the public bias is added outside every child branch. It is excluded by the frozen shared/common-parameter rule.'})
+(OUT / 'EXPERT_BLOCK_BINDING_full_tangent_reference.md').write_text('# Declared child-expert block\n\nBound before any new full-tangent outcomes.\n\nS1: up.weight [m,512], up.bias [m], down.weight [512,m], with copied output columns scaled by g. The source calls child output linear with bias=None and adds experts[0].down.bias once outside the mixture; this common output bias and unused duplicate biases are excluded.\n\nS2: gate_proj.weight [m,576], up_proj.weight [m,576], down_proj.weight [576,m], output columns scaled by g. No biases exist.\n\nAll four parent copies have independent storage and identical tensors for each child. Router, norms and all unrelated/shared base parameters are excluded. Per-child slices and dtypes are in the JSON.\n')
+write('IMPLEMENTATION_PLAN_FREEZE_full_tangent_reference.json', {'utc': stamp(), 'subset': [{'family': f, 'g': g, 'pair_index': 0 if g == 2 else 11264, 'child': c} for f in ['S1', 'S2'] for g in [2, 8] for c in [0, g - 1]], 'reference': 'all output-coordinate scalar gradient inner products summed; no J or full NTK matrix stored', 'metric': 'I/m, isotropic output trace 1/d', 'analytic_dtype': 'float64', 'historical_device': 'mps float32 with CPU float64 aggregates', 'numeric_tolerance_semantics': 'absolute and aggregate relative errors separately reported; both limits enforced for mandatory aggregate cross-checks', 'bootstrap': {'generator': 'PCG64', 'seed': 2026101201, 'replicates': 20000, 'unit': '8 paired seeds, retain all g and coordinates', 'RMS_normalization': 'normalize separately inside each family x g in every resampled dataset'}, 'sign_floor': 'within-cell restricted floor=max(1e-10,max historical B reproduction discrepancy); full floor=max(1e-10,conservative cross-check B error bound)', 'epsilon_B_propagation': 'max absolute kernel cross-check discrepancy times maximum per-domain mean L1 norm of q_C; extra factor 4 for conservative extrapolation', 'secondary': 'shared sequential PCG64(2026101202) stream, S1 Gaussian [512,4] QR then S2 [576,4] QR, first four Q columns'})
 print('STAGE2 COMPLETE', flush=True)
 (OUT / 'historical_reproduction').mkdir(exist_ok=True)
 compare = []
@@ -148,8 +148,8 @@ for fam in ['S1', 'S2']:
             np.savez_compressed(OUT / 'historical_reproduction' / f"{fam}_g{g}_seed{r['seed']}.npz", q_C=qc, qhat=qhat, B_restricted=B, kappa_restricted=kc, Pq=Pq, group=group, src=src, tgt=tgt)
             check(f"{fam} g{g} seed{r['seed']} restricted reproduction", ok, compare[-1])
         print('STAGE3', fam, g, 'max B error', max((x['B_max_abs_error'] for x in compare if x['family'] == fam and x['g'] == g)), flush=True)
-csvwrite('HISTORICAL_REPRODUCTION_COMPARISON_v283M.csv', compare)
-write('STAGE123_CHECKS_v283M.json', checks)
-write('HISTORICAL_REPRODUCTION_v283M.json', {'pass': True, 'records': 64, 'comparison': compare, 'max_B_error': max((x['B_max_abs_error'] for x in compare)), 'max_P_B_error': max((x['P_B_abs_error'] for x in compare))})
+csvwrite('HISTORICAL_REPRODUCTION_COMPARISON_full_tangent_reference.csv', compare)
+write('STAGE123_CHECKS_full_tangent_reference.json', checks)
+write('HISTORICAL_REPRODUCTION_full_tangent_reference.json', {'pass': True, 'records': 64, 'comparison': compare, 'max_B_error': max((x['B_max_abs_error'] for x in compare)), 'max_P_B_error': max((x['P_B_abs_error'] for x in compare))})
 write('RUN_STATUS.json', {'status': 'HISTORICAL_REPRODUCTION_PASSED', 'stage': 3, 'utc': stamp(), 'new_full_tangent_outcomes_computed': False})
 print('STAGE3 ALL PASS', flush=True)

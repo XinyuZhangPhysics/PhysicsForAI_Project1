@@ -64,14 +64,14 @@ def validate_authorities(original_freeze: Path, amendment: Path, stream_index: P
     if sha(original_freeze) != ORIGINAL_J1_FREEZE_SHA256:
         raise ValueError('original frozen J1 authority hash mismatch')
     if sha(amendment) != AMENDMENT_SHA256:
-        raise ValueError('v1.1 amendment hash mismatch')
+        raise ValueError('protocol amendment hash mismatch')
     if sha(stream_index) != STREAM_INDEX_SHA256:
         raise ValueError('inherited training stream index hash mismatch')
     frozen, amended, index = (json.loads(p.read_text()) for p in (original_freeze, amendment, stream_index))
     if frozen['seeds'] != list(SEEDS) or frozen['primary_g'] != list(GRANULARITIES):
         raise ValueError('frozen J1 seed/g mismatch')
     if amended['effective_checkpoint_tokens'] != list(CHECKPOINT_TOKENS) or amended['checkpoint_update_indices'] != list(CHECKPOINT_UPDATES):
-        raise ValueError('v1.1 checkpoint mismatch')
+        raise ValueError('protocol-amended checkpoint mismatch')
     if amended['original_j1_freeze_sha256'] != ORIGINAL_J1_FREEZE_SHA256:
         raise ValueError('amendment does not anchor original J1')
     if index['domain_order'] != list(DOMAIN_ORDER) or index['updates'] != 16:

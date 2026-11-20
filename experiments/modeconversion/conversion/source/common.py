@@ -61,7 +61,7 @@ def directions(f, g, seed):
     for r in range(4):
         attempt = 0
         while True:
-            key = f'v282M-r2-new-directions|{f}|{g}|{seed}|{r}|{attempt}'
+            key = f'mode_conversion_reference-r2-new-directions|{f}|{g}|{seed}|{r}|{attempt}'
             rng = np.random.default_rng(int.from_bytes(hashlib.sha256(key.encode()).digest()[:16], 'little'))
             v = rng.standard_normal(hidden)
             v /= np.linalg.norm(v)

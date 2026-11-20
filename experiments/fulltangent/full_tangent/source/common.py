@@ -10,9 +10,9 @@ import numpy as np, torch
 from torch.nn import functional as F
 from safetensors.torch import load_file
 BASE = Path(__file__).resolve().parent.parent
-OUT = BASE / 'outputs/v283M_r1'
+OUT = BASE / 'outputs/full_tangent_reference_r1'
 ROOT = Path(_p1_path('path_8c32eaf570f6'))
-MIG = BASE / 'work/PhysicsForAI_Project1_Migration_v283M'
+MIG = BASE / 'work/PhysicsForAI_Project1_Migration_full_tangent_reference'
 MODELS = {'S1': Path(_p1_path('path_44ab72c5d90e')), 'S2': Path(_p1_path('path_3397fdd42660'))}
 DIM = {'S1': (512, 2048), 'S2': (576, 1536)}
 

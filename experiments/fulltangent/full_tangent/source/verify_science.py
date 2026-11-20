@@ -11,18 +11,18 @@ checks = []
 def verify(name, ok, detail=None):
     checks.append({'check': name, 'pass': bool(ok), 'detail': detail})
     if not ok:
-        write('FINAL_SCIENTIFIC_VERIFICATION_v283M.json', {'pass': False, 'checks': checks})
+        write('FINAL_SCIENTIFIC_VERIFICATION_full_tangent_reference.json', {'pass': False, 'checks': checks})
         raise AssertionError(name)
-results = read(OUT / 'FULL_TANGENT_RESULTS_v283M.json')
-freeze = read(OUT / 'PRIMARY_CLASSIFICATION_FREEZE_v283M.json')
-man = read(OUT / 'FULL_TANGENT_SOURCE_MANIFEST_v283M.json')
-coordsraw = list(csv.DictReader((OUT / 'FULL_TANGENT_COORDINATES_v283M.csv').open()))
-index = np.load(OUT / 'BOOTSTRAP_SEED_INDICES_v283M.npy')
+results = read(OUT / 'FULL_TANGENT_RESULTS_full_tangent_reference.json')
+freeze = read(OUT / 'PRIMARY_CLASSIFICATION_FREEZE_full_tangent_reference.json')
+man = read(OUT / 'FULL_TANGENT_SOURCE_MANIFEST_full_tangent_reference.json')
+coordsraw = list(csv.DictReader((OUT / 'FULL_TANGENT_COORDINATES_full_tangent_reference.csv').open()))
+index = np.load(OUT / 'BOOTSTRAP_SEED_INDICES_full_tangent_reference.npy')
 seedcheck = np.random.Generator(np.random.PCG64(2026101201)).integers(0, 8, size=(20000, 8))
 verify('bootstrap draws reproduce frozen RNG', np.array_equal(index, seedcheck))
-verify('primary JSON frozen before secondary', sha(OUT / 'FULL_TANGENT_RESULTS_v283M.json') == freeze['results_sha256'])
+verify('primary JSON frozen before secondary', sha(OUT / 'FULL_TANGENT_RESULTS_full_tangent_reference.json') == freeze['results_sha256'])
 verify('all source hashes unchanged at completion', all((sha(z['path']) == z['expected_sha256'] for z in man['entries'])))
-verify('immutable preregistration unchanged', sha(OUT / 'FULL_TANGENT_PREREGISTRATION_v283M.md') == (OUT / 'FULL_TANGENT_PREREGISTRATION_v283M.sha256').read_text().split()[0])
+verify('immutable preregistration unchanged', sha(OUT / 'FULL_TANGENT_PREREGISTRATION_full_tangent_reference.md') == (OUT / 'FULL_TANGENT_PREREGISTRATION_full_tangent_reference.sha256').read_text().split()[0])
 verify('complete 768 signed-coordinate records', len(coordsraw) == 768)
 
 def ranks(v):
@@ -52,7 +52,7 @@ for fam in ['S1', 'S2']:
     stats = scalar_stats(xx, yy)
     for k, v in stats.items():
         verify(f'{fam} independent primary {k}', abs(v - results['families'][fam]['metrics'][k]['estimate']) < 1e-12, abs(v - results['families'][fam]['metrics'][k]['estimate']))
-    draws = np.load(OUT / f'{fam}_BOOTSTRAP_DISTRIBUTIONS_v283M.npz')
+    draws = np.load(OUT / f'{fam}_BOOTSTRAP_DISTRIBUTIONS_full_tangent_reference.npz')
     for iteration in [0, 1, 100, 499, 9999, 19999]:
         ss = [seeds[j] for j in index[iteration]]
         x = [float(by[s, g, i]['B_restricted']) for s in ss for g in [2, 4, 8] for i in range(12)]
@@ -79,10 +79,10 @@ for fam in ['S1', 'S2']:
             v = np.array([float(by[s, g, i]['B_full']) for i in range(12)])
             u = np.array([float(by[s, g, i]['B_restricted']) for i in range(12)])
             verify(f'{fam} g{g} seed{s} coordinate regeneration', np.array_equal(full, v) and np.array_equal(restricted, u) and (abs(float(np.mean(full ** 2)) - float(by[s, g, 0]['P_B_full'])) < 1e-16))
-    Q = np.load(OUT / f'{fam}_DIRECTIONAL_PROBES_v283M.npy')
+    Q = np.load(OUT / f'{fam}_DIRECTIONAL_PROBES_full_tangent_reference.npy')
     verify(f'{fam} probes orthonormal', np.max(np.abs(Q.T @ Q - np.eye(4))) < 1e-12)
 expected = 'PARTIAL_CHANNEL_AGREEMENT'
 verify('exact frozen rule classification', results['classification'] == expected and results['hypotheses']['H0']['pass'] and results['hypotheses']['H1']['pass'] and results['hypotheses']['H4']['pass'] and all((results['families'][f]['metrics'][k]['estimate'] > (0.5 if k == 'sign_agreement' else 0) for f in ['S1', 'S2'] for k in results['families'][f]['metrics'])) and results['families']['S1']['H2_confirmation_criteria_pass'] and (not results['families']['S2']['H2_confirmation_criteria_pass']))
-verify('secondary does not alter label', read(OUT / 'SECONDARY_DIRECTIONAL_RESULTS_v283M.json')['primary_classification_unchanged'] == expected)
-write('FINAL_SCIENTIFIC_VERIFICATION_v283M.json', {'utc': stamp(), 'pass': True, 'checks': checks, 'checks_passed': len(checks), 'independent_statistics_method': 'Python statistics correlation and scalar tie-averaged ranks, separate from vectorized implementation; 6 fixed draws per family cross-checked', 'historical_source_files_modified': False})
+verify('secondary does not alter label', read(OUT / 'SECONDARY_DIRECTIONAL_RESULTS_full_tangent_reference.json')['primary_classification_unchanged'] == expected)
+write('FINAL_SCIENTIFIC_VERIFICATION_full_tangent_reference.json', {'utc': stamp(), 'pass': True, 'checks': checks, 'checks_passed': len(checks), 'independent_statistics_method': 'Python statistics correlation and scalar tie-averaged ranks, separate from vectorized implementation; 6 fixed draws per family cross-checked', 'historical_source_files_modified': False})
 print('FINAL SCIENCE VERIFICATION', len(checks), 'PASS')

@@ -8,9 +8,9 @@ from pathlib import Path
 import json, hashlib, shutil, datetime, zoneinfo, platform, subprocess, sys
 import torch, numpy as np
 BASE = Path.cwd()
-OUT = BASE / 'outputs/v283M_r1'
-PK = BASE / 'work/PhysicsForAI_Project1_FullTangentLaunch_v283M'
-MIG = BASE / 'work/PhysicsForAI_Project1_Migration_v283M'
+OUT = BASE / 'outputs/full_tangent_reference_r1'
+PK = BASE / 'work/PhysicsForAI_Project1_FullTangentLaunch_full_tangent_reference'
+MIG = BASE / 'work/PhysicsForAI_Project1_Migration_full_tangent_reference'
 ROOT = Path(_p1_path('path_8c32eaf570f6'))
 
 def sha(p):
@@ -29,15 +29,15 @@ def git(p):
         r = subprocess.run(['git', '-C', str(p), *a], capture_output=True, text=True)
         return r.stdout.strip() if r.returncode == 0 else None
     return {'root': str(p), 'commit': run('rev-parse', 'HEAD'), 'status': run('status', '--porcelain')}
-for n in ['FULL_TANGENT_PREREGISTRATION_v283M.md', 'FULL_TANGENT_PREREGISTRATION_v283M.sha256', 'CODEX_FullTangentBenchmark_EXECUTION_v283M.md']:
+for n in ['FULL_TANGENT_PREREGISTRATION_full_tangent_reference.md', 'FULL_TANGENT_PREREGISTRATION_full_tangent_reference.sha256', 'CODEX_FullTangentBenchmark_EXECUTION_full_tangent_reference.md']:
     shutil.copy2(PK / n, OUT / n)
-expected = (PK / 'FULL_TANGENT_PREREGISTRATION_v283M.sha256').read_text().split()[0]
-assert sha(OUT / 'FULL_TANGENT_PREREGISTRATION_v283M.md') == expected
+expected = (PK / 'FULL_TANGENT_PREREGISTRATION_full_tangent_reference.sha256').read_text().split()[0]
+assert sha(OUT / 'FULL_TANGENT_PREREGISTRATION_full_tangent_reference.md') == expected
 now = datetime.datetime.now(datetime.timezone.utc)
-write('ENVIRONMENT_v283M.json', {'utc': now.isoformat(), 'asia_shanghai': now.astimezone(zoneinfo.ZoneInfo('Asia/Shanghai')).isoformat(), 'python': sys.version, 'python_executable': sys.executable, 'torch': torch.__version__, 'numpy': np.__version__, 'macos': platform.mac_ver(), 'platform': platform.platform(), 'devices': {'cpu': True, 'mps_built': torch.backends.mps.is_built(), 'mps_available': torch.backends.mps.is_available(), 'cuda_available': torch.cuda.is_available()}, 'git': [git(ROOT), git(ROOT / '04_prospective_experiments/EXP_S2/repository_full')], 'output_location_reason': 'User AGENTS default: deliverables under current Codex project outputs; historical research root accessed read-only.'})
+write('ENVIRONMENT_full_tangent_reference.json', {'utc': now.isoformat(), 'asia_shanghai': now.astimezone(zoneinfo.ZoneInfo('Asia/Shanghai')).isoformat(), 'python': sys.version, 'python_executable': sys.executable, 'torch': torch.__version__, 'numpy': np.__version__, 'macos': platform.mac_ver(), 'platform': platform.platform(), 'devices': {'cpu': True, 'mps_built': torch.backends.mps.is_built(), 'mps_available': torch.backends.mps.is_available(), 'cuda_available': torch.cuda.is_available()}, 'git': [git(ROOT), git(ROOT / '04_prospective_experiments/EXP_S2/repository_full')], 'output_location_reason': 'User AGENTS default: deliverables under current Codex project outputs; historical research root accessed read-only.'})
 write('RUN_STATUS.json', {'status': 'PREREGISTRATION_VERIFIED', 'preregistration_sha256': expected, 'utc': now.isoformat(), 'no_new_full_tangent_outcome_computed': True})
 print('STAGE0 PASS', expected, flush=True)
-provpath = MIG / 'EVIDENCE/selection_response/SELECTION_RESPONSE_PROVENANCE_v281M.json'
+provpath = MIG / 'EVIDENCE/selection_response/SELECTION_RESPONSE_PROVENANCE_selection_reference.json'
 prov = json.loads(provpath.read_text())
 refs = prov['evidence_sources']
 records = prov['primary_records']
@@ -89,9 +89,9 @@ for family in ['S1', 'S2']:
             r['bound_geometry_path'] = str(cache)
 for k, p in [('migration_provenance', provpath), ('launch_zip', Path(_p1_path('path_15a9c2a56381'))), ('migration_zip', Path(_p1_path('path_1997da014ac8')))]:
     bind(p, sha(p), k)
-write('FULL_TANGENT_SOURCE_MANIFEST_v283M.json', {'stage': 1, 'entries': manifest, 'failures': fails, 'primary_records': records, 'all_required_hashes_pass': not fails})
-(OUT / 'FULL_TANGENT_SOURCE_HASHES_v283M.sha256').write_text(''.join((f"{x['actual_sha256']}  {x['path']}\n" for x in manifest if x['actual_sha256'])))
-shutil.copy2(provpath, OUT / 'SELECTION_RESPONSE_PROVENANCE_v281M.json')
+write('FULL_TANGENT_SOURCE_MANIFEST_full_tangent_reference.json', {'stage': 1, 'entries': manifest, 'failures': fails, 'primary_records': records, 'all_required_hashes_pass': not fails})
+(OUT / 'FULL_TANGENT_SOURCE_HASHES_full_tangent_reference.sha256').write_text(''.join((f"{x['actual_sha256']}  {x['path']}\n" for x in manifest if x['actual_sha256'])))
+shutil.copy2(provpath, OUT / 'SELECTION_RESPONSE_PROVENANCE_selection_reference.json')
 print('STAGE1 HASHES', len(manifest), 'FAILURES', len(fails), flush=True)
 for f in fails:
     print(json.dumps(f), flush=True)

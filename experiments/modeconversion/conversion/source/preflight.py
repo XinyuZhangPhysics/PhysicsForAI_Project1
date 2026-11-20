@@ -15,7 +15,7 @@ def main():
     b = read(MATCH / 'preregistration/INPUT_BINDINGS.json')
     for x in b['copied_points']:
         assert sha(x['path']) == x['sha256']
-    assert (R1 / 'outputs/BACKGROUND_MODE_CONVERSION_RESULTS_v282M_r1.md').read_bytes() == (ROOT / 'inputs/R1_TECHNICAL_FAILURE_REPORT.md').read_bytes()
+    assert (R1 / 'outputs/BACKGROUND_MODE_CONVERSION_RESULTS_mode_conversion_reference_r1.md').read_bytes() == (ROOT / 'inputs/R1_TECHNICAL_FAILURE_REPORT.md').read_bytes()
     inputs = {str(p): sha(p) for p in (ROOT / 'inputs').iterdir()}
     inputs[str(MATCH / 'preregistration/INPUT_BINDINGS.json')] = sha(MATCH / 'preregistration/INPUT_BINDINGS.json')
     inputs[str(DB)] = sha(DB)
@@ -38,7 +38,7 @@ def main():
     con = sqlite3.connect(f'file:{DB}?mode=ro&immutable=1', uri=True)
     chosen = {(f, m): [] for f in ['S1', 'S2'] for m in ['calibration', 'audit']}
     for domain in DOMAINS:
-        candidates = ((digest(f'v282M-r2-fresh-bank|{domain}|{h}'.encode()), h, sh, ord, orig) for h, sh, ord, orig in con.execute('select text_sha,shard,row_ordinal,original_index from global_docs where domain=?', (domain,)) if h not in old)
+        candidates = ((digest(f'mode_conversion_reference-r2-fresh-bank|{domain}|{h}'.encode()), h, sh, ord, orig) for h, sh, ord, orig in con.execute('select text_sha,shard,row_ordinal,original_index from global_docs where domain=?', (domain,)) if h not in old)
         ranked = heapq.nsmallest(2048, candidates)
         for i, (f, m) in enumerate(chosen):
             for rank, h, sh, ordinal, orig in ranked[i * 512:(i + 1) * 512]:

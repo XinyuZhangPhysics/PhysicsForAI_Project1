@@ -7,10 +7,10 @@ from project1_paths import resolve_path as _p1_path
 from common import *
 from kernels import *
 torch.set_num_threads(1)
-assert read(OUT / 'HISTORICAL_REPRODUCTION_v283M.json')['pass']
-assert not (OUT / 'FULL_TANGENT_COORDINATES_v283M.csv').exists()
-plan = read(OUT / 'IMPLEMENTATION_PLAN_FREEZE_v283M.json')
-man = read(OUT / 'FULL_TANGENT_SOURCE_MANIFEST_v283M.json')
+assert read(OUT / 'HISTORICAL_REPRODUCTION_full_tangent_reference.json')['pass']
+assert not (OUT / 'FULL_TANGENT_COORDINATES_full_tangent_reference.csv').exists()
+plan = read(OUT / 'IMPLEMENTATION_PLAN_FREEZE_full_tangent_reference.json')
+man = read(OUT / 'FULL_TANGENT_SOURCE_MANIFEST_full_tangent_reference.json')
 recs = man['primary_records']
 pre = {}
 states = {}
@@ -39,13 +39,13 @@ for item in plan['subset']:
     row = {**item, 'optimized_full': float(full[0, c]), 'autograd_full': ref, 'full_abs_error': fe, 'full_relative_error': fe / max(abs(ref), 1e-300), 'optimized_down': float(out[0, c]), 'autograd_down': refout, 'down_abs_error': oe, 'down_relative_error': oe / max(abs(refout), 1e-300), 'historical_restricted_kernel': hist, 'historical_restriction_abs_error': he, 'historical_restriction_relative_error': he / max(abs(hist), 1e-300), 'historical_float32_down_autograd': same_precision_ref, 'same_feature_historical_identity_abs_error': same_precision_error, 'same_feature_historical_identity_relative_error': same_precision_error / max(abs(hist), 1e-300), 'cross_precision_bridge_is_diagnostic_only': True}
     row['pass'] = fe <= 1e-12 and row['full_relative_error'] <= 1e-10 and (oe <= 1e-12) and (row['down_relative_error'] <= 1e-10) and (same_precision_error <= 1e-12) and (row['same_feature_historical_identity_relative_error'] <= 1e-10)
     checks.append(row)
-    write('FULL_TANGENT_IMPLEMENTATION_CHECK_v283M.json', {'utc': stamp(), 'status': 'IN_PROGRESS', 'checks': checks})
+    write('FULL_TANGENT_IMPLEMENTATION_CHECK_full_tangent_reference.json', {'utc': stamp(), 'status': 'IN_PROGRESS', 'checks': checks})
     print('CHECK', fam, g, c, 'full errors', fe, row['full_relative_error'], 'historical', he, row['historical_restriction_relative_error'], flush=True)
     if not row['pass']:
         write('RUN_STATUS.json', {'status': 'TECHNICAL_PROTOCOL_FAILURE', 'stage': 4, 'failed_check': row})
         raise RuntimeError('mandatory implementation check failed')
 err = max((c['full_abs_error'] for c in checks))
-write('FULL_TANGENT_IMPLEMENTATION_CHECK_v283M.json', {'utc': stamp(), 'status': 'PASS', 'checks': checks, 'max_full_abs_error': err, 'max_full_relative_error': max((c['full_relative_error'] for c in checks)), 'max_output_abs_error': max((c['down_abs_error'] for c in checks)), 'max_historical_restriction_abs_error': max((c['historical_restriction_abs_error'] for c in checks)), 'derivation': 'GELU: output feature/m + (hx dot hy + 1) sum_a ||g V_a||^2 gelu_prime(zx_a)gelu_prime(zy_a)/(d m). SwiGLU: output feature/m + (hx dot hy) sum_a ||g V_a||^2 [gate_derivative_x*up_x*gate_derivative_y*up_y+silu_x*silu_y]/(d m). Common S1 output bias excluded.'})
+write('FULL_TANGENT_IMPLEMENTATION_CHECK_full_tangent_reference.json', {'utc': stamp(), 'status': 'PASS', 'checks': checks, 'max_full_abs_error': err, 'max_full_relative_error': max((c['full_relative_error'] for c in checks)), 'max_output_abs_error': max((c['down_abs_error'] for c in checks)), 'max_historical_restriction_abs_error': max((c['historical_restriction_abs_error'] for c in checks)), 'derivation': 'GELU: output feature/m + (hx dot hy + 1) sum_a ||g V_a||^2 gelu_prime(zx_a)gelu_prime(zy_a)/(d m). SwiGLU: output feature/m + (hx dot hy) sum_a ||g V_a||^2 [gate_derivative_x*up_x*gate_derivative_y*up_y+silu_x*silu_y]/(d m). Common S1 output bias excluded.'})
 floors = []
 for fam in ['S1', 'S2']:
     for g in [1, 2, 4, 8]:
@@ -58,7 +58,7 @@ for fam in ['S1', 'S2']:
             l1.extend((np.mean(np.sum(np.abs(q[group == i]), axis=1)) for i in range(12)))
         eps = 4 * err * max(l1)
         floors.append({'family': fam, 'g': g, 'epsilon_B': eps, 'tau_P': max(1e-20, 100 * eps * eps), 'restricted_sign_floor': 1e-10, 'full_sign_floor': max(1e-10, eps), 'max_group_mean_q_C_L1': float(max(l1)), 'kernel_error_bound': err, 'conservative_factor': 4})
-write('NUMERICAL_FLOORS_FREEZE_v283M.json', {'utc_before_primary_coordinates': stamp(), 'cells': floors, 'sign_floor_policy': 'fixed max(1e-10, propagated floor); historical reproduction error zero', 'precision': 'independent analytic/autograd f64; historical bridge f32/MPS'})
+write('NUMERICAL_FLOORS_FREEZE_full_tangent_reference.json', {'utc_before_primary_coordinates': stamp(), 'cells': floors, 'sign_floor_policy': 'fixed max(1e-10, propagated floor); historical reproduction error zero', 'precision': 'independent analytic/autograd f64; historical bridge f32/MPS'})
 (OUT / 'full_geometry').mkdir(exist_ok=True)
 rows = []
 geom = []
@@ -95,12 +95,12 @@ for fam in ['S1', 'S2']:
             Br = v['B_restricted']
             pb = float(np.mean(B * B))
             pbr = float(np.mean(Br * Br))
-            keys = read(OUT / 'SELECTION_RESPONSE_PROVENANCE_v281M.json')['families'][fam]['ordered_pair_keys']
+            keys = read(OUT / 'SELECTION_RESPONSE_PROVENANCE_selection_reference.json')['families'][fam]['ordered_pair_keys']
             np.savez_compressed(OUT / 'full_geometry' / f"{fam}_g{g}_seed{r['seed']}_pair_response.npz", restricted_pair=np.sum(q * v['kappa_restricted'], axis=1), full_pair=np.sum(q * kc, axis=1), group=group)
             for i in range(12):
                 rows.append({'family': fam, 'activation': r['activation'], 'g': g, 'arm': r['arm'], 'seed': r['seed'], 'domain_pair': '->'.join(keys[i]), 'coordinate_index': i, 'B_restricted': float(Br[i]), 'B_full': float(B[i]), 'B_restricted_power': float(Br[i] ** 2), 'B_full_power': float(B[i] ** 2), 'P_B_restricted': pbr, 'P_B_full': pb, 'router_source_hash': r['router_checkpoint_sha256'], 'q_C_cache_hash': sha(qpath), 'historical_response_hash': r['source_sha256'], 'full_geometry_cache_hash': cachehash, 'K_A': powers['A'], 'K_C': powers['C'], 'K_M': powers['M'], 'rho_A': ratios['A'], 'rho_M': ratios['M'], 'epsilon_B': floor['epsilon_B'], 'tau_P': floor['tau_P'], 'restricted_sign_floor': floor['restricted_sign_floor'], 'full_sign_floor': floor['full_sign_floor']})
         print('STAGE5', fam, g, 'K_C', powers['C'], 'A/M', ratios, flush=True)
-csvwrite('FULL_TANGENT_COORDINATES_v283M.csv', rows)
-write('FULL_TANGENT_GEOMETRY_AUDIT_v283M.json', {'cells': geom, 'all_H4_pass': all((r['H4_pass'] for r in geom))})
+csvwrite('FULL_TANGENT_COORDINATES_full_tangent_reference.csv', rows)
+write('FULL_TANGENT_GEOMETRY_AUDIT_full_tangent_reference.json', {'cells': geom, 'all_H4_pass': all((r['H4_pass'] for r in geom))})
 write('RUN_STATUS.json', {'status': 'PRIMARY_COORDINATES_COMPLETE', 'stage': 5, 'utc': stamp(), 'coordinate_records': len(rows), 'classification_not_yet_computed': True})
 print('STAGE5 COMPLETE', len(rows), flush=True)
