@@ -10,7 +10,7 @@ This repository contains the source code, fixed configurations, random seeds, as
 - `evidence/` — compact paper-facing evidence and retained reference outputs.
 - `requirements-*.txt` — tested software requirements.
 
-The paper-facing experiment-to-source index is `reference_implementation/docs/PAPER_RESULT_MAP.md`.
+The paper-facing experiment-to-source index is `reference_implementation/docs/PAPER_RESULT_MAP.md`. The independent source-to-paper audit is `CODE_PAPER_PROTOCOL_AUDIT.md`.
 
 Controlled expert-formation experiments are grouped under `experiments/formation/`. The trained OLMoE mixed-curvature experiments are grouped under `experiments/nmix/` as peer experiments: `source_to_heldout`, `orientation`, `basis_resampling`, `document_resampling`, and `fixed_membership`. Native OLMoE longitudinal response measurements are under `experiments/nativeolmoe/`.
 
