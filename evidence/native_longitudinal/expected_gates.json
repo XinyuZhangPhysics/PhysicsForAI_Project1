@@ -1,0 +1,82 @@
+[
+  {
+    "layer": 7,
+    "probe": "local",
+    "epsilon_scale": 0.21671064285028108,
+    "shape_cosine": 0.9772652938465044,
+    "baseline_split_stability": {
+      "cosine": 0.9997148221706098,
+      "d_eff_half0": 5.371113778640847,
+      "d_eff_half1": 5.403981262477579,
+      "relative_d_eff_difference": 0.006100639244722696,
+      "status": "STABLE"
+    },
+    "terminal_split_stability": {
+      "cosine": 0.999532720597734,
+      "d_eff_half0": 5.085921790787838,
+      "d_eff_half1": 5.130246099751702,
+      "relative_d_eff_difference": 0.008677286716266561,
+      "status": "STABLE"
+    }
+  },
+  {
+    "layer": 7,
+    "probe": "objective",
+    "epsilon_scale": 0.34002840069511164,
+    "shape_cosine": 0.9629697110449689,
+    "baseline_split_stability": {
+      "cosine": 0.9784146462249573,
+      "d_eff_half0": 5.129632746915675,
+      "d_eff_half1": 5.352038616466442,
+      "relative_d_eff_difference": 0.04243710031355211,
+      "status": "STABLE"
+    },
+    "terminal_split_stability": {
+      "cosine": 0.959181393145012,
+      "d_eff_half0": 5.132901224950257,
+      "d_eff_half1": 4.825324534847183,
+      "relative_d_eff_difference": 0.06177339167079312,
+      "status": "STABLE"
+    }
+  },
+  {
+    "layer": 15,
+    "probe": "local",
+    "epsilon_scale": 0.14677966627634545,
+    "shape_cosine": 0.9894333215632103,
+    "baseline_split_stability": {
+      "cosine": 0.9993996186626923,
+      "d_eff_half0": 2.715134993506008,
+      "d_eff_half1": 2.692807130768457,
+      "relative_d_eff_difference": 0.008257434056969118,
+      "status": "STABLE"
+    },
+    "terminal_split_stability": {
+      "cosine": 0.9997461762609204,
+      "d_eff_half0": 2.436018413004726,
+      "d_eff_half1": 2.447835689909287,
+      "relative_d_eff_difference": 0.004839324294110209,
+      "status": "STABLE"
+    }
+  },
+  {
+    "layer": 15,
+    "probe": "objective",
+    "epsilon_scale": 0.3243394551126294,
+    "shape_cosine": 0.9464352938696982,
+    "baseline_split_stability": {
+      "cosine": 0.9795626817196998,
+      "d_eff_half0": 4.008606631069579,
+      "d_eff_half1": 4.134198180456308,
+      "relative_d_eff_difference": 0.0308472454623886,
+      "status": "STABLE"
+    },
+    "terminal_split_stability": {
+      "cosine": 0.9804830166758397,
+      "d_eff_half0": 3.7590971796474126,
+      "d_eff_half1": 3.7034492975338305,
+      "relative_d_eff_difference": 0.01491391237126379,
+      "status": "STABLE"
+    }
+  }
+]
