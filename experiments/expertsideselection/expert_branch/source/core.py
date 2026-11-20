@@ -7,7 +7,7 @@ from project1_paths import resolve_path as _p1_path
 from common import *
 import sys, platform
 BASE = Path(__file__).resolve().parents[2]
-OUT = BASE / 'outputs/v284M_r1'
+OUT = BASE / 'outputs/expert_selection_public'
 OLD = Path(_p1_path('path_942393e607f5'))
 R2 = Path(_p1_path('path_7e04651960a0'))
 DOMAIN = ('RedPajamaArXiv', 'RedPajamaGithub', 'RedPajamaWikipedia', 'RedPajamaStackExchange')
@@ -24,7 +24,7 @@ def csvwrite(n, rows):
         w.writerows(rows)
 
 def rngkey(*args):
-    key = 'v284M-expert-selection|' + '|'.join(map(str, args))
+    key = 'public-expert-selection|' + '|'.join(map(str, args))
     return (np.random.default_rng(int.from_bytes(hashlib.sha256(key.encode()).digest()[:16], 'little')), key)
 
 def unit(rng, n):
