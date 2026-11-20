@@ -1,7 +1,7 @@
-# E7v2 execution summary
+# Pythia cross-model replication execution summary
 
-Aligned primary: **`E7V2_ALIGNED_CROSSMODEL_SUPPORTED`**.
-Generic secondary: **`E7V2_GENERIC_FULLSTATE_CLOSURE_SUPPORTED`**.
+Aligned primary: **`ALIGNED_CROSSMODEL_SUPPORTED`**.  
+Generic secondary: **`GENERIC_FULLSTATE_CLOSURE_SUPPORTED`**.
 
 | Metric | Value |
 |---|---:|
@@ -20,7 +20,5 @@ Generic secondary: **`E7V2_GENERIC_FULLSTATE_CLOSURE_SUPPORTED`**.
 - M mixed-action relative error: 0.002246097649
 - U mixed-action relative error: 0.0002281239185
 
-Nonlinear gradient evaluations: **72**.
+Nonlinear gradient evaluations: **72**.  
 Independent verification: **PASS, 25 checks**.
-
-No manuscript or research record was edited by this package.

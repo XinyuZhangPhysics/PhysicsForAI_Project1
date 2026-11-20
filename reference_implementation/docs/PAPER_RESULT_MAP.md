@@ -1,18 +1,20 @@
-# Paper result map — active manuscript
+# Paper result map — public v1
 
-| ID | Manuscript component | Public implementation/evidence |
-|---|---|---|
-| P1-E01 | copied router-side two-sided sector selection | `reference_implementation/src/moe_private_response/selection.py` |
-| P1-E02 | full expert-block tangent sector purity | `reference_implementation/src/moe_private_response/selection.py` |
-| P1-E03 | expert-parent selection branch | `reference_implementation/src/moe_private_response/selection.py` |
-| P1-E04 | background-assisted signed mode conversion | `reference_implementation/src/moe_private_response/mode_conversion.py` |
-| P1-E05 | mixed curvature, local threshold, exact-discrete growth | `reference_implementation/src/moe_private_response/formation.py` |
-| P1-E06 | stationary-background threshold/rate shift | `analysis/astra_r2_node6/background_absolute_lambda_data_with_provenance.csv` |
-| P1-E07 | generic non-mode-aligned frozen-map propagation | `experiments/genericlocal/` + `reproducibility/final/GENERIC_LOCAL_HEADLINE_SUMMARY.tsv` |
-| P1-E08 | leading-four mixed-block ablation | `analysis/astra_r2_node1/analyze_diag_baseline.py` + `analysis/astra_r2_node1/generic_local_dynamics_diag_baseline.csv` + summary JSON |
-| P1-E09 | ordered/sequence-mean/reference-mean finite-time propagation | `reference_implementation/src/moe_private_response/finite_time.py` |
-| P1-E10 | mature native OLMoE mixed-block necessity on disjoint Bank B | `evidence/nmix/` — source, protocol, compact results/adjudication, measured per-state/control-space evidence, and deterministic replay |
+This is the paper-facing source/evidence index for the public v1 release. It maps the experiments discussed in the paper to the public source and compact verification artifacts without using authoring-workflow revision identifiers.
 
-The saved-recurrence spectrum reconstruction in `analysis/astra_r2_node3/` is an independent reproducibility cross-check and is not represented as the original spectrum NPZ. The historical pretrained-OLMoE response-geometry / utility program remains paused and is not mapped as positive evidence.
+| ID | v1 experiment family | Primary public source | Public verification/evidence | Audit status |
+|---|---|---|---|---|
+| P1-E01 | Fixed-routing expert-identity response | `experiments/routefreeze/primary/source/u4_execute.py`, `u4_finalize_metrics.py` | `experiments/routefreeze/primary/tests/test_u4_protocol.py` and retained experiment outputs/provenance | **MODEL-FACING SOURCE MAPPED** |
+| P1-E02 | Response selection and full expert-block tangent | `experiments/copiedselection/S1/source/response_s1.py`, `experiments/copiedselection/S2_source/science_response.py`, `experiments/fulltangent/full_tangent/source/stage45.py` | experiment-local verification/provenance files and `reference_implementation/src/moe_private_response/selection.py` | **MODEL-FACING SOURCE MAPPED** |
+| P1-E03 | Background-assisted mode conversion | `experiments/modeconversion/conversion/source/experiment.py`, `finalize.py` | `verify_results.py` and `reference_implementation/src/moe_private_response/mode_conversion.py` | **MODEL-FACING SOURCE MAPPED** |
+| P1-E04 | Controlled formation, locality, and cross-model replication | `experiments/formation/primary/preflight_resume.py`, `train_primary.py`, `analyze_primary.py`; sparse-top-k controls under `experiments/formation/sparse_topk/` | compact Pythia replication outputs under `evidence/pythia_crossmodel/`; `reference_implementation/src/moe_private_response/formation.py` | **FORMATION SOURCE MAPPED**; Pythia source-package hash is public, but the frozen Pythia source package itself is not redistributed here |
+| P1-E05 | Trained OLMoE 12-dimensional mixed curvature and source-to-heldout transfer | `experiments/nmix/source_to_heldout/source/` plus `experiments/nmix/common/config.json` | `experiments/nmix/verify_reference_outputs.py`, basis/document resampling, fixed-membership, and orientation-null subexperiments | **MODEL-FACING SOURCE MAPPED** |
+| P1-E06 | Five-checkpoint longitudinal native-OLMoE response geometry | `experiments/nativeolmoe/tomography/tomography_engine.py`, `experiments/nativeolmoe/five_checkpoint_response/work/production_resume_v2.py`, `final_t4.py` | frozen six-control basis `reference_implementation/data/derived/native_control_basis.npz` and compact tomography matrices/summaries | **MEASUREMENT SOURCE MAPPED**; the exact historical builder that produced the final frozen six-control basis is not redistributed |
 
-P2J/P2L identity and E4B component records: `analysis/astra_r2_node6/archive_snapshots/` and `analysis/astra_r2_node6/ARCHIVE_SOURCE_BINDINGS.md`. Generic-local manifest/summary/endpoints/top-four records: `evidence/generic_local_dynamics/`. NMIX compact records: `evidence/nmix/`. All canonical authority bytes and transformations are otherwise bound in `reproducibility/PUBLIC_RELEASE_AUTHORITY_BINDINGS.tsv`. Scientific qualifications and nonredistributable dependencies: `reproducibility/README.md`.
+## Scope of the public audit
+
+The statuses above refer to whether the paper's stated protocol can be traced to model-facing public source, not merely whether final numerical tables can be regenerated from already-derived arrays.
+
+For P1-E04, the Pythia compact evidence is sufficient to verify the reported frozen outputs but not to independently audit the original model-facing implementation from this repository alone. For P1-E06, the frozen six-control basis and the downstream five-checkpoint measurement code are public; the historical basis-construction execution is represented by provenance rather than by a complete public builder.
+
+No unavailable execution source is replaced by reconstructed code and labeled as the historical implementation.
